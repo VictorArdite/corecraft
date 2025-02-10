@@ -1,3 +1,4 @@
+/* Estilo General */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,22 +11,25 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #ffffff; /* Fondo blanco para la barra de navegación */
     color: #fff;
     padding: 1rem 0;
     text-align: center;
     width: 100%;
     position: fixed;
     top: 0;
+    border-bottom: 2px solid #fff; /* Borde superior blanco */
 }
 
 header h1 {
     margin: 0;
+    color: #000; /* Título en color negro */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -34,26 +38,35 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #000; /* Enlaces en negro */
     text-decoration: none;
+    transition: color 0.3s ease; /* Transición suave */
 }
 
+/* Hover para los botones de navegación */
+nav ul li a:hover {
+    color: #276e2b; /* Cambio a verde fuerte cuando se pasa por encima */
+}
+
+/* Ajustamos el contenedor principal (main) */
 main {
     padding: 2rem;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: calc(100vh - 160px); /* Ajustar la altura para incluir el header y footer */
+    align-items: center; /* Centra el contenido tanto vertical como horizontalmente */
+    min-height: 100vh; /* Asegura que el main tenga la altura completa de la ventana */
     width: 100%;
 }
 
+/* Sección del formulario ajustada */
 section {
     background-color: #fff;
-    padding: 2rem;
+    padding: 3rem 2rem 2rem 2rem; /* Aumentamos el padding superior para darle más espacio arriba */
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
+    border: 2px solid #fff; /* Borde blanco para la sección principal */
 }
 
 form {
@@ -66,37 +79,57 @@ form label {
     font-weight: bold;
 }
 
-form input, form select, form button {
+form input, form select {
     margin-bottom: 1rem;
     padding: 0.75rem;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; /* Bordes grises para los campos */
     border-radius: 5px;
     font-size: 1rem;
 }
 
-form input:focus, form select:focus {
-    border-color: #333;
-    outline: none;
-}
-
+/* Botones generales */
 form button {
-    background-color: #333;
-    color: #fff;
-    border: none;
+    background-color: #ffffff;
+    color: #000; /* Texto negro */
+    border: 1px solid #276e2b; /* Borde verde */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transición de color y fondo */
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    width: 100%;
+    margin-top: 1rem;
 }
 
+/* Efecto hover para botones */
 form button:hover {
-    background-color: #555;
+    color: #fff; /* Texto blanco cuando se pasa el ratón */
+    background-color: #276e2b; /* Fondo verde fuerte cuando se pasa el ratón */
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 1rem 0;
-    background-color: #333;
+    background-color: #ffffff; /* Fondo blanco */
     color: #fff;
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* Cambio de color del texto en el pie de página */
+footer p {
+    color: #000; /* Texto negro para el pie de página */
+}
+
+/* Cambiar color del título de las secciones */
+h2, h3, h4 {
+    color: #000; /* Títulos en color negro */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Hover para los títulos */
+h2:hover, h3:hover, h4:hover {
+    color: #276e2b; /* Cambio a verde fuerte al pasar por encima */
 }
