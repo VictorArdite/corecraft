@@ -28,9 +28,9 @@ switch ($action) {
         $controller = new RutinaController();
         $controller->index();
         break;
-    case 'verRutina':
+    case 'verRutinaPorNombre':
         $controller = new RutinaController();
-        $controller->verRutina($_GET['id']);
+        $controller->verRutinaPorNombre($_GET['nombre']);
         break;
     case 'dashboard':
         $controller = new DashboardController();
