@@ -1,74 +1,76 @@
-/* Estilo General */
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
+/* Encabezado */
 header {
-    background-color: #ffffff; /* Fondo blanco para la barra de navegación */
+    background-color: #005f73;
     color: #fff;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     text-align: center;
     width: 100%;
     position: fixed;
     top: 0;
-    border-bottom: 2px solid #fff; /* Borde superior blanco */
+    left: 0;
+    z-index: 100;
 }
 
 header h1 {
     margin: 0;
-    color: #000; /* Título en color negro */
+    font-size: 2rem;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    margin: 1rem 0 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
 }
 
 nav ul li a {
-    color: #000; /* Enlaces en negro */
+    color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease; /* Transición suave */
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
-/* Hover para los botones de navegación */
 nav ul li a:hover {
-    color: #276e2b; /* Cambio a verde fuerte cuando se pasa por encima */
+    color: #ffb703;
 }
 
-/* Ajustamos el contenedor principal (main) */
+/* Main content */
 main {
     padding: 2rem;
     display: flex;
     justify-content: center;
-    align-items: center; /* Centra el contenido tanto vertical como horizontalmente */
-    min-height: 100vh; /* Asegura que el main tenga la altura completa de la ventana */
+    align-items: center;
+    height: calc(100vh - 160px);
     width: 100%;
 }
 
-/* Sección del formulario ajustada */
 section {
     background-color: #fff;
-    padding: 3rem 2rem 2rem 2rem; /* Aumentamos el padding superior para darle más espacio arriba */
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
-    border: 2px solid #fff; /* Borde blanco para la sección principal */
 }
 
+/* Formulario */
 form {
     display: flex;
     flex-direction: column;
@@ -77,59 +79,57 @@ form {
 form label {
     margin-bottom: 0.5rem;
     font-weight: bold;
-}
-
-form input, form select {
-    margin-bottom: 1rem;
-    padding: 0.75rem;
-    border: 1px solid #ccc; /* Bordes grises para los campos */
-    border-radius: 5px;
     font-size: 1rem;
 }
 
-/* Botones generales */
-form button {
-    background-color: #ffffff;
-    color: #000; /* Texto negro */
-    border: 1px solid #276e2b; /* Borde verde */
-    cursor: pointer;
-    transition: color 0.3s ease, background-color 0.3s ease; /* Transición de color y fondo */
-    padding: 1rem;
+form input, form button {
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1.2rem;
-    width: 100%;
-    margin-top: 1rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto hover para botones */
+form input:focus {
+    border-color: #005f73;
+    box-shadow: 0 0 8px rgba(0, 95, 115, 0.4);
+}
+
+form button {
+    background-color: #005f73;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
 form button:hover {
-    color: #fff; /* Texto blanco cuando se pasa el ratón */
-    background-color: #276e2b; /* Fondo verde fuerte cuando se pasa el ratón */
+    background-color: #ffb703;
+    transform: scale(1.05);
+}
+
+form button:active {
+    transform: scale(1);
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 1rem 0;
-    background-color: #ffffff; /* Fondo blanco */
+    background-color: #005f73;
     color: #fff;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
 
-/* Cambio de color del texto en el pie de página */
-footer p {
-    color: #000; /* Texto negro para el pie de página */
+/* Animación de transiciones */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
-/* Cambiar color del título de las secciones */
-h2, h3, h4 {
-    color: #000; /* Títulos en color negro */
-    transition: color 0.3s ease; /* Transición suave para el cambio de color */
-}
-
-/* Hover para los títulos */
-h2:hover, h3:hover, h4:hover {
-    color: #276e2b; /* Cambio a verde fuerte al pasar por encima */
+body {
+    animation: fadeIn 1s ease-out;
 }
