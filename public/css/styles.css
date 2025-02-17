@@ -1,6 +1,6 @@
 /* Estilos generales */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
@@ -48,16 +48,16 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffb703;
+    color: #d3d3d3;
 }
 
 /* Main content */
 main {
-    padding: 2rem;
+    padding: 6rem 0 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 160px);
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -68,12 +68,14 @@ section {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
+    margin-top: 3rem;
 }
 
 /* Formulario */
 form {
     display: flex;
     flex-direction: column;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
 form label {
@@ -82,7 +84,7 @@ form label {
     font-size: 1rem;
 }
 
-form input, form button {
+form input, form button, form select {
     margin-bottom: 1.5rem;
     padding: 0.75rem;
     border: 1px solid #ccc;
@@ -91,7 +93,7 @@ form input, form button {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-form input:focus {
+form input:focus, form select:focus {
     border-color: #005f73;
     box-shadow: 0 0 8px rgba(0, 95, 115, 0.4);
 }
@@ -105,7 +107,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #ffb703;
+    background-color: #a0a0a0;
     transform: scale(1.05);
 }
 
