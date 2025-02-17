@@ -3,7 +3,8 @@ require_once '../config/database.php';
 require_once '../app/controllers/HomeController.php';
 require_once '../app/controllers/AuthController.php';
 require_once '../app/controllers/DashboardController.php';
-require_once '../app/controllers/RutinaController.php'; // Incluir RutinaController
+require_once '../app/controllers/RutinaController.php';
+require_once '../app/controllers/SuplementacionController.php'; // Incluir SuplementacionController
 
 $action = $_GET['action'] ?? 'home';
 
@@ -31,6 +32,10 @@ switch ($action) {
     case 'verRutinaPorNombre':
         $controller = new RutinaController();
         $controller->verRutinaPorNombre($_GET['nombre']);
+        break;
+    case 'suplementacion':
+        $controller = new SuplementacionController();
+        $controller->index();
         break;
     case 'dashboard':
         $controller = new DashboardController();

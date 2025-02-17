@@ -15,6 +15,7 @@
                 <li><a href="index.php?action=login">Iniciar Sesión</a></li>
                 <li><a href="index.php?action=register">Registrarse</a></li>
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
+                <li><a href="index.php?action=suplementacion">Suplementación</a></li>
             </ul>
         </nav>
     </header>

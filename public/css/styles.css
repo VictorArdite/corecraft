@@ -1,22 +1,12 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
     width: 100%;
     position: fixed;
     top: 0;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
 }
 
 header h1 {
@@ -39,64 +29,53 @@ nav ul li a {
 }
 
 main {
-    padding: 2rem;
+    padding: 100px 20px 20px 20px; /* Ajustar el padding superior para evitar que el contenido se oculte detrás del header */
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: calc(100vh - 160px); /* Ajustar la altura para incluir el header y footer */
+    align-items: flex-start; /* Cambiar a flex-start para que el contenido comience desde la parte superior */
+    min-height: calc(100vh - 160px); /* Ajustar la altura para incluir el header y footer */
     width: 100%;
 }
 
-section {
+.content {
     background-color: #fff;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    max-width: 1200px; /* Aumentar el ancho máximo */
     width: 100%;
+    margin: 0 auto; /* Centrar el contenido */
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: fixed; /* Ajustar el ancho de las columnas */
 }
 
-form label {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    word-wrap: break-word; /* Ajustar el contenido de las celdas */
 }
 
-form input, form select, form button {
-    margin-bottom: 1rem;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
+th {
+    background-color: #f2f2f2;
 }
 
-form input:focus, form select:focus {
-    border-color: #333;
-    outline: none;
-}
-
-form button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-form button:hover {
-    background-color: #555;
+.dia {
+    margin-top: 20px;
 }
 
 footer {
-    text-align: center;
-    padding: 1rem 0;
     background-color: #333;
-    color: #fff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
+    z-index: 1000;
 }

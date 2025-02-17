@@ -34,7 +34,15 @@
             text-decoration: none;
         }
         main {
-            padding: 80px 20px 20px 20px; /* Ajustar el padding superior para evitar que el contenido se oculte detrás del header */
+            padding: 100px 20px 20px 20px; /* Ajustar el padding superior para evitar que el contenido se oculte detrás del header */
+        }
+        section {
+            max-width: 1200px; /* Aumentar el ancho máximo */
+            margin: 0 auto; /* Centrar el contenido */
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
         table {
             width: 100%;
@@ -54,6 +62,16 @@
         .dia {
             margin-top: 20px;
         }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            z-index: 1000;
+        }
     </style>
 </head>
 <body>
@@ -65,6 +83,7 @@
                 <li><a href="index.php?action=login">Iniciar Sesión</a></li>
                 <li><a href="index.php?action=register">Registrarse</a></li>
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
+                <li><a href="index.php?action=suplementacion">Suplementación</a></li> <!-- Nuevo enlace -->
             </ul>
         </nav>
     </header>
