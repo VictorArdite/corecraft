@@ -17,14 +17,15 @@
                 <li><a href="index.php?action=register">Registrarse</a></li>
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
                 <li><a href="index.php?action=suplementacion">Suplementación</a></li>
+                <li><a href="index.php?action=perfil">Perfil</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section>
             <form action="index.php?action=auth" method="POST">
-                <label for="username">Usuario:</label>
-                <input type="text" id="username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
                 <label for="password">Contraseña:</label>
                 <input type="password" id="password" name="password" required>
                 <button type="submit">Iniciar Sesión</button>

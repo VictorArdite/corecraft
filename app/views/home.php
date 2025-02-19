@@ -17,6 +17,7 @@
                 <li><a href="index.php?action=register">Registrarse</a></li>
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
                 <li><a href="index.php?action=suplementacion">Suplementación</a></li>
+                <li><a href="index.php?action=perfil">Perfil</a></li>
                 
             </ul>
         </nav>

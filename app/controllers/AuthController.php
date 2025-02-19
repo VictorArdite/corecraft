@@ -1,25 +1,35 @@
 <?php
+
 class AuthController {
     public function login() {
-        require_once '../app/views/auth/login.php';
+        require __DIR__ . '/../views/auth/login.php';
     }
 
     public function authenticate() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $username = $_POST['username'];
-            $password = $_POST['password'];
+            // Verificar si los campos del formulario están definidos
+            if (isset($_POST['email']) && isset($_POST['password'])) {
+                $email = $_POST['email'];
+                $password = $_POST['password'];
 
-            global $conn;
-            $stmt = $conn->prepare("SELECT * FROM usuarios WHERE nombre = :username");
-            $stmt->execute(['username' => $username]);
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+                global $conn;
+                $stmt = $conn->prepare("SELECT * FROM usuarios WHERE email = :email");
+                $stmt->execute(['email' => $email]);
+                $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            if ($user && password_verify($password, $user['password'])) {
-                session_start();
-                $_SESSION['user_id'] = $user['id'];
-                header('Location: index.php?action=dashboard');
+                if ($user && password_verify($password, $user['password'])) {
+                    // Iniciar la sesión y almacenar los datos del usuario
+                    session_start();
+                    $_SESSION['user_id'] = $user['id']; // Almacenar solo el ID del usuario
+
+                    // Redirigir a la página de inicio
+                    header('Location: index.php?action=home');
+                    exit();
+                } else {
+                    echo "Usuario o contraseña incorrectos";
+                }
             } else {
-                echo "Usuario o contraseña incorrectos";
+                echo "Por favor, complete todos los campos.";
             }
         }
     }
@@ -46,7 +56,13 @@ class AuthController {
                 'goal' => $goal
             ]);
 
-            header('Location: index.php?action=login');
+            // Iniciar la sesión y almacenar el ID del usuario
+            session_start();
+            $_SESSION['user_id'] = $conn->lastInsertId();
+
+            // Redirigir a la página de inicio
+            header('Location: index.php?action=home');
+            exit();
         } else {
             require_once '../app/views/auth/register.php';
         }
@@ -56,6 +72,7 @@ class AuthController {
         session_start();
         session_destroy();
         header('Location: index.php?action=home');
+        exit();
     }
 }
 ?>

@@ -5,7 +5,7 @@ require_once '../app/controllers/AuthController.php';
 require_once '../app/controllers/DashboardController.php';
 require_once '../app/controllers/RutinaController.php';
 require_once '../app/controllers/SuplementacionController.php';
-
+require_once '../app/controllers/PerfilController.php'; // Incluir PerfilController
 
 $action = $_GET['action'] ?? 'home';
 
@@ -36,6 +36,10 @@ switch ($action) {
         break;
     case 'suplementacion':
         $controller = new SuplementacionController();
+        $controller->index();
+        break;
+    case 'perfil':
+        $controller = new PerfilController();
         $controller->index();
         break;
     case 'dashboard':
