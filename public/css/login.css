@@ -1,6 +1,6 @@
 body {
-    background: linear-gradient(to right, #6a11cb, #2575fc); /* Fondo degradado */
-    color: #fff;
+    background-color: #f4f4f4; /* Fondo de un solo color */
+    color: #333;
     font-family: Arial, sans-serif;
 }
 
@@ -73,9 +73,16 @@ nav ul li a:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .login-container button:hover {
     background-color: #555;
+    transform: translateY(-2px);
+}
+
+.login-container button:active {
+    background-color: #222;
+    transform: translateY(0);
 }
