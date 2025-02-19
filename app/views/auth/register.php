@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoreCraft - Registrarse</title>
-    <link rel="stylesheet" href="css/styles.css"> <!-- Ruta correcta al archivo CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/registro.css"> <!-- Ruta correcta al archivo CSS -->
 </head>
 <body>
     <header>
