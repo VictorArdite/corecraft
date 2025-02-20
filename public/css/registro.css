@@ -1,88 +1,101 @@
+/* Estilos específicos para la página de registro con fondo gris y recuadro ajustado */
+
 body {
-    background-color: #f4f4f4; /* Fondo de un solo color */
-    color: #333;
-    font-family: Arial, sans-serif;
+    background-color: #49494b; /* Fondo gris oscuro para la página */
+    color: #000000; /* Color de texto negro */
+    font-family: Arial, sans-serif; /* Tipografía clara */
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin: 0;
-    color: #fff;
+    margin-bottom: 20px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center;
 }
 
 nav ul li {
-    margin: 0 15px;
+    display: inline;
+    margin: 0 10px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #1d2d56; /* Azul fuerte para los enlaces */
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
 }
 
-.registro-container {
-    max-width: 400px;
-    margin: 100px auto;
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la pantalla */
     padding: 20px;
-    border-radius: 10px;
-    background-color: #fff; /* Fondo blanco para el contenedor */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    background-color: #919294; /* Fondo gris para el recuadro */
+    padding: 30px; /* Aumento el padding para darle más espacio */
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra más suave */
+    width: 100%;
+    max-width: 500px; /* Ancho máximo ajustado para hacerlo más pequeño */
+    border: 3px solid #000000; /* Borde negro más grueso */
     text-align: center;
-    color: #333;
 }
 
-.registro-container h2 {
-    margin-top: 0;
-    font-size: 2em;
-    color: #333;
+section img {
+    width: 100%; /* La imagen ocupa el 100% del ancho disponible */
+    max-width: 150px; /* Tamaño máximo de la imagen */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
 }
 
-.registro-container input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaciado entre los campos */
+}
+
+label {
+    font-weight: bold;
+    color: #000000; /* Color negro para las etiquetas */
+}
+
+input, select {
+    padding: 6px; /* Reducido padding para hacer los campos más pequeños */
+    margin-top: 10px; /* Aumento el margen superior para los inputs */
     border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px; /* Tamaño de fuente reducido para que ocupe menos espacio */
+    width: 100%; /* Los campos ocupan todo el ancho disponible */
 }
 
-.registro-container button {
-    width: 100%;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+input[type="email"], input[type="text"], input[type="password"], input[type="number"], select {
+    width: 100%; /* Asegura que los inputs y select ocupen todo el ancho */
+}
+
+button {
+    margin-top: 25px; /* Aumento el margen superior del botón */
+    padding: 15px; /* Aumento el padding para que el botón sea más grande */
+    font-size: 18px; /* Aumento el tamaño de la fuente del botón */
+    background-color: #bcc0c1; /* Fondo gris claro para el botón */
+    color: #000; /* Texto en negro */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
 }
 
-.registro-container button:hover {
-    background-color: #555;
-    transform: translateY(-2px);
-}
-
-.registro-container button:active {
-    background-color: #222;
-    transform: translateY(0);
+button:hover {
+    background-color: #000; /* Fondo negro cuando se pasa el ratón sobre el botón */
+    color: #fff; /* Texto blanco cuando el mouse está sobre el botón */
 }

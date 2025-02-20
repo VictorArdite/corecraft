@@ -8,20 +8,10 @@
     <link rel="stylesheet" href="css/registro.css"> <!-- Ruta correcta al archivo CSS -->
 </head>
 <body>
-    <header>
-        <h1>Registrarse en CoreCraft</h1>
-        <nav>
-            <ul>
-                <li><a href="index.php?action=home">Inicio</a></li>
-                <li><a href="index.php?action=login">Iniciar Sesión</a></li>
-                <li><a href="index.php?action=register">Registrarse</a></li>
-                <li><a href="index.php?action=rutinas">Rutinas</a></li>
-                <li><a href="index.php?action=suplementacion">Suplementación</a></li>
-            </ul>
-        </nav>
-    </header>
     <main>
         <section>
+              <!-- Aquí agregas la imagen -->
+              <img src="/corecraft/public/img/logo.jpg" alt="Logo o Imagen" />
             <form action="index.php?action=register" method="POST">
                 <label for="username">Usuario:</label>
                 <input type="text" id="username" name="username" required>
@@ -45,8 +35,4 @@
             </form>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 CoreCraft</p>
-    </footer>
-</body>
 </html>

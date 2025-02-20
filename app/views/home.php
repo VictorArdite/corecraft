@@ -22,14 +22,5 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section>
-            <h2>Tu camino hacia un estilo de vida saludable</h2>
-            <p>Regístrate y comienza a crear tus rutinas de ejercicio personalizadas.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 CoreCraft</p>
-    </footer>
 </body>
 </html>
