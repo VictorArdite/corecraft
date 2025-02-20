@@ -1,5 +1,48 @@
-.profile {
-    margin-top: 20px;
+body {
+    background-color: #f4f4f4; /* Fondo de un solo color */
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.profile-container {
+    max-width: 600px;
+    margin: 100px auto;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -8,8 +51,16 @@
 
 .profile h2 {
     margin-top: 0;
+    font-size: 2em;
+    color: #333;
 }
 
 .profile p {
     margin: 10px 0;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.profile-container strong {
+    color: #333;
 }

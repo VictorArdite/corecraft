@@ -21,16 +21,14 @@
         </nav>
     </header>
     <main>
-        <div class="content">
-            <div class="profile">
-                <h2>Bienvenido, <?= htmlspecialchars($user['nombre']) ?></h2>
-                <p><strong>Email:</strong> <?= htmlspecialchars($user['email']) ?></p>
-                <p><strong>Edad:</strong> <?= htmlspecialchars($user['edad']) ?></p>
-                <p><strong>Peso:</strong> <?= htmlspecialchars($user['peso']) ?> kg</p>
-                <p><strong>Altura:</strong> <?= htmlspecialchars($user['altura']) ?> cm</p>
-                <p><strong>Objetivo:</strong> <?= htmlspecialchars($user['objetivo']) ?></p>
-                <!-- Añadir más detalles del perfil aquí -->
-            </div>
+        <div class="profile-container">
+            <h2>Bienvenido, <?= htmlspecialchars($user['nombre']) ?></h2>
+            <p><strong>Email:</strong> <?= htmlspecialchars($user['email']) ?></p>
+            <p><strong>Edad:</strong> <?= htmlspecialchars($user['edad']) ?></p>
+            <p><strong>Peso:</strong> <?= htmlspecialchars($user['peso']) ?> kg</p>
+            <p><strong>Altura:</strong> <?= htmlspecialchars($user['altura']) ?> cm</p>
+            <p><strong>Objetivo:</strong> <?= htmlspecialchars($user['objetivo']) ?></p>
+            <!-- Añadir más detalles del perfil aquí -->
         </div>
     </main>
     <footer>
