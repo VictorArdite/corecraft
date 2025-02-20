@@ -10,8 +10,11 @@
 <body>
     <main>
         <section>
-              <!-- Aquí agregas la imagen -->
-              <img src="/corecraft/public/img/logo.jpg" alt="Logo o Imagen" />
+            <!-- Aquí agregas la imagen en el recuadro que debe ser clickeable -->
+            <a href="index.php?action=home">
+                <img src="/corecraft/public/img/logo.jpg" alt="Logo o Imagen" /> <!-- Logo que redirige a la página de inicio -->
+            </a>
+
             <form action="index.php?action=register" method="POST">
                 <label for="username">Usuario:</label>
                 <input type="text" id="username" name="username" required>
@@ -35,4 +38,5 @@
             </form>
         </section>
     </main>
+</body>
 </html>

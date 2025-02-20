@@ -52,7 +52,7 @@ section {
 
 section img {
     width: 100%; /* La imagen ocupa el 100% del ancho disponible */
-    max-width: 150px; /* La imagen tendrá un tamaño máximo de 250px para hacerla más pequeña */
+    max-width: 250px; /* La imagen tendrá un tamaño máximo de 250px para hacerla más pequeña */
     margin-bottom: 20px; /* Espacio debajo de la imagen */
 }
 
