@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoreCraft - Perfil</title>
-    <link rel="stylesheet" href="css/global.css"> <!-- Estilos globales -->
-    <link rel="stylesheet" href="css/perfil.css"> <!-- Estilos específicos -->
+    <!-- Agregamos un parámetro de versión para evitar la caché -->
+    <link rel="stylesheet" href="css/global.css?v=<?= time() ?>">
+    <link rel="stylesheet" href="css/perfil.css?v=<?= time() ?>">
 </head>
 <body>
     <header>
@@ -28,7 +29,6 @@
             <p><strong>Peso:</strong> <?= htmlspecialchars($user['peso']) ?> kg</p>
             <p><strong>Altura:</strong> <?= htmlspecialchars($user['altura']) ?> cm</p>
             <p><strong>Objetivo:</strong> <?= htmlspecialchars($user['objetivo']) ?></p>
-            <!-- Añadir más detalles del perfil aquí -->
         </div>
     </main>
     <footer>

@@ -19,6 +19,11 @@ class PerfilController {
         $stmt->execute(['id' => $_SESSION['user_id']]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
+        // Verificar si el usuario existe
+        if (!$user) {
+            die("Error: Usuario no encontrado.");
+        }
+
         require __DIR__ . '/../views/auth/perfil.php';
     }
 }
