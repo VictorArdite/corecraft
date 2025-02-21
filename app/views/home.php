@@ -9,7 +9,11 @@
 </head>
 <body>
     <header>
-        <h1>Bienvenido a CoreCraft</h1>
+        <div class="logo">
+            <a href="index.php?action=home">
+                <img src="img/logo.jpg" alt="CoreCraft Logo"> <!-- Asegúrate de que la ruta de la imagen sea correcta -->
+            </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.php?action=home">Inicio</a></li>
@@ -18,9 +22,41 @@
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
                 <li><a href="index.php?action=suplementacion">Suplementación</a></li>
                 <li><a href="index.php?action=perfil">Perfil</a></li>
-                
             </ul>
         </nav>
     </header>
+    <main>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="img/banca.png" alt="Banca">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/sentadilla.png" alt="Sentadilla">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/pesomuerto.png" alt="Peso Muerto">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/halterofilia.png" alt="Halterofilia">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/banca.png" alt="Banca">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/sentadilla.png" alt="Sentadilla">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/pesomuerto.png" alt="Peso Muerto">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/halterofilia.png" alt="Halterofilia">
+                </div>
+            </div>
+            <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </main>
+    <script src="js/carousel.js"></script> <!-- Ruta correcta al archivo JS -->
 </body>
 </html>

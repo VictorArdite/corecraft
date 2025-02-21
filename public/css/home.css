@@ -1,20 +1,23 @@
 body {
-    background-color: #f4f4f4; /* Fondo de un solo color */
+    background-color: #49494b; /* Fondo claro similar al de rutinas.css */
     color: #333;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px 0;
+    background-color: #333; /* Color de fondo similar al de rutinas.css */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
-header h1 {
-    font-size: 2.5em;
-    margin: 0;
-    color: #fff;
+header .logo img {
+    height: 50px; /* Ajusta el tamaño del logo según sea necesario */
 }
 
 nav ul {
@@ -22,7 +25,6 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
 }
 
 nav ul li {
@@ -30,7 +32,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #fff; /* Color de texto blanco */
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
@@ -40,39 +42,56 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-.home-container {
-    text-align: center;
-    margin-top: 100px;
-    padding: 20px;
-    background-color: #fff; /* Fondo blanco para el contenedor */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px); /* Ajustar la altura del main para centrar el carrusel */
+}
+
+.carousel {
+    position: relative;
+    max-width: 90%; /* Estirar más el carrusel de izquierda a derecha */
+    overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Fondo blanco para el carrusel */
 }
 
-.home-container h2 {
-    margin-top: 0;
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 33.33%; /* Mostrar tres elementos a la vez */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item img {
+    width: 120%;
+    height: 800px; /* Ajustar la altura de la imagen */
+    object-fit: cover; /* Asegurar que la imagen cubra el espacio sin deformarse */
+    display: block;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
     font-size: 2em;
-    color: #333;
+    z-index: 1;
 }
 
-.home-container p {
-    margin: 20px 0;
-    font-size: 1.2em;
-    color: #666;
+.carousel-control.prev {
+    left: 10px;
 }
 
-.home-container a {
-    display: inline-block;
-    margin: 10px;
-    padding: 15px 30px;
-    background-color: #333;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
-}
-
-.home-container a:hover {
-    background-color: #555;
+.carousel-control.next {
+    right: 10px;
 }
