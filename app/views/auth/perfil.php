@@ -37,6 +37,10 @@
                 <p><strong>Objetivo:</strong> <?= htmlspecialchars($user['objetivo']) ?></p>
                 <!-- Añadir más detalles del perfil aquí -->
             </div>
+            <div class="profile-actions">
+                <button>Editar Perfil</button>
+                <button>Cambiar Contraseña</button>
+            </div>
         </div>
     </main>
     <footer>

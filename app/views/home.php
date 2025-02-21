@@ -57,6 +57,19 @@
             <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
         </div>
     </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="img/logo.jpg" alt="CoreCraft Logo"> <!-- Asegúrate de que la ruta de la imagen sea correcta -->
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="img/twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <p>&copy; 2025 CoreCraft. Todos los derechos reservados.</p>
+    </footer>
     <script src="js/carousel.js"></script> <!-- Ruta correcta al archivo JS -->
 </body>
 </html>
