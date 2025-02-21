@@ -4,64 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoreCraft - Suplementación</title>
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/suplementacion.css"> <!-- Ruta correcta al archivo CSS -->
-    <style>
-        .calculator {
-            margin-top: 20px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background-color: #f9f9f9;
-        }
-        .calculator input, .calculator select {
-            margin-bottom: 10px;
-            padding: 10px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .calculator button {
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .calculator button:hover {
-            background-color: #555;
-        }
-        .result {
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background-color: #fff;
-        }
-    </style>
+    <link rel="stylesheet" href="css/global.css"> <!-- Estilos globales -->
+    <link rel="stylesheet" href="css/suplementacion.css"> <!-- Estilos específicos -->
 </head>
 <body>
     <header>
-        <h1>Consejos de Suplementación</h1>
+        <div class="logo">
+            <a href="index.php?action=home">
+                <img src="img/logo.jpg" alt="CoreCraft Logo"> <!-- Asegúrate de que la ruta de la imagen sea correcta -->
+            </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.php?action=home">Inicio</a></li>
-                <li><a href="index.php?action=login">Iniciar Sesión</a></li>
-                <li><a href="index.php?action=register">Registrarse</a></li>
+                <li><a href="index.php?action=logout">Cerrar Sesión</a></li>
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
                 <li><a href="index.php?action=suplementacion">Suplementación</a></li>
+                <li><a href="index.php?action=perfil">Perfil</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="content">
-            <h2>Consejos de Suplementación</h2>
-            <ul>
-                <li>Consejo 1: Descripción del consejo de suplementación.</li>
-                <li>Consejo 2: Descripción del consejo de suplementación.</li>
-                <li>Consejo 3: Descripción del consejo de suplementación.</li>
-                <!-- Añadir más consejos aquí -->
-            </ul>
+        <div class="content-wrapper">
+            <!-- Contenido principal (izquierda) -->
+            <div class="main-content">
+                <section class="supplement-tips">
+                    <h2>Consejos de Suplementación</h2>
+                    <ul>
+                        <li>
+                            <strong>Consejo 1: Consulta a un profesional de la salud antes de comenzar cualquier suplementación.</strong><br>
+                            Es importante asegurarse de que los suplementos sean seguros y adecuados para ti.
+                        </li>
+                        <li>
+                            <strong>Consejo 2: Elige suplementos respaldados por evidencia científica.</strong><br>
+                            Opta por suplementos con estudios científicos que respalden su eficacia y seguridad. Algunos recomendados son: proteína en polvo, creatina y cafeína. Evita productos con ingredientes no comprobados o etiquetas engañosas.
+                        </li>
+                        <li>
+                            <strong>Consejo 3: Personaliza tu suplementación según tus objetivos y necesidades.</strong><br>
+                            Considera tu tipo de entrenamiento, dieta actual y metas (ganar masa muscular, perder grasa, mejorar el rendimiento). Si es posible, consulta a un nutricionista o especialista para una guía personalizada.
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Sección de Proteína -->
+                <div class="supplement-section">
+                    <h3>Proteína en Polvo</h3>
+                    <img src="img/proteina.png" alt="Proteína en Polvo" class="supplement-img">
+                    <p>
+                        La <strong>proteína en polvo</strong> es uno de los suplementos más populares y utilizados en el mundo del fitness. Sus principales beneficios incluyen:
+                    </p>
+                    <ul>
+                        <li>Ayuda a la <strong>recuperación muscular</strong> después del entrenamiento.</li>
+                        <li>Contribuye al <strong>crecimiento y mantenimiento de la masa muscular</strong>.</li>
+                        <li>Es una fuente conveniente de proteínas, especialmente para quienes no pueden obtener suficiente proteína de alimentos sólidos.</li>
+                    </ul>
+                    <p>
+                        <strong>Recomendación:</strong> Consume entre 20-30 gramos de proteína en polvo después de tu entrenamiento para maximizar la síntesis de proteínas musculares.
+                    </p>
+                </div>
+
+                <!-- Sección de Creatina -->
+                <div class="supplement-section">
+                    <h3>Creatina</h3>
+                    <img src="img/creatina.png" alt="Creatina" class="supplement-img">
+                    <p>
+                        La <strong>creatina</strong> es un suplemento ampliamente estudiado y respaldado por la ciencia. Sus principales beneficios son:
+                    </p>
+                    <ul>
+                        <li>Aumenta la <strong>fuerza y el rendimiento</strong> en ejercicios de alta intensidad y corta duración.</li>
+                        <li>Mejora la <strong>recuperación</strong> entre series y entrenamientos.</li>
+                        <li>Puede ayudar a <strong>aumentar la masa muscular</strong> a largo plazo.</li>
+                    </ul>
+                    <p>
+                        <strong>Recomendación:</strong> Toma 3-5 gramos de creatina monohidratada al día, preferiblemente después del entrenamiento o con una comida.
+                    </p>
+                </div>
+
+                <!-- Sección de Cafeína -->
+                <div class="supplement-section">
+                    <h3>Cafeína</h3>
+                    <img src="img/cafeina.png" alt="Cafeína" class="supplement-img">
+                    <p>
+                        La <strong>cafeína</strong> es un estimulante natural que puede mejorar el rendimiento deportivo. Sus principales beneficios incluyen:
+                    </p>
+                    <ul>
+                        <li>Mejora la <strong>concentración y el enfoque</strong> durante el entrenamiento.</li>
+                        <li>Aumenta la <strong>resistencia</strong> y retrasa la fatiga.</li>
+                        <li>Puede ayudar a <strong>quemar grasa</strong> al aumentar el metabolismo.</li>
+                    </ul>
+                    <p>
+                        <strong>Recomendación:</strong> Consume 3-6 mg de cafeína por kilogramo de peso corporal aproximadamente 30-60 minutos antes del entrenamiento.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Calculadora de Calorías (derecha) -->
             <div class="calculator">
                 <h2>Calculadora de Calorías</h2>
                 <form id="calorieForm">
@@ -86,63 +123,19 @@
                         <option value="light">Ligero</option>
                         <option value="moderate">Moderado</option>
                         <option value="active">Activo</option>
-                        <option value="very_active">Muy activo</option>
+                        <option value="very_active">Muy Activo</option>
                     </select>
                     
-                    <label for="goal">Objetivo:</label>
-                    <select id="goal" name="goal" required>
-                        <option value="lose">Perder peso</option>
-                        <option value="maintain">Mantener peso</option>
-                        <option value="gain">Subir peso</option>
-                    </select>
-                    
-                    <button type="button" onclick="calculateCalories()">Calcular</button>
+                    <button type="submit">Calcular</button>
                 </form>
-                <div id="result" class="result"></div>
+                <div class="result">
+                    <!-- Aquí se mostrarán los resultados -->
+                </div>
             </div>
         </div>
     </main>
     <footer>
         <p>&copy; 2025 CoreCraft</p>
     </footer>
-    <script>
-        function calculateCalories() {
-            const weight = parseFloat(document.getElementById('weight').value);
-            const height = parseFloat(document.getElementById('height').value.replace(',', '.'));
-            const age = parseFloat(document.getElementById('age').value);
-            const gender = document.getElementById('gender').value;
-            const activity = document.getElementById('activity').value;
-            const goal = document.getElementById('goal').value;
-
-            if (isNaN(weight) || isNaN(height) || isNaN(age)) {
-                document.getElementById('result').innerHTML = "<strong style='color: red;'>Por favor, completa todos los campos correctamente.</strong>";
-                return;
-            }
-
-            let bmr = gender === 'male' 
-                ? (10 * weight + 6.25 * height - 5 * age + 5)
-                : (10 * weight + 6.25 * height - 5 * age - 161);
-
-            const activityMultipliers = {
-                'sedentary': 1.2,
-                'light': 1.375,
-                'moderate': 1.55,
-                'active': 1.725,
-                'very_active': 1.9
-            };
-
-            let calories = bmr * activityMultipliers[activity];
-
-            if (goal === 'lose') {
-                calories -= 500;
-            } else if (goal === 'gain') {
-                calories += 500;
-            }
-
-            document.getElementById('result').innerHTML = `
-                <strong>Total de calorías diarias necesarias:</strong> <span style="color: green; font-size: 1.2em;">${Math.round(calories)}</span>
-            `;
-        }
-    </script>
 </body>
 </html>

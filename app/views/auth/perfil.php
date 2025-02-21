@@ -9,7 +9,11 @@
 </head>
 <body>
     <header>
-        <h1>Perfil de Usuario</h1>
+        <div class="logo">
+            <a href="index.php?action=home">
+                <img src="img/logo.jpg" alt="CoreCraft Logo"> <!-- Asegúrate de que la ruta de la imagen sea correcta -->
+            </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.php?action=home">Inicio</a></li>
@@ -21,14 +25,18 @@
         </nav>
     </header>
     <main>
+        <div class="profile-header">
+            <h2><?= htmlspecialchars($user['nombre']) ?></h2>
+        </div>
         <div class="profile-container">
-            <h2>Bienvenido, <?= htmlspecialchars($user['nombre']) ?></h2>
-            <p><strong>Email:</strong> <?= htmlspecialchars($user['email']) ?></p>
-            <p><strong>Edad:</strong> <?= htmlspecialchars($user['edad']) ?></p>
-            <p><strong>Peso:</strong> <?= htmlspecialchars($user['peso']) ?> kg</p>
-            <p><strong>Altura:</strong> <?= htmlspecialchars($user['altura']) ?> cm</p>
-            <p><strong>Objetivo:</strong> <?= htmlspecialchars($user['objetivo']) ?></p>
-            <!-- Añadir más detalles del perfil aquí -->
+            <div class="profile-details">
+                <p><strong>Email:</strong> <?= htmlspecialchars($user['email']) ?></p>
+                <p><strong>Edad:</strong> <?= htmlspecialchars($user['edad']) ?></p>
+                <p><strong>Peso:</strong> <?= htmlspecialchars($user['peso']) ?> kg</p>
+                <p><strong>Altura:</strong> <?= htmlspecialchars($user['altura']) ?> cm</p>
+                <p><strong>Objetivo:</strong> <?= htmlspecialchars($user['objetivo']) ?></p>
+                <!-- Añadir más detalles del perfil aquí -->
+            </div>
         </div>
     </main>
     <footer>

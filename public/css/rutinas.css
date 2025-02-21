@@ -8,16 +8,17 @@ header {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-header h1 {
-    font-size: 2.5em;
-    margin: 0;
-    color: #fff;
+header .logo img {
+    height: 50px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-left: 20px;
 }
 
-nav ul {
+header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -25,59 +26,61 @@ nav ul {
     justify-content: center;
 }
 
-nav ul li {
+header nav ul li {
     margin: 0 15px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
 }
 
-nav ul li a:hover {
+header nav ul li a:hover {
     text-decoration: underline;
 }
 
 .rutinas-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 20px;
-    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Aumentar el espacio entre los recuadros */
+    padding: 40px; /* Aumentar el padding */
+    min-height: calc(100vh - 160px); /* Asegurar que ocupe al menos la altura de la pantalla menos el header */
 }
 
-.rutina {
+.rutina-card {
     background-color: #fff;
-    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    width: 300px; /* Aumentar el tamaño del recuadro */
+    height: 400px; /* Definir una altura fija para los recuadros */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.rutina h2 {
-    margin-top: 0;
-    font-size: 1.5em;
+.rutina-card img {
+    width: 100%;
+    height: 70%; /* Ajustar la altura de la imagen */
+    object-fit: cover; /* Asegurar que la imagen cubra el espacio sin deformarse */
+}
+
+.rutina-card h3 {
+    margin: 10px 0;
+    font-size: 1.5em; /* Aumentar el tamaño del texto */
     color: #333;
 }
 
-.rutina table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-.rutina th, .rutina td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-.rutina th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-}
-
-.rutina td {
-    background-color: #fff;
+.rutina-card a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
