@@ -17,7 +17,6 @@
         <nav>
             <ul>
                 <li><a href="index.php?action=home">Inicio</a></li>
-                <li><a href="index.php?action=logout">Cerrar Sesión</a></li>
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
                 <li><a href="index.php?action=suplementacion">Suplementación</a></li>
                 <li><a href="index.php?action=perfil">Perfil</a></li>
@@ -136,9 +135,6 @@
             </div>
         </div>
     </main>
-    <footer>
-        <p>&copy; 2025 CoreCraft</p>
-    </footer>
     <script src="js/calculator.js"></script> <!-- Ruta al archivo JS -->
 </body>
 </html>
