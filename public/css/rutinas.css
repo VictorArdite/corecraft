@@ -1,0 +1,86 @@
+body {
+    background-color: #49494b; /* Fondo de un solo color */
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo img {
+    height: 50px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-left: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.rutinas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Aumentar el espacio entre los recuadros */
+    padding: 40px; /* Aumentar el padding */
+    min-height: calc(100vh - 160px); /* Asegurar que ocupe al menos la altura de la pantalla menos el header */
+}
+
+.rutina-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    width: 300px; /* Aumentar el tamaño del recuadro */
+    height: 400px; /* Definir una altura fija para los recuadros */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rutina-card img {
+    width: 100%;
+    height: 70%; /* Ajustar la altura de la imagen */
+    object-fit: cover; /* Asegurar que la imagen cubra el espacio sin deformarse */
+}
+
+.rutina-card h3 {
+    margin: 10px 0;
+    font-size: 1.5em; /* Aumentar el tamaño del texto */
+    color: #333;
+}
+
+.rutina-card a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
