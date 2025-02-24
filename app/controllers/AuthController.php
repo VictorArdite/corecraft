@@ -70,8 +70,11 @@ class AuthController {
 
     public function logout() {
         session_start();
+        session_unset();
         session_destroy();
-        header('Location: index.php?action=home');
+
+        // Redirigir al usuario a la página de inicio de sesión
+        header("Location: index.php?action=login");
         exit();
     }
 }

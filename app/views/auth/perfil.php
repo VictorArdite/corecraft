@@ -35,11 +35,28 @@
                 <p><strong>Peso:</strong> <?= htmlspecialchars($user['peso']) ?> kg</p>
                 <p><strong>Altura:</strong> <?= htmlspecialchars($user['altura']) ?> cm</p>
                 <p><strong>Objetivo:</strong> <?= htmlspecialchars($user['objetivo']) ?></p>
-               
+                <!-- Añadir más detalles del perfil aquí -->
             </div>
             <div class="profile-actions">
                 <button>Editar Perfil</button>
                 <button>Cambiar Contraseña</button>
+                <a href="index.php?action=logout"><button>Cerrar Sesión</button></a>
+            </div>
+        </div>
+        <div class="achievements-container">
+            <h3>Logros</h3>
+            <div class="achievements-list">
+                <?php if (!empty($logros)): ?>
+                    <?php foreach ($logros as $logro): ?>
+                        <div class="achievement">
+                            <img src="<?= htmlspecialchars($logro['icono']) ?>" alt="<?= htmlspecialchars($logro['nombre']) ?>">
+                            <p><strong><?= htmlspecialchars($logro['nombre']) ?></strong></p>
+                            <p><?= htmlspecialchars($logro['descripcion']) ?></p>
+                        </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p>No has obtenido ningún logro todavía.</p>
+                <?php endif; ?>
             </div>
         </div>
     </main>
