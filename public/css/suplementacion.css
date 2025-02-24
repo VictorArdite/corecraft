@@ -1,0 +1,162 @@
+body {
+    background-color: #cccccf; /* Fondo de un solo color */
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo img {
+    height: 50px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-left: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-content {
+    flex: 2;
+}
+
+.supplement-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff; /* Fondo blanco para el contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    color: #333;
+}
+
+.supplement-section h3 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+.supplement-section p {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.supplement-section ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.supplement-section ul li {
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.supplement-section strong {
+    color: #333;
+}
+
+.supplement-img {
+    width: 100%;
+    height: 200px; /* Ajustar la altura de la imagen */
+    object-fit: cover; /* Asegurar que la imagen cubra el espacio sin deformarse */
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.calculator {
+    flex: 1;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff; /* Fondo blanco para el contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #333;
+    align-self: flex-start; /* Alinear la calculadora al inicio del contenedor */
+}
+
+.calculator h2 {
+    margin-top: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+.calculator input, .calculator select {
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+}
+
+.calculator button {
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calculator button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+.calculator button:active {
+    background-color: #222;
+    transform: translateY(0);
+}
+
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #333;
+    border: 1px solid #ddd;
+}
