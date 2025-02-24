@@ -17,7 +17,6 @@
         <nav>
             <ul>
                 <li><a href="index.php?action=home">Inicio</a></li>
-                <li><a href="index.php?action=logout">Cerrar Sesión</a></li>
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
                 <li><a href="index.php?action=suplementacion">Suplementación</a></li>
                 <li><a href="index.php?action=perfil">Perfil</a></li>
