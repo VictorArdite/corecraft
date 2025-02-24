@@ -58,18 +58,23 @@
         </div>
     </main>
     <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="img/logo.jpg" alt="CoreCraft Logo"> <!-- Asegúrate de que la ruta de la imagen sea correcta -->
-            </div>
-            <div class="footer-social">
-                <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="img/twitter-icon.png" alt="Twitter"></a>
-                <a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a>
-            </div>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="img/logo.jpg" alt="CoreCraft Logo">
         </div>
-        <p>&copy; 2025 CoreCraft. Todos los derechos reservados.</p>
-    </footer>
+        <div class="footer-contact">
+            <p><strong>Contacto:</strong></p>
+            <p>Email: contacto@corecraft.com</p>
+            <p>Teléfono: +34 123 456 789</p>
+        </div>
+        <div class="footer-links">
+            <a href="index.php?action=about">Sobre nosotros</a>
+            <a href="index.php?action=terms">Términos y condiciones</a>
+            <a href="index.php?action=privacy">Política de privacidad</a>
+        </div>
+    </div>
+    <p>&copy; 2025 CoreCraft. Todos los derechos reservados.</p>
+</footer>
     <script src="js/carousel.js"></script> <!-- Ruta correcta al archivo JS -->
 </body>
 </html>
