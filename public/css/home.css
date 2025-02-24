@@ -44,11 +44,29 @@ nav ul li a:hover {
 
 main {
     display: flex;
+    flex-direction: column; /* Aseguramos que el mensaje y el carrusel estén uno encima del otro */
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 100px); /* Ajustar la altura del main para centrar el carrusel */
+    height: calc(100vh - 100px); /* Ajustar la altura del main para centrar los elementos */
 }
 
+/* Estilo para el mensaje motivacional */
+.motivational-message {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #2c2c2c; /* Fondo oscuro para destacar el mensaje */
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    width: 100%; /* Asegura que el mensaje ocupe todo el ancho */
+    margin: 20px 0; /* Añadimos margen arriba y abajo para separarlo de otros elementos */
+}
+
+.motivational-message p {
+    margin: 0;
+    font-style: italic; /* Para dar un toque de énfasis */
+}
+/* Estilo del carrusel */
 .carousel {
     position: relative;
     max-width: 90%; /* Estirar más el carrusel de izquierda a derecha */
@@ -95,6 +113,7 @@ main {
     right: 10px;
 }
 
+/* Estilos del footer */
 footer {
     background-color: #1c1c1c;
     padding: 40px 20px;

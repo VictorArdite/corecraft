@@ -26,6 +26,12 @@
         </nav>
     </header>
     <main>
+        <!-- Mensaje Motivacional justo arriba del carrusel -->
+        <div class="motivational-message">
+            <p>Supera tus límites. Con dedicación, esfuerzo y constancia, tu mejor versión está más cerca de lo que imaginas.</p>
+        </div>
+
+        <!-- Carrusel de imágenes -->
         <div class="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item">
@@ -56,25 +62,33 @@
             <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
             <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
         </div>
+
+        <!-- Mensaje complementario debajo del carrusel -->
+        <div class="motivational-message">
+            <p>¡No esperes más! Empieza hoy mismo tu camino hacia el cambio. Aprovecha nuestras rutinas diseñadas especialmente para ti y tus objetivos. ¡El momento de transformar tu vida es ahora!</p>
+        </div>
     </main>
+    
+    <!-- Footer -->
     <footer>
-    <div class="footer-container">
-        <div class="footer-logo">
-            <img src="img/logo.jpg" alt="CoreCraft Logo">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="img/logo.jpg" alt="CoreCraft Logo">
+            </div>
+            <div class="footer-contact">
+                <p><strong>Contacto:</strong></p>
+                <p>Email: contacto@corecraft.com</p>
+                <p>Teléfono: +34 123 456 789</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.php?action=about">Sobre nosotros</a>
+                <a href="index.php?action=terms">Términos y condiciones</a>
+                <a href="index.php?action=privacy">Política de privacidad</a>
+            </div>
         </div>
-        <div class="footer-contact">
-            <p><strong>Contacto:</strong></p>
-            <p>Email: contacto@corecraft.com</p>
-            <p>Teléfono: +34 123 456 789</p>
-        </div>
-        <div class="footer-links">
-            <a href="index.php?action=about">Sobre nosotros</a>
-            <a href="index.php?action=terms">Términos y condiciones</a>
-            <a href="index.php?action=privacy">Política de privacidad</a>
-        </div>
-    </div>
-    <p>&copy; 2025 CoreCraft. Todos los derechos reservados.</p>
-</footer>
+        <p>&copy; 2025 CoreCraft. Todos los derechos reservados.</p>
+    </footer>
+    
     <script src="js/carousel.js"></script> <!-- Ruta correcta al archivo JS -->
 </body>
 </html>
