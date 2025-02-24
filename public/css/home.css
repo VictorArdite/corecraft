@@ -97,7 +97,7 @@ main {
 
 footer {
     background-color: #1c1c1c;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
     color: #fff;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5);
@@ -116,9 +116,17 @@ footer {
     height: 50px;
 }
 
+.footer-contact p {
+    color: #fff;
+    margin: 5px 0;
+}
+
 .footer-links {
     display: flex;
     gap: 15px;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
 }
 
 .footer-links a {
@@ -137,4 +145,9 @@ footer {
 
 .footer-social img {
     height: 30px;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 0.9em;
 }
