@@ -11,7 +11,7 @@
     <header>
         <div class="logo">
             <a href="index.php?action=home">
-                <img src="img/logo.jpg" alt="CoreCraft Logo"> <!-- Asegúrate de que la ruta de la imagen sea correcta -->
+                <img src="img/logo.jpg" alt="CoreCraft Logo"> 
             </a>
         </div>
         <nav>
@@ -139,6 +139,6 @@
     <footer>
         <p>&copy; 2025 CoreCraft</p>
     </footer>
-    <script src="js/calculator.js"></script> <!-- Ruta correcta al archivo JS -->
+    <script src="js/calculator.js"></script> <!-- Ruta al archivo JS -->
 </body>
 </html>

@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoreCraft - Inicio</title>
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/home.css"> <!-- Ruta correcta al archivo CSS -->
+    <link rel="stylesheet" href="css/home.css"> <!-- Ruta  al archivo CSS -->
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="index.php?action=home">
-                <img src="img/logo.jpg" alt="CoreCraft Logo"> <!-- Asegúrate de que la ruta de la imagen sea correcta -->
+                <img src="img/logo.jpg" alt="CoreCraft Logo"> 
             </a>
         </div>
         <nav>
@@ -89,6 +89,6 @@
         <p>&copy; 2025 CoreCraft. Todos los derechos reservados.</p>
     </footer>
     
-    <script src="js/carousel.js"></script> <!-- Ruta correcta al archivo JS -->
+    <script src="js/carousel.js"></script> <!-- Ruta al archivo JS -->
 </body>
 </html>

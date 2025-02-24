@@ -35,7 +35,7 @@
                 <p><strong>Peso:</strong> <?= htmlspecialchars($user['peso']) ?> kg</p>
                 <p><strong>Altura:</strong> <?= htmlspecialchars($user['altura']) ?> cm</p>
                 <p><strong>Objetivo:</strong> <?= htmlspecialchars($user['objetivo']) ?></p>
-                <!-- Añadir más detalles del perfil aquí -->
+               
             </div>
             <div class="profile-actions">
                 <button>Editar Perfil</button>

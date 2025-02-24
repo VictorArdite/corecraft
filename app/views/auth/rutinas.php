@@ -11,7 +11,7 @@
     <header>
         <div class="logo">
             <a href="index.php?action=home">
-                <img src="img/logo.jpg" alt="CoreCraft Logo"> <!-- Asegúrate de que la ruta de la imagen sea correcta -->
+                <img src="img/logo.jpg" alt="CoreCraft Logo"> 
             </a>
         </div>
         <nav>

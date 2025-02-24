@@ -10,7 +10,7 @@
 <body>
     <main>
         <section>
-            <!-- Aquí agregas la imagen en el recuadro que debe ser clickeable -->
+         
             <a href="index.php?action=home">
                 <img src="/corecraft/public/img/logo.jpg" alt="Logo o Imagen" /> <!-- Logo que redirige a la página de inicio -->
             </a>
