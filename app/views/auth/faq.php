@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoreCraft - FAQ</title>
+    <title>CoreCraft - Preguntas Frecuentes</title>
     <link rel="stylesheet" href="css/global.css"> <!-- Estilos globales -->
     <link rel="stylesheet" href="css/footer.css"> <!-- Estilos específicos -->
+    <link rel="stylesheet" href="css/nosotros.css"> <!-- Estilos específicos para la página Nosotros -->
 </head>
 <body>
+    <!-- Encabezado -->
     <header>
         <div class="logo">
             <a href="index.php?action=home">
-                <img src="img/logo.jpg" alt="CoreCraft Logo"> 
+                <img src="img/logo.jpg" alt="CoreCraft Logo">
             </a>
         </div>
         <nav>
@@ -23,3 +25,59 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Sección Preguntas Frecuentes -->
+    <section class="faq">
+        <div class="faq-container">
+            <h1>Preguntas Frecuentes</h1>
+
+            <div class="faq-item">
+                <h2>¿Cómo obtengo una rutina personalizada?</h2>
+                <p>Para obtener una rutina personalizada, solo tienes que completar un formulario en nuestra web con tu información básica (edad, peso, altura, días que practicas deporte, estado de forma y objetivos) y nuestro equipo diseñará una rutina ajustada a tus necesidades.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>¿Qué tipo de suplementos necesito tomar?</h2>
+                <p>La suplementación depende de tus objetivos. Si buscas aumentar masa muscular, puedes considerar suplementos de proteínas, creatina y aminoácidos. Si tu objetivo es perder peso, te recomendamos consultar con nuestro equipo para recibir recomendaciones personalizadas de acuerdo a tu dieta y rutina.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>¿Cuánto tiempo necesito entrenar cada semana?</h2>
+                <p>El tiempo recomendado depende de tus objetivos. Para mantenerte en forma, con 3 a 4 días de entrenamiento por semana es suficiente. Para perder peso o ganar músculo, podrías necesitar entrenar 4 a 6 días a la semana. Nuestro equipo ajustará tu rutina según lo que quieras lograr.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>¿Puedo cambiar mi rutina después de un tiempo?</h2>
+                <p>Sí, puedes cambiar tu rutina en cualquier momento. Si sientes que ya no estás progresando o si tus objetivos cambian, podemos hacer ajustes a tu rutina para que sigas avanzando hacia tus metas.</p>
+            </div>
+
+            <div class="faq-item">
+                <h2>¿CoreCraft ofrece entrenamientos en línea?</h2>
+                <p>Sí, ofrecemos entrenamientos en línea. Puedes acceder a tu rutina personalizada desde cualquier dispositivo y seguirla desde la comodidad de tu hogar o gimnasio. Además, te brindamos soporte online para resolver cualquier duda que puedas tener.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-secciones">
+            <div class="compania">
+                <a href="nosotros.php">Nosotros</a>
+                <a href="servicios.php">Nuestros servicios</a>
+                <a href="politica.php">Política de privacidad</a>
+            </div>
+            <div class="ayuda">
+                <a href="faq.php">Preguntas frecuentes</a>
+                <a href="contacto.php">Contacto</a>
+            </div>
+            <div class="siguenos">
+                <a href="https://www.facebook.com">Facebook</a>
+                <a href="https://www.instagram.com">Instagram</a>
+                <a href="https://twitter.com">X (Twitter)</a>
+            </div>
+        </div>
+        <p>© 2025 CoreCraft. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

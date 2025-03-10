@@ -1,21 +1,31 @@
+/* Estilos generales */
 body {
     background-color: #cccccf; /* Fondo de un solo color */
     color: #333;
     font-family: Arial, sans-serif;
 }
 
+/* Encabezado */
 header {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;  /* Esto asegura que el contenido del header esté centrado */
+}
+
+header .logo {
+    position: absolute;
+    left: 20px;
 }
 
 header .logo img {
     height: 50px; /* Ajusta el tamaño del logo según sea necesario */
-    margin-left: 20px;
+}
+
+header nav {
+    margin: 0 auto;  /* Esto centra el menú de navegación */
 }
 
 header nav ul {
@@ -23,11 +33,10 @@ header nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
 }
 
 header nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;  /* Aumenté el margen entre los elementos del menú */
 }
 
 header nav ul li a {
@@ -38,5 +47,76 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo común para las secciones de la página: Nosotros, Servicios, FAQ, Política, Contacto */
+.about-us, .faq, .privacy-policy, .contact {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    color: #333;
+}
+
+.about-container, .faq-container, .privacy-policy-container, .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-container h1, .faq-container h1, .privacy-policy-container h1, .contact-container h1 {
+    font-size: 2.5em;
+    color: #333;  /* Cambio a color negro */
+    margin-bottom: 20px;
+}
+
+.about-container h2, .faq-item h2, .privacy-policy-container h2, .contact-container h2 {
+    font-size: 2em;
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.about-container p, .faq-item p, .privacy-policy-container p, .contact-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.about-container ul, .faq-item ul, .privacy-policy-container ul, .contact-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-container ul li, .faq-item li, .privacy-policy-container li, .contact-container li {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.image-section {
+    margin-top: 40px;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
     text-decoration: underline;
 }
