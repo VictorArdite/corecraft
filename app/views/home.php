@@ -78,9 +78,14 @@
         <div class="footer-section">
             <h4>Compañía</h4>
             <div class="footer-links">
-                <a href="index.php?action=about">Nosotros</a>
-                <a href="index.php?action=services">Nuestros servicios</a>
-                <a href="index.php?action=privacy">Política de privacidad</a>
+                
+            <a href="index.php?action=nosotros">Nosotros</a>
+
+
+            <a href="index.php?action=services">Nuestros servicios</a>
+
+            <a href="index.php?action=privacy">Política de privacidad</a>
+
             </div>
         </div>
 
@@ -88,7 +93,9 @@
         <div class="footer-section">
             <h4>Ayuda</h4>
             <div class="footer-links">
-                <a href="index.php?action=faq">Preguntas</a>
+            <a href="index.php?action=faq">Preguntas frecuentes</a>
+            <a href="index.php?action=contact">Contacto</a>
+
             </div>
         </div>
 
