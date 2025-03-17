@@ -44,7 +44,7 @@
             <ul>
                 <li><strong>Teléfono:</strong> +34 123 456 789</li>
                 <li><strong>Correo Electrónico:</strong> <a href="mailto:contacto@corecraft.com">corecraft.fv@gmail.com</a></li>
-                <li><strong>Dirección:</strong> Calle Clot, 123, Barcelona, España</li>
+                <li><strong>Dirección:</strong> Calle Clot, 123, Barcelona,España</li>
             </ul>
 
             <!-- Mapa de Google Maps -->
