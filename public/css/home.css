@@ -148,7 +148,7 @@ main {
 
 /* Estilos del footer */
 footer {
-    background-color: #1c1c1c;
+    background-color: #333;
     padding: 40px 20px;
     text-align: center;
     color: #fff;
@@ -158,44 +158,51 @@ footer {
 .footer-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.footer-logo img {
-    height: 150px;
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    text-align: left;
 }
 
-.footer-contact p {
+.footer-section h4 {
+    font-size: 1.2em;
     color: #fff;
-    margin: 5px 0;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #00bcd4; /* Línea azul debajo del título */
+    padding-bottom: 5px;
 }
 
 .footer-links {
     display: flex;
-    gap: 15px;
-    justify-content: center;
-    width: 100%;
-    margin: 10px 0;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .footer-links a {
-    color: #fff;
+    color: #ccc; /* Gris/blanco */
     text-decoration: none;
     font-weight: bold;
+    font-size: 1em;
+    transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    text-decoration: underline;
+    color: #fff; /* Cambia a blanco cuando se pasa el ratón */
 }
 
-.footer-social a {
-    margin: 0 10px;
+.footer-social {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
 }
 
-.footer-social img {
+.footer-social a img {
     height: 30px;
 }
 
