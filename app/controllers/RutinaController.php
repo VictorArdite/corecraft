@@ -1,7 +1,9 @@
 <?php
+require_once __DIR__ . '/../models/Rutina.php';
 
 class RutinaController {
     private $rutinas;
+    private $rutinaModel;
 
     public function __construct() {
         $this->rutinas = [
@@ -284,6 +286,7 @@ class RutinaController {
                 ],
             ],
         ];
+        $this->rutinaModel = new Rutina();
     }
 
     public function index() {
@@ -294,6 +297,36 @@ class RutinaController {
     public function verRutinaPorNombre($nombre) {
         $rutina = $this->rutinas[$nombre] ?? null;
         require __DIR__ . '/../views/rutina_detalle.php';
+    }
+
+    public function completarRutina() {
+        // Iniciar la sesión si no está iniciada
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        // Verificar si el usuario está logueado
+        if (!isset($_SESSION['user_id'])) {
+            header('Location: index.php?action=login');
+            exit();
+        }
+
+        // Verificar si se recibió el ID de la rutina
+        if (!isset($_POST['rutina_id'])) {
+            header('Location: index.php?action=rutinas&error=rutina_no_valida');
+            exit();
+        }
+
+        $usuarioId = $_SESSION['user_id'];
+        $rutinaId = $_POST['rutina_id'];
+
+        // Completar la rutina y verificar logros
+        if ($this->rutinaModel->completarRutina($usuarioId, $rutinaId)) {
+            header('Location: index.php?action=rutinas&success=rutina_completada');
+        } else {
+            header('Location: index.php?action=rutinas&error=error_completar');
+        }
+        exit();
     }
 }
 ?>
