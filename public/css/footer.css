@@ -1,0 +1,289 @@
+/* Estilos generales */
+body {
+    background-color: #cccccf; /* Fondo de un solo color */
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Encabezado */
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* Esto asegura que el contenido del header esté centrado */
+}
+
+header .logo {
+    position: absolute;
+    left: 20px;
+}
+
+header .logo img {
+    height: 50px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+header nav {
+    margin: 0 auto;  /* Esto centra el menú de navegación */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 20px;  /* Aumenté el margen entre los elementos del menú */
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Secciones comunes: Nosotros, Servicios, FAQ, Política, Contacto */
+.about-us, .faq, .privacy-policy, .contact {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    color: #333;
+}
+
+.about-container, .faq-container, .privacy-policy-container, .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-container h1, .faq-container h1, .privacy-policy-container h1, .contact-container h1 {
+    font-size: 2.5em;
+    color: #333;  /* Cambio a color negro */
+    margin-bottom: 20px;
+}
+
+.about-container h2, .faq-item h2, .privacy-policy-container h2, .contact-container h2 {
+    font-size: 2em;
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.about-container p, .faq-item p, .privacy-policy-container p, .contact-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+.about-container ul, .faq-item ul, .privacy-policy-container ul, .contact-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-container ul li, .faq-item li, .privacy-policy-container li, .contact-container li {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.image-section {
+    margin-top: 40px;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #444, #222);
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Contenedor del footer */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/* Secciones del footer */
+.footer-section {
+    margin: 20px;
+    flex: 1 1 300px;
+    text-align: left;
+}
+
+.footer-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    position: relative;
+    color: #fff;  /* Asegura que los títulos no sean azules */
+}
+
+/* Línea separadora debajo de los títulos */
+.footer-section h4::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #00bcd4; /* Azul */
+    margin-top: 5px;
+}
+
+/* Contenedor de los enlaces */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Enlaces en el footer */
+.footer-links a {
+    color: #ccc; /* Gris casi blanco */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff; /* Blanco al pasar el mouse */
+}
+
+/* Estilo del texto inferior */
+footer p {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+/* Estilo para h3 en el contenedor de la política de privacidad */
+.privacy-policy-container h3 {
+    font-size: 2em;
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   SOBRE NOSOTROS (Hero y tarjetas)
+   ========================= */
+
+   .about-us .section-title {
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.about-us .section-title h1 {
+    font-size: 4em; /* Cambia este valor para hacerlo más grande */
+    color: #142e52
+}
+
+/* Hero principal */
+.about-us .hero-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Reducido de 400px a 300px */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-us .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Muestra la imagen completa sin recortes */
+    filter: brightness(0.7);
+}
+
+
+/* Texto superpuesto en el hero */
+.about-us .hero-text {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    /* Centra el texto vertical y horizontalmente en la imagen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-us .hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.about-us .hero-text p {
+    font-size: 1.3em;
+}
+
+/* Descripción de la empresa */
+.about-us .description-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.about-us .description-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-us .description-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px; /* Limita el ancho para mayor legibilidad */
+}
+
+/* Sección de características (tarjetas) */
+.about-us .features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.about-us .feature {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    flex: 1 1 300px;
+    max-width: 350px;
+    text-align: center;
+    padding: 20px;
+}
+
+.about-us .feature img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.about-us .feature h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.about-us .feature p {
+    font-size: 1em;
+    line-height: 1.4;
+}

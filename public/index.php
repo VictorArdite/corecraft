@@ -53,5 +53,36 @@ switch ($action) {
     default:
         echo "Página no encontrada";
         break;
+    case 'nosotros':
+            require_once '../app/controllers/NosotrosController.php';
+            $controller = new NosotrosController();
+            $controller->index();
+            break;
+        
+    case 'services':
+            require_once '../app/controllers/ServiciosController.php';
+            $controller = new ServiciosController();
+            $controller->index();
+        break;
+    case 'privacy':
+            require_once '../app/controllers/PoliticaController.php';
+            $controller = new PoliticaController();
+            $controller->index();
+            break;
+    case 'faq':
+                require_once '../app/controllers/FaqController.php';
+                $controller = new FaqController();
+                $controller->index();
+                break;
+    case 'contact':
+                    require_once '../app/controllers/ContactoController.php';
+                    $controller = new ContactoController();
+                    $controller->index();
+                    break;
+                
+            
+        
+            
+            
 }
 ?>

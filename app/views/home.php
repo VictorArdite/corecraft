@@ -71,25 +71,48 @@
         </div>
     </main>
     
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-logo">
-                <img src="img/logo.jpg" alt="CoreCraft Logo">
-            </div>
-            <div class="footer-contact">
-                <p><strong>Contacto:</strong></p>
-                <p>Email: contacto@corecraft.com</p>
-                <p>Teléfono: +34 123 456 789</p>
-            </div>
+ <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <!-- Apartado Compañía -->
+        <div class="footer-section">
+            <h4>Compañía</h4>
             <div class="footer-links">
-                <a href="index.php?action=about">Sobre nosotros</a>
-                <a href="index.php?action=terms">Términos y condiciones</a>
-                <a href="index.php?action=privacy">Política de privacidad</a>
+                
+            <a href="index.php?action=nosotros">Nosotros</a>
+
+
+            <a href="index.php?action=services">Nuestros servicios</a>
+
+            <a href="index.php?action=privacy">Política de privacidad</a>
+
             </div>
         </div>
-        <p>&copy; 2025 CoreCraft. Todos los derechos reservados.</p>
-    </footer>
+
+        <!-- Apartado Ayuda -->
+        <div class="footer-section">
+            <h4>Ayuda</h4>
+            <div class="footer-links">
+            <a href="index.php?action=faq">Preguntas frecuentes</a>
+            <a href="index.php?action=contact">Contacto</a>
+
+            </div>
+        </div>
+
+        <!-- Apartado Síguenos -->
+        <div class="footer-section">
+            <h4>Síguenos</h4>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/profile.php?id=61574264483708" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/corecraft__/" target="_blank"><img src="img/instagram.jpg" alt="Instagram"></a>
+                <a href="https://x.com/Corecraft__" target="_blank"><img src="img/twitter.jpeg" alt="Twitter"></a>
+            </div>
+        </div>
+    </div>
+    <p>&copy; 2025 CoreCraft. Todos los derechos reservados.</p>
+</footer>
+
+
     
     <script src="js/carousel.js"></script> <!-- Ruta al archivo JS -->
 </body>
