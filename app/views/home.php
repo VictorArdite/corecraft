@@ -103,9 +103,9 @@
         <div class="footer-section">
             <h4>Síguenos</h4>
             <div class="footer-social">
-                <a href="https://facebook.com" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
-                <a href="https://instagram.com" target="_blank"><img src="img/instagram.jpg" alt="Instagram"></a>
-                <a href="https://twitter.com" target="_blank"><img src="img/twitter.jpeg" alt="Twitter"></a>
+                <a href="https://www.facebook.com/profile.php?id=61574264483708" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/corecraft__/" target="_blank"><img src="img/instagram.jpg" alt="Instagram"></a>
+                <a href="https://x.com/Corecraft__" target="_blank"><img src="img/twitter.jpeg" alt="Twitter"></a>
             </div>
         </div>
     </div>

@@ -47,25 +47,34 @@
         
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-secciones">
-            <div class="compania">
-                <a href="nosotros.php">Nosotros</a>
-                <a href="servicios.php">Nuestros servicios</a>
-                <a href="politica.php">Política de privacidad</a>
-            </div>
-            <div class="ayuda">
-                <a href="faq.php">Preguntas frecuentes</a>
-                <a href="contacto.php">Contacto</a>
-            </div>
-            <div class="siguenos">
-                <a href="https://www.facebook.com">Facebook</a>
-                <a href="https://www.instagram.com">Instagram</a>
-                <a href="https://twitter.com">X (Twitter)</a>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+        <!-- Apartado Compañía -->
+        <div class="footer-section">
+            <h4>Compañía</h4>
+            <div class="footer-links">
+                
+            <a href="index.php?action=nosotros">Nosotros</a>
+
+
+            <a href="index.php?action=services">Nuestros servicios</a>
+
+            <a href="index.php?action=privacy">Política de privacidad</a>
+
             </div>
         </div>
-        <p>© 2025 CoreCraft. Todos los derechos reservados.</p>
-    </footer>
+
+        <!-- Apartado Ayuda -->
+        <div class="footer-section">
+            <h4>Ayuda</h4>
+            <div class="footer-links">
+            <a href="index.php?action=faq">Preguntas frecuentes</a>
+            <a href="index.php?action=contact">Contacto</a>
+
+            </div>
+        </div>
+
+</footer>
 </body>
 </html>

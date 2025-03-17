@@ -103,20 +103,72 @@ header nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para el footer */
+/* Footer */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-footer a {
+    background: linear-gradient(135deg, #444, #222);
     color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
 }
 
-footer a:hover {
-    text-decoration: underline;
+/* Contenedor del footer */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
 }
+
+/* Secciones del footer */
+.footer-section {
+    margin: 20px;
+    flex: 1 1 300px;
+    text-align: left;
+}
+
+.footer-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    position: relative;
+    color: #fff;  /* Agregado para que los títulos no sean azules */
+}
+
+
+/* Línea separadora debajo de los títulos */
+.footer-section h4::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #00bcd4; /* Azul */
+    margin-top: 5px;
+}
+/* Contenedor de los enlaces */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Enlaces en el footer */
+.footer-links a {
+    color: #ccc; /* Gris casi blanco */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff; /* Blanco al pasar el mouse */
+}
+
+/* Estilo del texto inferior */
+footer p {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+
