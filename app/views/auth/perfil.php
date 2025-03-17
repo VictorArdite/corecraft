@@ -44,7 +44,7 @@
                     <div class="stat-card">
                         <div class="stat-icon">🎯</div>
                         <div class="stat-info">
-                            <h3>Objetivo</h3>
+                            <h3>Objetivo a cumplir</h3>
                             <p><?php echo ucfirst($user['objetivo']); ?></p>
                         </div>
                     </div>
