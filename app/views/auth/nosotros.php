@@ -26,26 +26,59 @@
         </nav>
     </header>
 
-    <!-- Sección Nosotros -->
-    <section class="about-us">
-        <div class="about-container">
-            <h1>Sobre CoreCraft</h1>
-            <p>En CoreCraft, creemos que cada persona es única, y por eso nuestras rutinas de gimnasio son personalizadas para adaptarse a tus necesidades y objetivos específicos. Nuestro enfoque está en brindarte un entrenamiento eficiente y saludable que te permita alcanzar tu mejor versión.</p>
-            <p>Además, sabemos lo importante que es la suplementación para lograr los mejores resultados, por lo que ofrecemos asesoramiento personalizado sobre los productos que mejor complementan tu rutina. Nuestro equipo de expertos está comprometido a guiarte en cada paso de tu camino hacia una vida más saludable y activa.</p>
+   
+   <!-- Sección "Sobre Nosotros" -->
+   <section class="about-us">
+        <!-- Hero principal: imagen de fondo con texto superpuesto -->
+        <div class="section-title">
+        <h1>Sobre Nosotros</h1>
+    </div>
+        <div class="hero-container">
+            <!-- Sugerencia: utiliza una imagen de alta calidad que transmita energía y motivación, por ejemplo, una imagen de personas entrenando en un gimnasio o al aire libre -->
+            <img src="img/principal.jpg" alt="Imagen principal de CoreCraft" class="hero-image">
 
-            <h2>Nuestro Enfoque</h2>
-            <p>CoreCraft se basa en un enfoque integral, que combina ejercicio físico, nutrición y suplementos para asegurar que cada miembro alcance sus metas de forma eficiente y sostenible. Ya sea que quieras perder peso, ganar músculo o mejorar tu rendimiento deportivo, tenemos la rutina perfecta para ti.</p>
+        </div>
 
-            <h2>Por qué elegir CoreCraft</h2>
-            <ul>
-                <li><strong>Rutinas Personalizadas:</strong> Adaptadas a tus necesidades y objetivos.</li>
-                <li><strong>Asesoramiento Nutricional:</strong> Guiamos tu dieta y suplementación para que los resultados sean los mejores.</li>
-                <li><strong>Experiencia:</strong> Un equipo de expertos en fitness y nutrición a tu disposición.</li>
-                <li><strong>Resultados Garantizados:</strong> Nuestro enfoque te asegura progreso continuo en tu entrenamiento.</li>
-            </ul>
+        <!-- Bloque de descripción general -->
+        <div class="description-container">
+            <h2>Descripción de la empresa</h2>
+            <p>
+                CoreCraft es una empresa líder en rutinas de fitness, planes de suplementación y seguimiento personalizado. Nuestro objetivo es ayudar a las personas a alcanzar sus metas de salud y bienestar 
+            </p>
+        </div>
 
-        
+        <!-- Bloque de "tarjetas" o columnas informativas -->
+        <div class="features-container">
+            <!-- Tarjeta "Sobre nosotros" -->
+            <div class="feature">
+            <img src="img/sobre.jpg" alt="Sobre nosotros">
+
+                <h3>Sobre nosotros</h3>
+                <p>
+                En CoreCraft vamos más allá de ser una empresa de fitness. Nos especializamos en desarrollar rutinas de gimnasio personalizadas y en ofrecer información precisa sobre suplementación, todo respaldado por un equipo de expertos comprometidos con la innovación y la excelencia.
+                </p>
+            </div>
+            <!-- Tarjeta "Objetivos" (antes Servicio integral) -->
+            <div class="feature">
+            <img src="img/objetivos.jpg" alt="Objetivos">
+
+                <h3>Objetivos</h3>
+                <p>
+                Nuestro objetivo es liderar el sector mediante soluciones innovadoras y un enfoque en la mejora continua, consolidando nuestra presencia en el mercado.
+                </p>
+            </div>
+            <!-- Tarjeta "Metas" (antes Sostenibilidad) -->
+            <div class="feature">
+            <img src="img/metas.png" alt="Metas">
+
+                <h3>Metas</h3>
+                <p>
+                Las metas de CoreCraft se centran en alcanzar un crecimiento sostenible y potenciar el desarrollo de proyectos vanguardistas que marcan tendencia.
+                </p>
+            </div>
+        </div>
     </section>
+
 
   <!-- Footer -->
   <footer>

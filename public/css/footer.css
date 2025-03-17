@@ -50,7 +50,7 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Estilo común para las secciones de la página: Nosotros, Servicios, FAQ, Política, Contacto */
+/* Secciones comunes: Nosotros, Servicios, FAQ, Política, Contacto */
 .about-us, .faq, .privacy-policy, .contact {
     background-color: #f8f8f8;
     padding: 40px 20px;
@@ -133,9 +133,8 @@ footer {
     font-size: 1.2em;
     margin-bottom: 15px;
     position: relative;
-    color: #fff;  /* Agregado para que los títulos no sean azules */
+    color: #fff;  /* Asegura que los títulos no sean azules */
 }
-
 
 /* Línea separadora debajo de los títulos */
 .footer-section h4::after {
@@ -146,6 +145,7 @@ footer {
     background: #00bcd4; /* Azul */
     margin-top: 5px;
 }
+
 /* Contenedor de los enlaces */
 .footer-links {
     display: flex;
@@ -171,4 +171,119 @@ footer p {
     color: #ccc;
 }
 
+/* Estilo para h3 en el contenedor de la política de privacidad */
+.privacy-policy-container h3 {
+    font-size: 2em;
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
 
+/* =========================
+   SOBRE NOSOTROS (Hero y tarjetas)
+   ========================= */
+
+   .about-us .section-title {
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.about-us .section-title h1 {
+    font-size: 4em; /* Cambia este valor para hacerlo más grande */
+    color: #142e52
+}
+
+/* Hero principal */
+.about-us .hero-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Reducido de 400px a 300px */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-us .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Muestra la imagen completa sin recortes */
+    filter: brightness(0.7);
+}
+
+
+/* Texto superpuesto en el hero */
+.about-us .hero-text {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    /* Centra el texto vertical y horizontalmente en la imagen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-us .hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.about-us .hero-text p {
+    font-size: 1.3em;
+}
+
+/* Descripción de la empresa */
+.about-us .description-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.about-us .description-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-us .description-container p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px; /* Limita el ancho para mayor legibilidad */
+}
+
+/* Sección de características (tarjetas) */
+.about-us .features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.about-us .feature {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    flex: 1 1 300px;
+    max-width: 350px;
+    text-align: center;
+    padding: 20px;
+}
+
+.about-us .feature img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.about-us .feature h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.about-us .feature p {
+    font-size: 1em;
+    line-height: 1.4;
+}
