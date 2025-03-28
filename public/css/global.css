@@ -15,6 +15,38 @@ body {
     padding: 0;
 }
 
+/* Header */
+header {
+    background-color: #142e52;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
 /* Encabezados */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Arial', sans-serif;

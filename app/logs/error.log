@@ -1,0 +1,180 @@
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "peso_objetivo" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 183
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 200
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 202
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 213
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 200
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 202
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 213
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 200
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 202
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 213
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 200
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 202
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 213
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 200
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 202
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 213
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 200
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 202
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 213
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 200
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 202
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 213
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 200
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 202
+[13-Mar-2025 10:00:21 Europe/Madrid] PHP Warning:  Undefined array key "obtenido" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 213
+[13-Mar-2025 10:00:47 Europe/Madrid] PHP Warning:  Undefined array key "peso_objetivo" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 183
+[13-Mar-2025 10:01:13 Europe/Madrid] PHP Warning:  Undefined array key "peso_objetivo" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 183
+[13-Mar-2025 10:01:14 Europe/Madrid] PHP Warning:  Undefined array key "peso_objetivo" in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 183
+[13-Mar-2025 22:47:57 Europe/Madrid] Error de conexión: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[13-Mar-2025 22:48:21 Europe/Madrid] Intento de login - Email: aa@gmail.com
+[13-Mar-2025 22:48:21 Europe/Madrid] Usuario encontrado: Sí
+[13-Mar-2025 22:48:21 Europe/Madrid] Verificando contraseña para usuario: aa@gmail.com
+[13-Mar-2025 22:48:21 Europe/Madrid] Contraseña válida: Sí
+[13-Mar-2025 22:48:21 Europe/Madrid] Sesión iniciada para usuario: aa@gmail.com
+[13-Mar-2025 22:48:21 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 4
+    [user_name] => victor
+    [user_email] => aa@gmail.com
+    [user_edad] => 23
+    [user_peso] => 56.00
+    [user_altura] => 124.00
+    [user_objetivo] => 
+    [authenticated] => 1
+)
+
+[13-Mar-2025 23:48:23 Europe/Madrid] Intento de login - Email: aa@gmail.com
+[13-Mar-2025 23:48:23 Europe/Madrid] Usuario encontrado: Sí
+[13-Mar-2025 23:48:23 Europe/Madrid] Verificando contraseña para usuario: aa@gmail.com
+[13-Mar-2025 23:48:23 Europe/Madrid] Contraseña válida: Sí
+[13-Mar-2025 23:48:23 Europe/Madrid] Sesión iniciada para usuario: aa@gmail.com
+[13-Mar-2025 23:48:23 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 4
+    [user_name] => victor
+    [user_email] => aa@gmail.com
+    [user_edad] => 23
+    [user_peso] => 56.00
+    [user_altura] => 124.00
+    [user_objetivo] => 
+    [authenticated] => 1
+)
+
+[25-Mar-2025 10:57:31 Europe/Madrid] Intento de login - Email: ar@gmail.com
+[25-Mar-2025 10:57:31 Europe/Madrid] Usuario encontrado: No
+[25-Mar-2025 10:57:31 Europe/Madrid] Credenciales inválidas
+[25-Mar-2025 10:57:34 Europe/Madrid] Intento de login - Email: aa@gmail.com
+[25-Mar-2025 10:57:34 Europe/Madrid] Usuario encontrado: Sí
+[25-Mar-2025 10:57:34 Europe/Madrid] Verificando contraseña para usuario: aa@gmail.com
+[25-Mar-2025 10:57:34 Europe/Madrid] Contraseña válida: No
+[25-Mar-2025 10:57:34 Europe/Madrid] Credenciales inválidas
+[25-Mar-2025 10:57:36 Europe/Madrid] Intento de login - Email: admin@playhub.com
+[25-Mar-2025 10:57:36 Europe/Madrid] Usuario encontrado: No
+[25-Mar-2025 10:57:36 Europe/Madrid] Credenciales inválidas
+[25-Mar-2025 10:58:05 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[25-Mar-2025 10:58:05 Europe/Madrid] Usuario encontrado: Sí
+[25-Mar-2025 10:58:05 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[25-Mar-2025 10:58:05 Europe/Madrid] Contraseña válida: Sí
+[25-Mar-2025 10:58:05 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[25-Mar-2025 10:58:05 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 34.00
+    [user_altura] => 214.00
+    [user_objetivo] => 
+    [authenticated] => 1
+)
+
+[25-Mar-2025 11:05:39 Europe/Madrid] PHP Warning:  require_once(D:\Xaamp\htdocs\corecraft\app\views/../../../public/config/config.php): Failed to open stream: No such file or directory in D:\Xaamp\htdocs\corecraft\app\views\rutina_personalizada.php on line 1
+[25-Mar-2025 11:05:39 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\Xaamp\htdocs\corecraft\app\views/../../../public/config/config.php' (include_path='D:\Xaamp\php\PEAR') in D:\Xaamp\htdocs\corecraft\app\views\rutina_personalizada.php:1
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\RutinaPersonalizadaController.php(25): require()
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(63): RutinaPersonalizadaController->mostrarFormulario()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\views\rutina_personalizada.php on line 1
+[25-Mar-2025 11:10:04 Europe/Madrid] PHP Fatal error:  Uncaught Error: Call to undefined method Logro::asignarLogro() in D:\Xaamp\htdocs\corecraft\app\controllers\RutinaPersonalizadaController.php:72
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\public\index.php(67): RutinaPersonalizadaController->guardarRutina()
+#1 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\controllers\RutinaPersonalizadaController.php on line 72
+[25-Mar-2025 11:10:46 Europe/Madrid] PHP Warning:  require_once(D:\Xaamp\htdocs\corecraft\app\views\auth/../../public/config/config.php): Failed to open stream: No such file or directory in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 1
+[25-Mar-2025 11:10:46 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\Xaamp\htdocs\corecraft\app\views\auth/../../public/config/config.php' (include_path='D:\Xaamp\php\PEAR') in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php:1
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\PerfilController.php(61): require()
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(55): PerfilController->index()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\views\auth\perfil.php on line 1
+[25-Mar-2025 11:14:31 Europe/Madrid] PHP Warning:  require_once(D:\Xaamp\htdocs\corecraft\app\views/../../../public/config/config.php): Failed to open stream: No such file or directory in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 1
+[25-Mar-2025 11:14:31 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\Xaamp\htdocs\corecraft\app\views/../../../public/config/config.php' (include_path='D:\Xaamp\php\PEAR') in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php:1
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\RutinaPersonalizadaController.php(47): require_once()
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(71): RutinaPersonalizadaController->mostrarMisRutinas()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 1
+[25-Mar-2025 11:14:40 Europe/Madrid] PHP Warning:  require_once(D:\Xaamp\htdocs\corecraft\app\views/../../../public/config/config.php): Failed to open stream: No such file or directory in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 1
+[25-Mar-2025 11:14:40 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\Xaamp\htdocs\corecraft\app\views/../../../public/config/config.php' (include_path='D:\Xaamp\php\PEAR') in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php:1
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\RutinaPersonalizadaController.php(47): require_once()
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(71): RutinaPersonalizadaController->mostrarMisRutinas()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 1
+[25-Mar-2025 11:15:30 Europe/Madrid] PHP Warning:  require_once(D:\Xaamp\htdocs\corecraft\app\views/../../../public/config/config.php): Failed to open stream: No such file or directory in D:\Xaamp\htdocs\corecraft\app\views\ver_rutina.php on line 1
+[25-Mar-2025 11:15:30 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\Xaamp\htdocs\corecraft\app\views/../../../public/config/config.php' (include_path='D:\Xaamp\php\PEAR') in D:\Xaamp\htdocs\corecraft\app\views\ver_rutina.php:1
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\RutinaPersonalizadaController.php(82): require_once()
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(77): RutinaPersonalizadaController->verRutina('2')
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\views\ver_rutina.php on line 1
+[25-Mar-2025 11:36:12 Europe/Madrid] PHP Warning:  Undefined array key "ejercicios" in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 51
+[25-Mar-2025 11:36:12 Europe/Madrid] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php:51
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\RutinaPersonalizadaController.php(47): require_once()
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(71): RutinaPersonalizadaController->mostrarMisRutinas()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 51
+[25-Mar-2025 11:36:13 Europe/Madrid] PHP Warning:  Undefined array key "ejercicios" in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 51
+[25-Mar-2025 11:36:13 Europe/Madrid] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php:51
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\RutinaPersonalizadaController.php(47): require_once()
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(71): RutinaPersonalizadaController->mostrarMisRutinas()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 51
+[25-Mar-2025 11:36:18 Europe/Madrid] PHP Warning:  Undefined array key "ejercicios" in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 51
+[25-Mar-2025 11:36:18 Europe/Madrid] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php:51
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\RutinaPersonalizadaController.php(47): require_once()
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(71): RutinaPersonalizadaController->mostrarMisRutinas()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 51
+[25-Mar-2025 11:36:26 Europe/Madrid] PHP Warning:  Undefined array key "ejercicios" in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 51
+[25-Mar-2025 11:36:26 Europe/Madrid] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php:51
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\RutinaPersonalizadaController.php(47): require_once()
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(71): RutinaPersonalizadaController->mostrarMisRutinas()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 51
+[25-Mar-2025 11:36:33 Europe/Madrid] PHP Warning:  Undefined array key "ejercicios" in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 51
+[25-Mar-2025 11:36:33 Europe/Madrid] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php:51
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\RutinaPersonalizadaController.php(47): require_once()
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(71): RutinaPersonalizadaController->mostrarMisRutinas()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 51
+[25-Mar-2025 11:36:38 Europe/Madrid] PHP Warning:  Undefined array key "ejercicios" in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 51
+[25-Mar-2025 11:36:38 Europe/Madrid] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php:51
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\RutinaPersonalizadaController.php(47): require_once()
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(71): RutinaPersonalizadaController->mostrarMisRutinas()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 51
+[25-Mar-2025 11:36:43 Europe/Madrid] PHP Warning:  Undefined array key "ejercicios" in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 51
+[25-Mar-2025 11:36:43 Europe/Madrid] PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php:51
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\RutinaPersonalizadaController.php(47): require_once()
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(71): RutinaPersonalizadaController->mostrarMisRutinas()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 51
