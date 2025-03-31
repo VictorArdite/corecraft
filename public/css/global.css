@@ -9,7 +9,7 @@
 body {
     font-family: 'Arial', sans-serif; /* Tipografía básica */
     line-height: 1.6; /* Mejor legibilidad entre líneas */
-    background-color: #1a1a1a; /* Fondo oscuro */
+    background-color: #49494b; /* Fondo oscuro similar al de Epic Games */
     color: #fff; /* Texto blanco */
     margin: 0;
     padding: 0;
@@ -17,12 +17,13 @@ body {
 
 /* Header */
 header {
-    background-color: #142e52;
-    padding: 1rem 2rem;
+    background-color: #1c1c1c;
+    padding: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .logo img {
@@ -30,34 +31,73 @@ header {
     width: auto;
 }
 
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
 nav ul {
     display: flex;
     gap: 2rem;
     list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 0 15px;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bold;
+    font-size: 1.1em;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #ffd700;
+    text-decoration: underline;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-button {
+    padding: 12px 25px;
+    background-color: #bcc0c1;
+    color: #000;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.auth-button:hover {
+    background-color: #000;
+    color: #fff;
 }
 
 /* Encabezados */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Arial', sans-serif;
     font-weight: bold;
-    color: #142e52; /* Color dorado para encabezados */
+    color: #fff;
     margin-bottom: 15px;
 }
 
 /* Estilos de los enlaces */
 a {
-    color: #142e52;
+    color: #fff;
     text-decoration: none;
 }
 

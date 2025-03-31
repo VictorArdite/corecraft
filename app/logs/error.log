@@ -178,3 +178,42 @@ Stack trace:
 #1 D:\Xaamp\htdocs\corecraft\public\index.php(71): RutinaPersonalizadaController->mostrarMisRutinas()
 #2 {main}
   thrown in D:\Xaamp\htdocs\corecraft\app\views\mis_rutinas.php on line 51
+[29-Mar-2025 10:32:24 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[29-Mar-2025 10:32:24 Europe/Madrid] Usuario encontrado: Sí
+[29-Mar-2025 10:32:24 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[29-Mar-2025 10:32:24 Europe/Madrid] Contraseña válida: No
+[29-Mar-2025 10:32:24 Europe/Madrid] Credenciales inválidas
+[29-Mar-2025 10:32:58 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[29-Mar-2025 10:32:58 Europe/Madrid] Usuario encontrado: Sí
+[29-Mar-2025 10:32:58 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[29-Mar-2025 10:32:58 Europe/Madrid] Contraseña válida: Sí
+[29-Mar-2025 10:32:58 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[29-Mar-2025 10:32:58 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 34.00
+    [user_altura] => 214.00
+    [user_objetivo] => 
+    [authenticated] => 1
+)
+
+[31-Mar-2025 15:20:55 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[31-Mar-2025 15:20:55 Europe/Madrid] Usuario encontrado: Sí
+[31-Mar-2025 15:20:55 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[31-Mar-2025 15:20:55 Europe/Madrid] Contraseña válida: Sí
+[31-Mar-2025 15:20:55 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[31-Mar-2025 15:20:55 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 34.00
+    [user_altura] => 214.00
+    [user_objetivo] => 
+    [authenticated] => 1
+)
+

@@ -107,6 +107,9 @@ switch ($action) {
         $controller = new RutinaPersonalizadaController();
         $controller->borrarRutina();
         break;
+    case 'calculadora-nivel':
+        require_once __DIR__ . '/../app/views/calculadora_nivel.php';
+        break;
     default:
         if (isset($_SESSION['authenticated'])) {
             header('Location: index.php?action=dashboard');
