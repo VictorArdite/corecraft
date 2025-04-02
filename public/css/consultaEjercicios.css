@@ -367,4 +367,14 @@ footer p {
 /* Ajuste del margen entre secciones */
 section.grupo-muscular + section.grupo-muscular {
     margin-top: 4rem;
+}
+
+.footer-social a i {
+    font-size: 25px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer-social a i:hover {
+    color: #ccc;
 } 

@@ -5,7 +5,7 @@ class ConsultaEjerciciosController {
         'pecho' => [
             1 => [
                 'nombre' => 'Press de Banca',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/pressbanca.jpg',
                 'descripcion' => 'El press de banca es un ejercicio compuesto que trabaja principalmente el pecho, hombros y tríceps.',
                 'pasos' => [
                     'Acuéstate en el banco con los pies planos en el suelo',
@@ -17,7 +17,7 @@ class ConsultaEjerciciosController {
             ],
             2 => [
                 'nombre' => 'Press Inclinado',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/pressInclinado.jpg',
                 'descripcion' => 'El press inclinado es un ejercicio que trabaja el pecho y los hombros.',
                 'pasos' => [
                     'Acuéstate en el banco inclinado',
@@ -29,7 +29,7 @@ class ConsultaEjerciciosController {
             ],
             3 => [
                 'nombre' => 'Press Declinado',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/pressdeclinado.jpg',
                 'descripcion' => 'El press declinado es un ejercicio que trabaja el pecho y los hombros.',
                 'pasos' => [
                     'Acuéstate en el banco inclinado',
@@ -41,7 +41,7 @@ class ConsultaEjerciciosController {
             ],
             4 => [
                 'nombre' => 'Aperturas con Mancuernas',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/aperturasmancuernas.jpg',
                 'descripcion' => 'Las aperturas con mancuernas son un ejercicio que trabaja el pecho y los hombros.',
                 'pasos' => [
                     'Acuéstate en el banco con los pies planos en el suelo',
@@ -65,7 +65,7 @@ class ConsultaEjerciciosController {
             ],
             6 => [
                 'nombre' => 'Press con Mancuernas',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/pressmancuernas.jpg',
                 'descripcion' => 'El press con mancuernas es un ejercicio que trabaja el pecho y los hombros.',
                 'pasos' => [
                     'Acuéstate en el banco con los pies planos en el suelo',
@@ -77,7 +77,7 @@ class ConsultaEjerciciosController {
             ],
             7 => [
                 'nombre' => 'Pullover',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/pull.jpg',
                 'descripcion' => 'El pullover es un ejercicio que trabaja el pecho y los hombros.',
                 'pasos' => [
                     'Acuéstate en el banco con los pies planos en el suelo',
@@ -89,7 +89,7 @@ class ConsultaEjerciciosController {
             ],
             8 => [
                 'nombre' => 'Cruce de Poleas',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/curecepoleas.jpg',
                 'descripcion' => 'El cruce de poleas es un ejercicio que trabaja el pecho y los hombros.',
                 'pasos' => [
                     'Acuéstate en el banco con los pies planos en el suelo',
@@ -101,7 +101,7 @@ class ConsultaEjerciciosController {
             ],
             9 => [
                 'nombre' => 'Press Hammer',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/presshammer.jpg',
                 'descripcion' => 'El press hammer es un ejercicio que trabaja el pecho y los hombros.',
                 'pasos' => [
                     'Acuéstate en el banco con los pies planos en el suelo',
@@ -113,7 +113,7 @@ class ConsultaEjerciciosController {
             ],
             10 => [
                 'nombre' => 'Push-Ups',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/push.jpg',
                 'descripcion' => 'Los push-ups son un ejercicio que trabaja el pecho y los hombros.',
                 'pasos' => [
                     'Acuéstate en el suelo o en un banco',
@@ -127,7 +127,7 @@ class ConsultaEjerciciosController {
         'espalda' => [
             11 => [
                 'nombre' => 'Dominadas',
-                'imagen' => 'img/halterofilia.png',
+                'imagen' => 'img/dominadas.jpg',
                 'descripcion' => 'Las dominadas son un ejercicio excelente para desarrollar la espalda y los brazos.',
                 'pasos' => [
                     'Agarra la barra con las palmas hacia adelante',
@@ -139,7 +139,7 @@ class ConsultaEjerciciosController {
             ],
             12 => [
                 'nombre' => 'Remo con Barra',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/remo.jpg',
                 'descripcion' => 'El remo con barra es excelente para desarrollar la espalda media.',
                 'pasos' => [
                     'Inclínate hacia adelante con la espalda recta',
@@ -151,7 +151,7 @@ class ConsultaEjerciciosController {
             ],
             13 => [
                 'nombre' => 'Jalón al Pecho',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/jalon.jpg',
                 'descripcion' => 'El jalon al pecho es un ejercicio que trabaja la espalda y los hombros.',
                 'pasos' => [
                     'Acuéstate en el suelo o en un banco',
@@ -163,7 +163,7 @@ class ConsultaEjerciciosController {
             ],
             14 => [
                 'nombre' => 'Remo con Mancuerna',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/remomancuerna.jpg',
                 'descripcion' => 'El remo con mancuerna es un ejercicio que trabaja la espalda y los hombros.',
                 'pasos' => [
                     'Acuéstate en el suelo o en un banco',
@@ -175,7 +175,7 @@ class ConsultaEjerciciosController {
             ],
             15 => [
                 'nombre' => 'Pull-ups',
-                'imagen' => 'img/halterofilia.png',
+                'imagen' => 'img/ups.jpg',
                 'descripcion' => 'Los pull-ups son un ejercicio excelente para desarrollar la espalda y los brazos.',
                 'pasos' => [
                     'Agarra la barra con las manos hacia adelante',
@@ -187,7 +187,7 @@ class ConsultaEjerciciosController {
             ],
             16 => [
                 'nombre' => 'Remo en Máquina',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/remomaquina.jpg',
                 'descripcion' => 'El remo en máquina es un ejercicio que trabaja la espalda y los hombros.',
                 'pasos' => [
                     'Acuéstate en la máquina de remo',
@@ -199,7 +199,7 @@ class ConsultaEjerciciosController {
             ],
             17 => [
                 'nombre' => 'Hiperextensiones',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/hiper.jpg',
                 'descripcion' => 'Las hiperextensiones son un ejercicio que trabaja la espalda y los glúteos.',
                 'pasos' => [
                     'Acuéstate en la máquina de hiperextensiones',
@@ -211,7 +211,7 @@ class ConsultaEjerciciosController {
             ],
             18 => [
                 'nombre' => 'Face Pull',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/face.jpg',
                 'descripcion' => 'El face pull es un ejercicio que trabaja la espalda y los hombros.',
                 'pasos' => [
                     'Acuéstate en el suelo o en un banco',
@@ -249,7 +249,7 @@ class ConsultaEjerciciosController {
         'piernas' => [
             21 => [
                 'nombre' => 'Sentadilla',
-                'imagen' => 'img/sentadilla.png',
+                'imagen' => 'img/sentadillaa.jpg',
                 'descripcion' => 'La sentadilla es un ejercicio fundamental que trabaja principalmente piernas y glúteos.',
                 'pasos' => [
                     'Coloca la barra en los trapecios',
@@ -261,7 +261,7 @@ class ConsultaEjerciciosController {
             ],
             22 => [
                 'nombre' => 'Peso Muerto',
-                'imagen' => 'img/pesomuerto.png',
+                'imagen' => 'img/peso.jpg',
                 'descripcion' => 'El peso muerto es un ejercicio que trabaja toda la cadena posterior del cuerpo.',
                 'pasos' => [
                     'Colócate frente a la barra con los pies a la altura de las caderas',
@@ -273,7 +273,7 @@ class ConsultaEjerciciosController {
             ],
             23 => [
                 'nombre' => 'Hip Thrust',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/hip.jpg',
                 'descripcion' => 'El hip thrust es el mejor ejercicio para desarrollar los glúteos.',
                 'pasos' => [
                     'Siéntate con la espalda apoyada en un banco',
@@ -285,7 +285,7 @@ class ConsultaEjerciciosController {
             ],
             24 => [
                 'nombre' => 'Prensa de Piernas',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/premsa.jpg',
                 'descripcion' => 'La prensa de piernas es un ejercicio que trabaja los músculos de las piernas.',
                 'pasos' => [
                     'Acuéstate en la prensa de piernas',
@@ -297,7 +297,7 @@ class ConsultaEjerciciosController {
             ],
             25 => [
                 'nombre' => 'Extensiones de Cuádriceps',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/cuadriceps.jpg',
                 'descripcion' => 'Las extensiones de cuádriceps son un ejercicio que trabaja los músculos de las piernas.',
                 'pasos' => [
                     'Acuéstate en la máquina de extensiones de cuádriceps',
@@ -309,7 +309,7 @@ class ConsultaEjerciciosController {
             ],
             26 => [
                 'nombre' => 'Curl de Isquiotibiales',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/isquios.jpeg',
                 'descripcion' => 'El curl de isquiotibiales es un ejercicio que trabaja los músculos de las piernas.',
                 'pasos' => [
                     'Acuéstate en la máquina de curls de isquiotibiales',
@@ -321,7 +321,7 @@ class ConsultaEjerciciosController {
             ],
             27 => [
                 'nombre' => 'Elevación de Gemelos',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/gemelos.jpg',
                 'descripcion' => 'La elevación de gemelos es un ejercicio que trabaja los músculos de las piernas.',
                 'pasos' => [
                     'Acuéstate en la máquina de elevación de gemelos',
@@ -333,7 +333,7 @@ class ConsultaEjerciciosController {
             ],
             28 => [
                 'nombre' => 'Zancadas',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/zancadas.jpg',
                 'descripcion' => 'Las zancadas son un ejercicio que trabaja los músculos de las piernas.',
                 'pasos' => [
                     'Coloca las piernas frente a una silla o escalón',
@@ -345,7 +345,7 @@ class ConsultaEjerciciosController {
             ],
             29 => [
                 'nombre' => 'Sentadilla Búlgara',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/bulgara.jpg',
                 'descripcion' => 'La sentadilla búlgara es un ejercicio que trabaja los músculos de las piernas.',
                 'pasos' => [
                     'Coloca las piernas frente a una silla o escalón',
@@ -357,7 +357,7 @@ class ConsultaEjerciciosController {
             ],
             30 => [
                 'nombre' => 'Aductores',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/aductores.jpg',
                 'descripcion' => 'Los aductores son un ejercicio que trabaja los músculos de las piernas.',
                 'pasos' => [
                     'Coloca las piernas frente a una silla o escalón',
@@ -371,7 +371,7 @@ class ConsultaEjerciciosController {
         'brazos' => [
             31 => [
                 'nombre' => 'Curl de Bíceps',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/biceps.jpg',
                 'descripcion' => 'El curl de bíceps es el ejercicio clásico para desarrollar los brazos.',
                 'pasos' => [
                     'De pie, sostén las mancuernas con los brazos extendidos',
@@ -383,7 +383,7 @@ class ConsultaEjerciciosController {
             ],
             32 => [
                 'nombre' => 'Extensión de Tríceps',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/extension.jpg',
                 'descripcion' => 'La extensión de tríceps es fundamental para desarrollar la parte posterior del brazo.',
                 'pasos' => [
                     'Sostén una mancuerna con ambas manos sobre la cabeza',
@@ -395,7 +395,7 @@ class ConsultaEjerciciosController {
             ],
             33 => [
                 'nombre' => 'Curl Martillo',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/martillo.jpg',
                 'descripcion' => 'El curl martillo es un ejercicio que trabaja los músculos del brazo.',
                 'pasos' => [
                     'De pie, sostén la mancuerna con la mano',
@@ -407,7 +407,7 @@ class ConsultaEjerciciosController {
             ],
             34 => [
                 'nombre' => 'Press Francés',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/frances.jpg',
                 'descripcion' => 'El press francés es un ejercicio que trabaja los músculos del brazo.',
                 'pasos' => [
                     'Acuéstate en el banco con los pies planos en el suelo',
@@ -419,7 +419,7 @@ class ConsultaEjerciciosController {
             ],
             35 => [
                 'nombre' => 'Curl con Barra Z',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/z.jpg',
                 'descripcion' => 'El curl con barra Z es un ejercicio que trabaja los músculos del brazo.',
                 'pasos' => [
                     'Acuéstate en el banco con los pies planos en el suelo',
@@ -431,7 +431,7 @@ class ConsultaEjerciciosController {
             ],
             36 => [
                 'nombre' => 'Extensiones en Polea',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/extension.jpg',
                 'descripcion' => 'Las extensiones en polea son un ejercicio que trabaja los músculos del brazo.',
                 'pasos' => [
                     'Acuéstate en la máquina de extensiones en polea',
@@ -443,7 +443,7 @@ class ConsultaEjerciciosController {
             ],
             37 => [
                 'nombre' => 'Curl Scott',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/curl.jpg',
                 'descripcion' => 'El curl Scott es un ejercicio que trabaja los músculos del brazo.',
                 'pasos' => [
                     'Acuéstate en el banco con los pies planos en el suelo',
@@ -455,7 +455,7 @@ class ConsultaEjerciciosController {
             ],
             38 => [
                 'nombre' => 'Fondos en Banco',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/fondos.jpg',
                 'descripcion' => 'Los fondos en banco son un ejercicio que trabaja los músculos del brazo.',
                 'pasos' => [
                     'Acuéstate en el banco con los pies planos en el suelo',
@@ -493,7 +493,7 @@ class ConsultaEjerciciosController {
         'core' => [
             41 => [
                 'nombre' => 'Plancha',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/plancha.jpg',
                 'descripcion' => 'La plancha es un ejercicio isométrico excelente para fortalecer el core.',
                 'pasos' => [
                     'Apóyate sobre los antebrazos y las puntas de los pies',
@@ -505,7 +505,7 @@ class ConsultaEjerciciosController {
             ],
             42 => [
                 'nombre' => 'Crunch',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/crunch.jpg',
                 'descripcion' => 'El crunch es un ejercicio que trabaja el core.',
                 'pasos' => [
                     'Acuéstate en el suelo o en un banco',
@@ -517,7 +517,7 @@ class ConsultaEjerciciosController {
             ],
             43 => [
                 'nombre' => 'Russian Twist',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/russian.jpg',
                 'descripcion' => 'El Russian twist es un ejercicio que trabaja el core.',
                 'pasos' => [
                     'Acuéstate en el suelo o en un banco',
@@ -529,7 +529,7 @@ class ConsultaEjerciciosController {
             ],
             44 => [
                 'nombre' => 'Elevación de Piernas',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/elevacion.jpg',
                 'descripcion' => 'La elevación de piernas es un ejercicio que trabaja el core.',
                 'pasos' => [
                     'Acuéstate en el suelo o en un banco',
@@ -541,7 +541,7 @@ class ConsultaEjerciciosController {
             ],
             45 => [
                 'nombre' => 'Plancha Lateral',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/lateral.jpg',
                 'descripcion' => 'La plancha lateral es un ejercicio que trabaja el core.',
                 'pasos' => [
                     'Acuéstate en el suelo o en un banco',
@@ -553,7 +553,7 @@ class ConsultaEjerciciosController {
             ],
             46 => [
                 'nombre' => 'Dragon Flag',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/dragon.jpg',
                 'descripcion' => 'El dragon flag es un ejercicio que trabaja el core.',
                 'pasos' => [
                     'Acuéstate en el suelo o en un banco',
@@ -565,7 +565,7 @@ class ConsultaEjerciciosController {
             ],
             47 => [
                 'nombre' => 'Ab Wheel',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/wheel.jpg',
                 'descripcion' => 'El ab wheel es un ejercicio que trabaja el core.',
                 'pasos' => [
                     'Acuéstate en el suelo o en un banco',
