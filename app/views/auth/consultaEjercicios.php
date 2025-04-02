@@ -116,7 +116,7 @@
                 <h3>Instrucciones</h3>
                 <ol id="modalSteps"></ol>
             </div>
-            <a id="modalVideo" href="" target="_blank" class="video-link">Ver video tutorial</a>
+            <a id="modalVideo" href="" target="_blank" class="video-link">Ver video </a>
         </div>
     </div>
 
