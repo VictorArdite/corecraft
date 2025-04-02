@@ -187,7 +187,7 @@ footer {
     font-size: 1.2em;
     color: #fff;
     margin-bottom: 10px;
-    border-bottom: 2px solid #00bcd4; /* Línea azul debajo del título */
+    border-bottom: 2px solid #000; /* Cambiado a negro */
     padding-bottom: 5px;
 }
 
@@ -215,8 +215,14 @@ footer {
     justify-content: flex-start;
 }
 
-.footer-social a img {
-    height: 30px;
+.footer-social a i {
+    font-size: 25px; /* Iconos más grandes */
+    color: #fff; /* Color blanco en lugar de gris */
+    transition: color 0.3s ease;
+}
+
+.footer-social a i:hover {
+    color: #ccc; /* Color más claro al pasar el mouse */
 }
 
 footer p {
