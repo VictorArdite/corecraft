@@ -87,21 +87,36 @@ class AuthController {
 
     public function register() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            try {
-                $username = $_POST['username'];
-                $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-                $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-                $age = (int)$_POST['age'];
-                $weight = (float)$_POST['weight'];
-                $height = (float)$_POST['height'];
-                $goal = $_POST['goal'];
+            $username = $_POST['username'] ?? '';
+            $email = $_POST['email'] ?? '';
+            $password = $_POST['password'] ?? '';
+            $age = $_POST['age'] ?? null;
+            $weight = $_POST['weight'] ?? null;
+            $height = $_POST['height'] ?? null;
+            $goal = $_POST['goal'] ?? '';
+            $pregunta_seguridad = $_POST['pregunta_seguridad'] ?? '';
+            $respuesta_seguridad = $_POST['respuesta_seguridad'] ?? '';
 
-                if (!$email) {
-                    throw new Exception("Email inválido");
+            if (empty($username) || empty($email) || empty($password) || 
+                empty($pregunta_seguridad) || empty($respuesta_seguridad)) {
+                header('Location: index.php?action=register&error=2');
+                exit();
+            }
+
+            try {
+                // Verificar si el email ya existe
+                $stmt = $this->db->prepare("SELECT id FROM usuarios WHERE email = ?");
+                $stmt->execute([$email]);
+                if ($stmt->fetch()) {
+                    header('Location: index.php?action=register&error=3');
+                    exit();
                 }
 
-                $stmt = $this->db->prepare("INSERT INTO usuarios (nombre, email, password, edad, peso, altura, objetivo) 
-                                          VALUES (:username, :email, :password, :age, :weight, :height, :goal)");
+                // Hash de la contraseña
+                $password = password_hash($password, PASSWORD_DEFAULT);
+
+                $stmt = $this->db->prepare("INSERT INTO usuarios (nombre, email, password, edad, peso, altura, objetivo, pregunta_seguridad, respuesta_seguridad) 
+                                          VALUES (:username, :email, :password, :age, :weight, :height, :goal, :pregunta_seguridad, :respuesta_seguridad)");
                 
                 $stmt->execute([
                     'username' => $username,
@@ -110,7 +125,9 @@ class AuthController {
                     'age' => $age,
                     'weight' => $weight,
                     'height' => $height,
-                    'goal' => $goal
+                    'goal' => $goal,
+                    'pregunta_seguridad' => $pregunta_seguridad,
+                    'respuesta_seguridad' => $respuesta_seguridad
                 ]);
 
                 $_SESSION['user_id'] = $this->db->lastInsertId();
@@ -148,99 +165,76 @@ class AuthController {
         require __DIR__ . '/../views/auth/forgot-password.php';
     }
 
-    public function sendResetLink() {
+    public function verifySecurity() {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
             header('Location: index.php?action=forgot-password');
             exit;
         }
 
-        $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-        if (!$email) {
-            header('Location: index.php?action=forgot-password&error=Email inválido');
+        $email = $_POST['email'] ?? '';
+        $pregunta = $_POST['pregunta_seguridad'] ?? '';
+        $respuesta = $_POST['respuesta_seguridad'] ?? '';
+
+        if (empty($email) || empty($pregunta) || empty($respuesta)) {
+            header('Location: index.php?action=forgot-password&error=Todos los campos son obligatorios');
             exit;
         }
 
         try {
-            // Verificar si el email existe
-            $stmt = $this->db->prepare("SELECT id FROM usuarios WHERE email = ?");
-            $stmt->execute([$email]);
+            // Verificar si el usuario existe y la respuesta de seguridad es correcta
+            $stmt = $this->db->prepare("SELECT id FROM usuarios WHERE email = ? AND pregunta_seguridad = ? AND respuesta_seguridad = ?");
+            $stmt->execute([$email, $pregunta, $respuesta]);
             $user = $stmt->fetch();
 
             if (!$user) {
-                header('Location: index.php?action=forgot-password&error=No existe una cuenta con este email');
+                header('Location: index.php?action=forgot-password&error=Email o respuesta de seguridad incorrecta');
                 exit;
             }
 
-            // Generar token único
-            $token = bin2hex(random_bytes(32));
-            $expiry = date('Y-m-d H:i:s', strtotime('+1 hour'));
-
-            // Guardar el token en la base de datos
-            $stmt = $this->db->prepare("INSERT INTO password_resets (user_id, token, expiry) VALUES (?, ?, ?)");
-            $stmt->execute([$user['id'], $token, $expiry]);
-
-            // Redirigir con mensaje de éxito
-            header('Location: index.php?action=forgot-password&message=Se ha enviado un correo con las instrucciones para restablecer tu contraseña');
+            // Si la verificación es correcta, mostrar el formulario de nueva contraseña
+            header('Location: index.php?action=forgot-password&step=2&email=' . urlencode($email));
             exit;
-
         } catch (Exception $e) {
-            error_log($e->getMessage());
-            header('Location: index.php?action=forgot-password&error=Error del sistema');
+            error_log("Error en verifySecurity: " . $e->getMessage());
+            header('Location: index.php?action=forgot-password&error=Error al verificar la información. Por favor, inténtalo de nuevo más tarde.');
             exit;
         }
-    }
-
-    public function resetPassword() {
-        if (!isset($_GET['token'])) {
-            header('Location: index.php?action=login');
-            exit;
-        }
-
-        $token = $_GET['token'];
-        require __DIR__ . '/../views/auth/reset-password.php';
     }
 
     public function updatePassword() {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: index.php?action=login');
+            header('Location: index.php?action=forgot-password');
             exit;
         }
 
-        $token = $_POST['token'];
-        $password = $_POST['password'];
-        $confirmPassword = $_POST['confirm_password'];
+        $email = $_POST['email'] ?? '';
+        $new_password = $_POST['new_password'] ?? '';
+        $confirm_password = $_POST['confirm_password'] ?? '';
 
-        if ($password !== $confirmPassword) {
-            header('Location: index.php?action=reset-password&token=' . $token . '&error=Las contraseñas no coinciden');
+        if (empty($email) || empty($new_password) || empty($confirm_password)) {
+            header('Location: index.php?action=forgot-password&step=2&email=' . urlencode($email) . '&error=Todos los campos son obligatorios');
+            exit;
+        }
+
+        if ($new_password !== $confirm_password) {
+            header('Location: index.php?action=forgot-password&step=2&email=' . urlencode($email) . '&error=Las contraseñas no coinciden');
             exit;
         }
 
         try {
-            // Verificar token y que no haya expirado
-            $stmt = $this->db->prepare("SELECT user_id FROM password_resets WHERE token = ? AND expiry > NOW() AND used = 0");
-            $stmt->execute([$token]);
-            $reset = $stmt->fetch();
+            // Hash de la nueva contraseña
+            $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
 
-            if (!$reset) {
-                header('Location: index.php?action=forgot-password&error=El enlace ha expirado o no es válido');
-                exit;
-            }
+            // Actualizar la contraseña
+            $stmt = $this->db->prepare("UPDATE usuarios SET password = ? WHERE email = ?");
+            $stmt->execute([$hashed_password, $email]);
 
-            // Actualizar contraseña
-            $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-            $stmt = $this->db->prepare("UPDATE usuarios SET password = ? WHERE id = ?");
-            $stmt->execute([$hashedPassword, $reset['user_id']]);
-
-            // Marcar token como usado
-            $stmt = $this->db->prepare("UPDATE password_resets SET used = 1 WHERE token = ?");
-            $stmt->execute([$token]);
-
-            header('Location: index.php?action=login&message=Tu contraseña ha sido actualizada');
+            // Mostrar mensaje de confirmación
+            require_once __DIR__ . '/../views/auth/password-changed.php';
             exit;
-
         } catch (Exception $e) {
-            error_log($e->getMessage());
-            header('Location: index.php?action=reset-password&token=' . $token . '&error=Error del sistema');
+            error_log("Error en updatePassword: " . $e->getMessage());
+            header('Location: index.php?action=forgot-password&step=2&email=' . urlencode($email) . '&error=Error al actualizar la contraseña. Por favor, inténtalo de nuevo más tarde.');
             exit;
         }
     }

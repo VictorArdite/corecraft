@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Nivel de Entrenamiento - CoreCraft</title>
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/public/css/global.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/public/css/calculadora_nivel.css">
+    <link rel="stylesheet" href="/corecraft/public/css/global.css">
+    <link rel="stylesheet" href="/corecraft/public/css/calculadora_nivel.css">
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="index.php?action=home">
-                <img src="<?php echo BASE_URL; ?>/public/img/logo.jpg" alt="CoreCraft Logo">
+                <img src="/corecraft/public/img/logo.jpg" alt="CoreCraft Logo">
             </a>
         </div>
         <nav>

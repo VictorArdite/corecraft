@@ -10,5 +10,9 @@ class DashboardController {
         
         require_once __DIR__ . '/../views/calculadora_nivel.php';
     }
+
+    public function calculadoraNivel() {
+        require_once __DIR__ . '/../views/calculadora_nivel.php';
+    }
 }
 ?>

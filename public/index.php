@@ -21,7 +21,7 @@ $database = Database::getInstance();
 $db = $database->getConnection();
 
 // Verificar si el usuario está autenticado
-$public_actions = ['login', 'auth', 'register', 'home', 'consultaEjercicios', 'forgot-password', 'send-reset-link', 'reset-password', 'update-password'];
+$public_actions = ['login', 'auth', 'register', 'home', 'consultaEjercicios', 'forgot-password', 'verify-security', 'update-password', 'calculadora-nivel'];
 $action = $_GET['action'] ?? 'home';
 
 // Si el usuario no está autenticado y la acción no es pública, redirigir al login
@@ -47,9 +47,29 @@ switch ($action) {
         $controller = new AuthController();
         $controller->register();
         break;
+    case 'logout':
+        $controller = new AuthController();
+        $controller->logout();
+        break;
+    case 'forgot-password':
+        $controller = new AuthController();
+        $controller->forgotPassword();
+        break;
+    case 'verify-security':
+        $controller = new AuthController();
+        $controller->verifySecurity();
+        break;
+    case 'update-password':
+        $controller = new AuthController();
+        $controller->updatePassword();
+        break;
     case 'dashboard':
         $controller = new DashboardController();
         $controller->index();
+        break;
+    case 'calculadora-nivel':
+        $controller = new DashboardController();
+        $controller->calculadoraNivel();
         break;
     case 'perfil':
         $controller = new PerfilController($db);
@@ -70,6 +90,10 @@ switch ($action) {
     case 'mis-rutinas':
         $controller = new RutinaPersonalizadaController();
         $controller->mostrarMisRutinas();
+        break;
+    case 'borrar-rutina':
+        $controller = new RutinaPersonalizadaController();
+        $controller->borrarRutina();
         break;
     case 'ver-rutina':
         $controller = new RutinaPersonalizadaController();
@@ -112,19 +136,6 @@ switch ($action) {
         } else {
             header('Location: index.php?action=consultaEjercicios');
         }
-        break;
-    case 'logout':
-        $controller = new AuthController();
-        $controller->logout();
-        break;
-    default:
-        if (isset($_SESSION['authenticated'])) {
-            header('Location: index.php?action=dashboard');
-        } else {
-            header('Location: index.php?action=login');
-        }
-        exit;
-        echo "Página no encontrada";
         break;
     case 'nosotros':
             require_once '../app/controllers/NosotrosController.php';

@@ -337,3 +337,42 @@ Stack trace:
     [authenticated] => 1
 )
 
+[07-Apr-2025 17:27:49 Europe/Madrid] Intento de login - Email: victor_ardite33@ceroca.cat
+[07-Apr-2025 17:27:49 Europe/Madrid] Usuario encontrado: Sí
+[07-Apr-2025 17:27:49 Europe/Madrid] Verificando contraseña para usuario: victor_ardite33@ceroca.cat
+[07-Apr-2025 17:27:49 Europe/Madrid] Contraseña válida: No
+[07-Apr-2025 17:27:49 Europe/Madrid] Credenciales inválidas
+[07-Apr-2025 17:27:55 Europe/Madrid] Intento de login - Email: victor_ardite33@ceroca.cat
+[07-Apr-2025 17:27:55 Europe/Madrid] Usuario encontrado: Sí
+[07-Apr-2025 17:27:55 Europe/Madrid] Verificando contraseña para usuario: victor_ardite33@ceroca.cat
+[07-Apr-2025 17:27:55 Europe/Madrid] Contraseña válida: Sí
+[07-Apr-2025 17:27:55 Europe/Madrid] Sesión iniciada para usuario: victor_ardite33@ceroca.cat
+[07-Apr-2025 17:27:55 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 5
+    [user_name] => victor3
+    [user_email] => victor_ardite33@ceroca.cat
+    [user_edad] => 34
+    [user_peso] => 43.00
+    [user_altura] => 43.00
+    [user_objetivo] => 
+    [authenticated] => 1
+)
+
+[07-Apr-2025 17:30:07 Europe/Madrid] Intento de login - Email: victor_ardite33@ceroca.cat
+[07-Apr-2025 17:30:07 Europe/Madrid] Usuario encontrado: Sí
+[07-Apr-2025 17:30:07 Europe/Madrid] Verificando contraseña para usuario: victor_ardite33@ceroca.cat
+[07-Apr-2025 17:30:07 Europe/Madrid] Contraseña válida: Sí
+[07-Apr-2025 17:30:07 Europe/Madrid] Sesión iniciada para usuario: victor_ardite33@ceroca.cat
+[07-Apr-2025 17:30:07 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 5
+    [user_name] => victor3
+    [user_email] => victor_ardite33@ceroca.cat
+    [user_edad] => 34
+    [user_peso] => 43.00
+    [user_altura] => 43.00
+    [user_objetivo] => 
+    [authenticated] => 1
+)
+
