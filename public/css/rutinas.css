@@ -84,3 +84,23 @@ header nav ul li a:hover {
     justify-content: space-between;
     height: 100%;
 }
+
+.crear-rutina-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.btn-crear-rutina {
+    display: inline-block;
+    background-color: #4299e1;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-crear-rutina:hover {
+    background-color: #3182ce;
+}

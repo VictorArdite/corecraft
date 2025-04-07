@@ -3,11 +3,16 @@
 
 class DashboardController {
     public function index() {
-        session_start();
         if (!isset($_SESSION['user_id'])) {
             header('Location: index.php?action=login');
+            exit;
         }
-        require_once '../app/views/dashboard/index.php';
+        
+        require_once __DIR__ . '/../views/calculadora_nivel.php';
+    }
+
+    public function calculadoraNivel() {
+        require_once __DIR__ . '/../views/calculadora_nivel.php';
     }
 }
 ?>

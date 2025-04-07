@@ -1,0 +1,139 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.btn-crear {
+    background-color: #4299e1;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-crear:hover {
+    background-color: #3182ce;
+}
+
+.no-rutinas {
+    text-align: center;
+    padding: 3rem;
+    background-color: #2d3748;
+    border-radius: 0.5rem;
+}
+
+.no-rutinas p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #a0aec0;
+}
+
+.rutinas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.rutina-card {
+    background-color: #2d3748;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: transform 0.2s;
+}
+
+.rutina-card:hover {
+    transform: translateY(-5px);
+}
+
+.rutina-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.rutina-header h2 {
+    margin: 0;
+    color: #fff;
+}
+
+.fecha {
+    color: #a0aec0;
+    font-size: 0.9rem;
+}
+
+.descripcion {
+    color: #a0aec0;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.rutina-stats {
+    margin-bottom: 1rem;
+}
+
+.ejercicios {
+    color: #4299e1;
+    font-weight: 500;
+}
+
+.rutina-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-borrar {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-borrar:hover {
+    background-color: #c82333;
+}
+
+.form-borrar {
+    margin: 0;
+}
+
+.btn-ver {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ver:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .header-section {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .rutinas-grid {
+        grid-template-columns: 1fr;
+    }
+} 

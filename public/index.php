@@ -13,13 +13,15 @@ require_once __DIR__ . '/../app/controllers/RutinaController.php';
 require_once __DIR__ . '/../app/controllers/SuplementacionController.php';
 require_once __DIR__ . '/../app/controllers/PerfilController.php';
 require_once __DIR__ . '/../app/controllers/RegistroPesoController.php';
+require_once __DIR__ . '/../app/controllers/ConsultaEjerciciosController.php';
+require_once __DIR__ . '/../app/controllers/RutinaPersonalizadaController.php';
 
 // Obtener la conexión a la base de datos
 $database = Database::getInstance();
 $db = $database->getConnection();
 
 // Verificar si el usuario está autenticado
-$public_actions = ['login', 'auth', 'register', 'home'];
+$public_actions = ['login', 'auth', 'register', 'home', 'consultaEjercicios', 'forgot-password', 'verify-security', 'update-password', 'calculadora-nivel'];
 $action = $_GET['action'] ?? 'home';
 
 // Si el usuario no está autenticado y la acción no es pública, redirigir al login
@@ -45,9 +47,29 @@ switch ($action) {
         $controller = new AuthController();
         $controller->register();
         break;
+    case 'logout':
+        $controller = new AuthController();
+        $controller->logout();
+        break;
+    case 'forgot-password':
+        $controller = new AuthController();
+        $controller->forgotPassword();
+        break;
+    case 'verify-security':
+        $controller = new AuthController();
+        $controller->verifySecurity();
+        break;
+    case 'update-password':
+        $controller = new AuthController();
+        $controller->updatePassword();
+        break;
     case 'dashboard':
         $controller = new DashboardController();
         $controller->index();
+        break;
+    case 'calculadora-nivel':
+        $controller = new DashboardController();
+        $controller->calculadoraNivel();
         break;
     case 'perfil':
         $controller = new PerfilController($db);
@@ -56,6 +78,31 @@ switch ($action) {
     case 'rutinas':
         $controller = new RutinaController();
         $controller->index();
+        break;
+    case 'rutina-personalizada':
+        $controller = new RutinaPersonalizadaController();
+        $controller->mostrarFormulario();
+        break;
+    case 'rutina-personalizada/guardar':
+        $controller = new RutinaPersonalizadaController();
+        $controller->guardarRutina();
+        break;
+    case 'mis-rutinas':
+        $controller = new RutinaPersonalizadaController();
+        $controller->mostrarMisRutinas();
+        break;
+    case 'borrar-rutina':
+        $controller = new RutinaPersonalizadaController();
+        $controller->borrarRutina();
+        break;
+    case 'ver-rutina':
+        $controller = new RutinaPersonalizadaController();
+        $id = $_GET['id'] ?? null;
+        if ($id) {
+            $controller->verRutina($id);
+        } else {
+            header('Location: index.php?action=mis-rutinas');
+        }
         break;
     case 'verRutinaPorNombre':
         $controller = new RutinaController();
@@ -77,18 +124,18 @@ switch ($action) {
         $controller = new RegistroPesoController($db);
         $controller->obtenerHistorial();
         break;
-    case 'logout':
-        $controller = new AuthController();
-        $controller->logout();
+    case 'consultaEjercicios':
+        $controller = new ConsultaEjerciciosController();
+        $controller->index();
         break;
-    default:
-        if (isset($_SESSION['authenticated'])) {
-            header('Location: index.php?action=dashboard');
+    case 'ejercicio':
+        $controller = new ConsultaEjerciciosController();
+        $id = $_GET['id'] ?? null;
+        if ($id) {
+            $controller->verEjercicio($id);
         } else {
-            header('Location: index.php?action=login');
+            header('Location: index.php?action=consultaEjercicios');
         }
-        exit;
-        echo "Página no encontrada";
         break;
     case 'nosotros':
             require_once '../app/controllers/NosotrosController.php';
