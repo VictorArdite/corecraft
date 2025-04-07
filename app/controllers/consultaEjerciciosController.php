@@ -620,12 +620,17 @@ class ConsultaEjerciciosController {
     }
 
     public function verEjercicio($id) {
-        foreach ($this->ejercicios as $grupo) {
-            if (isset($grupo[$id])) {
+        // Buscar el ejercicio en todos los grupos musculares
+        foreach ($this->ejercicios as $grupo => $ejercicios) {
+            if (isset($ejercicios[$id])) {
                 header('Content-Type: application/json');
-                echo json_encode($grupo[$id]);
+                echo json_encode($ejercicios[$id]);
                 return;
             }
         }
+        
+        // Si no se encuentra el ejercicio, devolver un error
+        header('HTTP/1.1 404 Not Found');
+        echo json_encode(['error' => 'Ejercicio no encontrado']);
     }
 }

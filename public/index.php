@@ -100,6 +100,19 @@ switch ($action) {
         $controller = new RegistroPesoController($db);
         $controller->obtenerHistorial();
         break;
+    case 'consultaEjercicios':
+        $controller = new ConsultaEjerciciosController();
+        $controller->index();
+        break;
+    case 'ejercicio':
+        $controller = new ConsultaEjerciciosController();
+        $id = $_GET['id'] ?? null;
+        if ($id) {
+            $controller->verEjercicio($id);
+        } else {
+            header('Location: index.php?action=consultaEjercicios');
+        }
+        break;
     case 'logout':
         $controller = new AuthController();
         $controller->logout();

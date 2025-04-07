@@ -217,3 +217,123 @@ Stack trace:
     [authenticated] => 1
 )
 
+[07-Apr-2025 16:42:31 Europe/Madrid] PHP Warning:  Undefined array key "token" in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:42:31 Europe/Madrid] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:42:42 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[07-Apr-2025 16:42:42 Europe/Madrid] Usuario encontrado: Sí
+[07-Apr-2025 16:42:42 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[07-Apr-2025 16:42:42 Europe/Madrid] Contraseña válida: Sí
+[07-Apr-2025 16:42:42 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[07-Apr-2025 16:42:42 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 34.00
+    [user_altura] => 214.00
+    [user_objetivo] => 
+    [authenticated] => 1
+)
+
+[07-Apr-2025 16:42:48 Europe/Madrid] PHP Warning:  Undefined array key "token" in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:42:48 Europe/Madrid] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:42:50 Europe/Madrid] PHP Warning:  Undefined array key "token" in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:42:50 Europe/Madrid] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:42:55 Europe/Madrid] PHP Warning:  Undefined array key "token" in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:42:55 Europe/Madrid] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:43:22 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[07-Apr-2025 16:43:22 Europe/Madrid] Usuario encontrado: Sí
+[07-Apr-2025 16:43:22 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[07-Apr-2025 16:43:22 Europe/Madrid] Contraseña válida: Sí
+[07-Apr-2025 16:43:22 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[07-Apr-2025 16:43:22 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 34.00
+    [user_altura] => 214.00
+    [user_objetivo] => 
+    [authenticated] => 1
+)
+
+[07-Apr-2025 16:43:37 Europe/Madrid] PHP Warning:  Undefined array key "token" in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:43:37 Europe/Madrid] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:43:42 Europe/Madrid] PHP Warning:  Undefined array key "token" in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:43:42 Europe/Madrid] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:43:44 Europe/Madrid] PHP Warning:  Undefined array key "token" in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:43:44 Europe/Madrid] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:43:56 Europe/Madrid] PHP Warning:  Undefined array key "token" in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:43:56 Europe/Madrid] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:47:06 Europe/Madrid] PHP Warning:  Undefined array key "token" in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:47:06 Europe/Madrid] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:51:55 Europe/Madrid] PHP Warning:  require_once(C:\xampp\htdocs\corecraft\app\controllers/../views/dashboard/index.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php on line 11
+[07-Apr-2025 16:51:55 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\corecraft\app\controllers/../views/dashboard/index.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php:11
+Stack trace:
+#0 C:\xampp\htdocs\corecraft\public\index.php(52): DashboardController->index()
+#1 {main}
+  thrown in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php on line 11
+[07-Apr-2025 16:52:04 Europe/Madrid] PHP Warning:  require_once(C:\xampp\htdocs\corecraft\app\controllers/../views/dashboard/index.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php on line 11
+[07-Apr-2025 16:52:04 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\corecraft\app\controllers/../views/dashboard/index.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php:11
+Stack trace:
+#0 C:\xampp\htdocs\corecraft\public\index.php(52): DashboardController->index()
+#1 {main}
+  thrown in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php on line 11
+[07-Apr-2025 16:52:35 Europe/Madrid] PHP Warning:  require_once(C:\xampp\htdocs\corecraft\app\controllers/../views/dashboard/index.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php on line 11
+[07-Apr-2025 16:52:35 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\corecraft\app\controllers/../views/dashboard/index.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php:11
+Stack trace:
+#0 C:\xampp\htdocs\corecraft\public\index.php(52): DashboardController->index()
+#1 {main}
+  thrown in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php on line 11
+[07-Apr-2025 16:53:08 Europe/Madrid] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php on line 6
+[07-Apr-2025 16:53:08 Europe/Madrid] PHP Warning:  require_once(../app/views/dashboard/index.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php on line 10
+[07-Apr-2025 16:53:08 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required '../app/views/dashboard/index.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php:10
+Stack trace:
+#0 C:\xampp\htdocs\corecraft\public\index.php(51): DashboardController->index()
+#1 {main}
+  thrown in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php on line 10
+[07-Apr-2025 16:59:03 Europe/Madrid] PHP Warning:  Undefined array key "token" in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 16:59:03 Europe/Madrid] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 17:00:40 Europe/Madrid] PHP Warning:  Undefined array key "token" in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 17:00:40 Europe/Madrid] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 17:00:44 Europe/Madrid] PHP Warning:  Undefined array key "token" in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 17:00:44 Europe/Madrid] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 17:02:52 Europe/Madrid] PHP Warning:  Undefined array key "token" in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 17:02:52 Europe/Madrid] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\xampp\htdocs\corecraft\app\views\dashboard\index.php on line 24
+[07-Apr-2025 17:04:26 Europe/Madrid] PHP Warning:  require_once(C:\xampp\htdocs\corecraft\app\views\dashboard\index.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php on line 11
+[07-Apr-2025 17:04:26 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\corecraft\app\controllers/../views/dashboard/index.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php:11
+Stack trace:
+#0 C:\xampp\htdocs\corecraft\public\index.php(52): DashboardController->index()
+#1 {main}
+  thrown in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php on line 11
+[07-Apr-2025 17:04:28 Europe/Madrid] PHP Warning:  require_once(C:\xampp\htdocs\corecraft\app\views\dashboard\index.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php on line 11
+[07-Apr-2025 17:04:28 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\corecraft\app\controllers/../views/dashboard/index.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php:11
+Stack trace:
+#0 C:\xampp\htdocs\corecraft\public\index.php(52): DashboardController->index()
+#1 {main}
+  thrown in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php on line 11
+[07-Apr-2025 17:04:43 Europe/Madrid] PHP Warning:  require_once(C:\xampp\htdocs\corecraft\app\views\dashboard\index.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php on line 11
+[07-Apr-2025 17:04:43 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\corecraft\app\controllers/../views/dashboard/index.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php:11
+Stack trace:
+#0 C:\xampp\htdocs\corecraft\public\index.php(52): DashboardController->index()
+#1 {main}
+  thrown in C:\xampp\htdocs\corecraft\app\controllers\DashboardController.php on line 11
+[07-Apr-2025 17:07:24 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[07-Apr-2025 17:07:24 Europe/Madrid] Usuario encontrado: Sí
+[07-Apr-2025 17:07:24 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[07-Apr-2025 17:07:24 Europe/Madrid] Contraseña válida: Sí
+[07-Apr-2025 17:07:24 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[07-Apr-2025 17:07:24 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 34.00
+    [user_altura] => 214.00
+    [user_objetivo] => 
+    [authenticated] => 1
+)
+

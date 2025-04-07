@@ -8,7 +8,7 @@ class DashboardController {
             exit;
         }
         
-        require_once __DIR__ . '/../views/dashboard/index.php';
+        require_once __DIR__ . '/../views/calculadora_nivel.php';
     }
 }
 ?>

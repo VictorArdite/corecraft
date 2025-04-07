@@ -61,7 +61,7 @@
                                 <img src="<?php echo $ejercicio['imagen']; ?>" alt="<?php echo $ejercicio['nombre']; ?>">
                                 <h3><?php echo $ejercicio['nombre']; ?></h3>
                                 <p><?php echo $ejercicio['descripcion']; ?></p>
-                                <a href="index.php?action=ejercicio&id=<?php echo $id; ?>" class="ver-mas">Ver más detalles</a>
+                                <a href="index.php?action=ejercicio&id=<?php echo $id; ?>" class="ver-mas" data-id="<?php echo $id; ?>">Ver más detalles</a>
                             </div>
                         <?php endforeach; ?>
                     <?php endif; ?>
@@ -136,25 +136,49 @@
         verMasButtons.forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
-                const ejercicioId = this.href.split('id=')[1];
+                const ejercicioId = this.getAttribute('data-id');
                 
+                // Mostrar el modal inmediatamente
+                modal.style.display = 'block';
+                
+                // Cargar los datos del ejercicio
                 fetch(`index.php?action=ejercicio&id=${ejercicioId}`)
-                    .then(response => response.json())
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Error al cargar los datos del ejercicio');
+                        }
+                        return response.json();
+                    })
                     .then(data => {
-                        document.getElementById('modalTitle').textContent = data.nombre;
-                        document.getElementById('modalImage').src = data.imagen;
-                        document.getElementById('modalDescription').textContent = data.descripcion;
-                        
-                        const stepsList = document.getElementById('modalSteps');
-                        stepsList.innerHTML = '';
-                        data.pasos.forEach(paso => {
-                            const li = document.createElement('li');
-                            li.textContent = paso;
-                            stepsList.appendChild(li);
-                        });
-                        
-                        document.getElementById('modalVideo').href = data.video;
-                        modal.style.display = 'block';
+                        if (data) {
+                            document.getElementById('modalTitle').textContent = data.nombre || 'Ejercicio';
+                            document.getElementById('modalImage').src = data.imagen || '';
+                            document.getElementById('modalImage').alt = data.nombre || 'Ejercicio';
+                            document.getElementById('modalDescription').textContent = data.descripcion || 'Sin descripción disponible';
+                            
+                            const stepsList = document.getElementById('modalSteps');
+                            stepsList.innerHTML = '';
+                            if (data.pasos && Array.isArray(data.pasos)) {
+                                data.pasos.forEach(paso => {
+                                    const li = document.createElement('li');
+                                    li.textContent = paso;
+                                    stepsList.appendChild(li);
+                                });
+                            }
+                            
+                            const videoLink = document.getElementById('modalVideo');
+                            if (data.video) {
+                                videoLink.href = data.video;
+                                videoLink.style.display = 'block';
+                            } else {
+                                videoLink.style.display = 'none';
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        document.getElementById('modalTitle').textContent = 'Error';
+                        document.getElementById('modalDescription').textContent = 'No se pudieron cargar los datos del ejercicio. Por favor, inténtalo de nuevo.';
                     });
             });
         });
