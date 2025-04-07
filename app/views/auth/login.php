@@ -27,6 +27,21 @@
                     case 'system_error':
                         echo 'Error del sistema. Por favor, inténtalo más tarde.';
                         break;
+                    case 'forgot-password':
+                        echo 'Ha ocurrido un error al intentar recuperar la contraseña. Por favor, inténtalo más tarde.';
+                        break;
+                    case 'send-reset-link':
+                        echo 'Ha ocurrido un error al intentar enviar el enlace de recuperación. Por favor, inténtalo más tarde.';
+                        break;
+                    case 'reset-password':
+                        echo 'Ha ocurrido un error al intentar resetear la contraseña. Por favor, inténtalo más tarde.';
+                        break;
+                    case 'update-password':
+                        echo 'Ha ocurrido un error al intentar actualizar la contraseña. Por favor, inténtalo más tarde.';
+                        break;
+                    case 'nosotros':
+                        echo 'Ha ocurrido un error al intentar acceder a la página de Nosotros. Por favor, inténtalo más tarde.';
+                        break;
                     default:
                         echo 'Ha ocurrido un error. Por favor, inténtalo de nuevo.';
                 }
@@ -50,6 +65,10 @@
 
                 <button type="submit" class="btn-primary">Iniciar Sesión</button>
             </form>
+
+            <p class="forgot-password">
+                <a href="index.php?action=forgot-password">¿Has olvidado tu contraseña?</a>
+            </p>
 
             <p class="register-link">
                 ¿No tienes una cuenta? <a href="index.php?action=register">Regístrate aquí</a>

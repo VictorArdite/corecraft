@@ -143,5 +143,106 @@ class AuthController {
         header("Location: index.php?action=login");
         exit();
     }
+
+    public function forgotPassword() {
+        require __DIR__ . '/../views/auth/forgot-password.php';
+    }
+
+    public function sendResetLink() {
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            header('Location: index.php?action=forgot-password');
+            exit;
+        }
+
+        $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+        if (!$email) {
+            header('Location: index.php?action=forgot-password&error=Email inválido');
+            exit;
+        }
+
+        try {
+            // Verificar si el email existe
+            $stmt = $this->db->prepare("SELECT id FROM usuarios WHERE email = ?");
+            $stmt->execute([$email]);
+            $user = $stmt->fetch();
+
+            if (!$user) {
+                header('Location: index.php?action=forgot-password&error=No existe una cuenta con este email');
+                exit;
+            }
+
+            // Generar token único
+            $token = bin2hex(random_bytes(32));
+            $expiry = date('Y-m-d H:i:s', strtotime('+1 hour'));
+
+            // Guardar el token en la base de datos
+            $stmt = $this->db->prepare("INSERT INTO password_resets (user_id, token, expiry) VALUES (?, ?, ?)");
+            $stmt->execute([$user['id'], $token, $expiry]);
+
+            // Redirigir con mensaje de éxito
+            header('Location: index.php?action=forgot-password&message=Se ha enviado un correo con las instrucciones para restablecer tu contraseña');
+            exit;
+
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+            header('Location: index.php?action=forgot-password&error=Error del sistema');
+            exit;
+        }
+    }
+
+    public function resetPassword() {
+        if (!isset($_GET['token'])) {
+            header('Location: index.php?action=login');
+            exit;
+        }
+
+        $token = $_GET['token'];
+        require __DIR__ . '/../views/auth/reset-password.php';
+    }
+
+    public function updatePassword() {
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+            header('Location: index.php?action=login');
+            exit;
+        }
+
+        $token = $_POST['token'];
+        $password = $_POST['password'];
+        $confirmPassword = $_POST['confirm_password'];
+
+        if ($password !== $confirmPassword) {
+            header('Location: index.php?action=reset-password&token=' . $token . '&error=Las contraseñas no coinciden');
+            exit;
+        }
+
+        try {
+            // Verificar token y que no haya expirado
+            $stmt = $this->db->prepare("SELECT user_id FROM password_resets WHERE token = ? AND expiry > NOW() AND used = 0");
+            $stmt->execute([$token]);
+            $reset = $stmt->fetch();
+
+            if (!$reset) {
+                header('Location: index.php?action=forgot-password&error=El enlace ha expirado o no es válido');
+                exit;
+            }
+
+            // Actualizar contraseña
+            $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+            $stmt = $this->db->prepare("UPDATE usuarios SET password = ? WHERE id = ?");
+            $stmt->execute([$hashedPassword, $reset['user_id']]);
+
+            // Marcar token como usado
+            $stmt = $this->db->prepare("UPDATE password_resets SET used = 1 WHERE token = ?");
+            $stmt->execute([$token]);
+
+            header('Location: index.php?action=login&message=Tu contraseña ha sido actualizada');
+            exit;
+
+        } catch (Exception $e) {
+            error_log($e->getMessage());
+            header('Location: index.php?action=reset-password&token=' . $token . '&error=Error del sistema');
+            exit;
+        }
+    }
 }
 ?>
