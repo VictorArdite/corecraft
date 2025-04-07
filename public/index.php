@@ -13,6 +13,7 @@ require_once __DIR__ . '/../app/controllers/RutinaController.php';
 require_once __DIR__ . '/../app/controllers/SuplementacionController.php';
 require_once __DIR__ . '/../app/controllers/PerfilController.php';
 require_once __DIR__ . '/../app/controllers/RegistroPesoController.php';
+require_once __DIR__ . '/../app/controllers/RutinaPersonalizadaController.php';
 
 // Obtener la conexión a la base de datos
 $database = Database::getInstance();
@@ -57,6 +58,27 @@ switch ($action) {
         $controller = new RutinaController();
         $controller->index();
         break;
+    case 'rutina-personalizada':
+        $controller = new RutinaPersonalizadaController();
+        $controller->mostrarFormulario();
+        break;
+    case 'rutina-personalizada/guardar':
+        $controller = new RutinaPersonalizadaController();
+        $controller->guardarRutina();
+        break;
+    case 'mis-rutinas':
+        $controller = new RutinaPersonalizadaController();
+        $controller->mostrarMisRutinas();
+        break;
+    case 'ver-rutina':
+        $controller = new RutinaPersonalizadaController();
+        $id = $_GET['id'] ?? null;
+        if ($id) {
+            $controller->verRutina($id);
+        } else {
+            header('Location: index.php?action=mis-rutinas');
+        }
+        break;
     case 'verRutinaPorNombre':
         $controller = new RutinaController();
         $controller->verRutinaPorNombre($_GET['nombre']);
@@ -80,6 +102,13 @@ switch ($action) {
     case 'logout':
         $controller = new AuthController();
         $controller->logout();
+        break;
+    case 'borrar-rutina':
+        $controller = new RutinaPersonalizadaController();
+        $controller->borrarRutina();
+        break;
+    case 'calculadora-nivel':
+        require_once __DIR__ . '/../app/views/calculadora_nivel.php';
         break;
     default:
         if (isset($_SESSION['authenticated'])) {
