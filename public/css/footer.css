@@ -50,7 +50,7 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Secciones comunes: Nosotros, Servicios, FAQ, Política, Contacto */
+/* Secciones comunes: Nosotros, Servicios, FAQ, Política, Contacto /*/
 .about-us, .faq, .privacy-policy, .contact {
     background-color: #f8f8f8;
     padding: 40px 20px;

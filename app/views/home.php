@@ -6,6 +6,7 @@
     <title>CoreCraft - Inicio</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/home.css"> <!-- Ruta al archivo CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -18,6 +19,10 @@
             <ul>
                 <li><a href="index.php?action=home">Inicio</a></li>
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
+                <li><a href="index.php?action=consultaEjercicios">Ejercicios</a></li>
+                <?php if (isset($_SESSION['user_id'])): ?>
+                    <li><a href="index.php?action=registro-peso">Registro de Pesos</a></li>
+                <?php endif; ?>
                 <li><a href="index.php?action=mis-rutinas">Mis Rutinas</a></li>
                 <li><a href="index.php?action=calculadora-nivel">Calculadora de Nivel</a></li>
                 <li><a href="index.php?action=suplementacion">Suplementación</a></li>
@@ -111,9 +116,15 @@
         <div class="footer-section">
             <h4>Síguenos</h4>
             <div class="footer-social">
-                <a href="https://www.facebook.com/profile.php?id=61574264483708" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
-                <a href="https://www.instagram.com/corecraft__/" target="_blank"><img src="img/instagram.jpg" alt="Instagram"></a>
-                <a href="https://x.com/Corecraft__" target="_blank"><img src="img/twitter.jpeg" alt="Twitter"></a>
+                <a href="https://www.facebook.com/profile.php?id=61574264483708" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/corecraft__/" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://x.com/Corecraft__" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
             </div>
         </div>
     </div>

@@ -13,6 +13,7 @@ require_once __DIR__ . '/../app/controllers/RutinaController.php';
 require_once __DIR__ . '/../app/controllers/SuplementacionController.php';
 require_once __DIR__ . '/../app/controllers/PerfilController.php';
 require_once __DIR__ . '/../app/controllers/RegistroPesoController.php';
+require_once __DIR__ . '/../app/controllers/ConsultaEjerciciosController.php';
 require_once __DIR__ . '/../app/controllers/RutinaPersonalizadaController.php';
 
 // Obtener la conexión a la base de datos
@@ -20,7 +21,7 @@ $database = Database::getInstance();
 $db = $database->getConnection();
 
 // Verificar si el usuario está autenticado
-$public_actions = ['login', 'auth', 'register', 'home'];
+$public_actions = ['login', 'auth', 'register', 'home', 'consultaEjercicios', 'forgot-password', 'send-reset-link', 'reset-password', 'update-password'];
 $action = $_GET['action'] ?? 'home';
 
 // Si el usuario no está autenticado y la acción no es pública, redirigir al login
@@ -102,13 +103,6 @@ switch ($action) {
     case 'logout':
         $controller = new AuthController();
         $controller->logout();
-        break;
-    case 'borrar-rutina':
-        $controller = new RutinaPersonalizadaController();
-        $controller->borrarRutina();
-        break;
-    case 'calculadora-nivel':
-        require_once __DIR__ . '/../app/views/calculadora_nivel.php';
         break;
     default:
         if (isset($_SESSION['authenticated'])) {
