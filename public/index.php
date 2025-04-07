@@ -20,7 +20,7 @@ $database = Database::getInstance();
 $db = $database->getConnection();
 
 // Verificar si el usuario está autenticado
-$public_actions = ['login', 'auth', 'register', 'home', 'consultaEjercicios'];
+$public_actions = ['login', 'auth', 'register', 'home', 'consultaEjercicios', 'forgot-password', 'send-reset-link', 'reset-password', 'update-password'];
 $action = $_GET['action'] ?? 'home';
 
 // Si el usuario no está autenticado y la acción no es pública, redirigir al login
@@ -89,6 +89,22 @@ switch ($action) {
     case 'ejercicio':
         $controller = new ConsultaEjerciciosController();
         $controller->verEjercicio($_GET['id']);
+        break;
+    case 'forgot-password':
+        $controller = new AuthController();
+        $controller->forgotPassword();
+        break;
+    case 'send-reset-link':
+        $controller = new AuthController();
+        $controller->sendResetLink();
+        break;
+    case 'reset-password':
+        $controller = new AuthController();
+        $controller->resetPassword();
+        break;
+    case 'update-password':
+        $controller = new AuthController();
+        $controller->updatePassword();
         break;
     default:
         if (isset($_SESSION['authenticated'])) {
