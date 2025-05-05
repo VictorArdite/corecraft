@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoreCraft - Inicio</title>
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/home.css"> <!-- Ruta al archivo CSS -->
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -18,6 +18,7 @@
         <nav>
             <ul>
                 <li><a href="index.php?action=home">Inicio</a></li>
+                <li><a href="index.php?action=calendario">Calendario</a></li>
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
                 <li><a href="index.php?action=consultaEjercicios">Ejercicios</a></li>
                 <?php if (isset($_SESSION['user_id'])): ?>
@@ -84,7 +85,7 @@
         </div>
     </main>
     
- <!-- Footer -->
+<!-- Footer -->
 <footer>
     <div class="footer-container">
         <!-- Apartado Compañía -->
@@ -133,6 +134,6 @@
 
 
     
-    <script src="js/carousel.js"></script> <!-- Ruta al archivo JS -->
+    <script src="js/carousel.js"></script>
 </body>
 </html>

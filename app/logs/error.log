@@ -376,3 +376,185 @@ Stack trace:
     [authenticated] => 1
 )
 
+[07-Apr-2025 18:55:20 Europe/Madrid] Intento de login - Email: victor_ardite33@ceroca.cat
+[07-Apr-2025 18:55:20 Europe/Madrid] Usuario encontrado: Sí
+[07-Apr-2025 18:55:20 Europe/Madrid] Verificando contraseña para usuario: victor_ardite33@ceroca.cat
+[07-Apr-2025 18:55:20 Europe/Madrid] Contraseña válida: No
+[07-Apr-2025 18:55:20 Europe/Madrid] Credenciales inválidas
+[07-Apr-2025 18:55:25 Europe/Madrid] Intento de login - Email: victor_ardite33@ceroca.cat
+[07-Apr-2025 18:55:25 Europe/Madrid] Usuario encontrado: Sí
+[07-Apr-2025 18:55:25 Europe/Madrid] Verificando contraseña para usuario: victor_ardite33@ceroca.cat
+[07-Apr-2025 18:55:25 Europe/Madrid] Contraseña válida: Sí
+[07-Apr-2025 18:55:25 Europe/Madrid] Sesión iniciada para usuario: victor_ardite33@ceroca.cat
+[07-Apr-2025 18:55:25 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 5
+    [user_name] => victor3
+    [user_email] => victor_ardite33@ceroca.cat
+    [user_edad] => 34
+    [user_peso] => 43.00
+    [user_altura] => 43.00
+    [user_objetivo] => 
+    [authenticated] => 1
+)
+
+[10-Apr-2025 10:07:32 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[10-Apr-2025 10:07:32 Europe/Madrid] Usuario encontrado: Sí
+[10-Apr-2025 10:07:32 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[10-Apr-2025 10:07:32 Europe/Madrid] Contraseña válida: Sí
+[10-Apr-2025 10:07:32 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[10-Apr-2025 10:07:32 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 60.00
+    [user_altura] => 214.00
+    [user_objetivo] => perder_peso
+    [authenticated] => 1
+)
+
+[10-Apr-2025 10:07:55 Europe/Madrid] PHP Warning:  Undefined array key "04" in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 38
+[10-Apr-2025 10:12:33 Europe/Madrid] PHP Warning:  require_once(D:\Xaamp\htdocs\corecraft\app\views/footer.php): Failed to open stream: No such file or directory in D:\Xaamp\htdocs\corecraft\app\views\home.php on line 63
+[10-Apr-2025 10:12:33 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\Xaamp\htdocs\corecraft\app\views/footer.php' (include_path='D:\Xaamp\php\PEAR') in D:\Xaamp\htdocs\corecraft\app\views\home.php:63
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\HomeController.php(4): require_once()
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(37): HomeController->index()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\views\home.php on line 63
+[10-Apr-2025 10:13:15 Europe/Madrid] PHP Warning:  Undefined array key "04" in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 42
+[10-Apr-2025 10:13:15 Europe/Madrid] PHP Warning:  require_once(D:\Xaamp\htdocs\corecraft\app\views/footer.php): Failed to open stream: No such file or directory in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 259
+[10-Apr-2025 10:13:15 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\Xaamp\htdocs\corecraft\app\views/footer.php' (include_path='D:\Xaamp\php\PEAR') in D:\Xaamp\htdocs\corecraft\app\views\calendario.php:259
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\CalendarioController.php(37): require_once()
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(169): CalendarioController->index()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 259
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  Undefined variable $mes_anterior in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 52
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  Undefined variable $anio_anterior in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 52
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  Undefined variable $meses in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 56
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  Trying to access array offset on value of type null in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 56
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  Undefined variable $mes_siguiente in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 57
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  Undefined variable $anio_siguiente in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 57
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  Undefined variable $primer_dia in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 77
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  Undefined variable $dias_mes in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 82
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  Undefined variable $tipos_entrenamiento in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 116
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  foreach() argument must be of type array|object, null given in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 116
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  Undefined variable $mes_anterior in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 53
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  Undefined variable $anio_anterior in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 53
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  Undefined variable $meses in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 57
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  Trying to access array offset on value of type null in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 57
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  Undefined variable $mes_siguiente in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 58
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  Undefined variable $anio_siguiente in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 58
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  Undefined variable $primer_dia in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 78
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  Undefined variable $dias_mes in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 83
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  Undefined variable $tipos_entrenamiento in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 117
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  foreach() argument must be of type array|object, null given in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 117
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  Undefined variable $mes_anterior in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 52
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  Undefined variable $anio_anterior in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 52
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  Undefined variable $meses in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 56
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  Trying to access array offset on value of type null in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 56
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  Undefined variable $mes_siguiente in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 57
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  Undefined variable $anio_siguiente in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 57
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  Undefined variable $primer_dia in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 77
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  Undefined variable $dias_mes in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 82
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  Undefined variable $tipos_entrenamiento in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 116
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  foreach() argument must be of type array|object, null given in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 116
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  Undefined variable $mes_anterior in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 52
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  Undefined variable $anio_anterior in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 52
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  Undefined variable $meses in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 56
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  Trying to access array offset on value of type null in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 56
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  Undefined variable $mes_siguiente in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 57
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  Undefined variable $anio_siguiente in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 57
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  Undefined variable $primer_dia in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 77
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  Undefined variable $dias_mes in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 82
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  Undefined variable $tipos_entrenamiento in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 116
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  foreach() argument must be of type array|object, null given in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 116
+[10-Apr-2025 10:25:09 Europe/Madrid] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'corecraft.registro_peso' doesn't exist in D:\Xaamp\htdocs\corecraft\app\controllers\PerfilController.php:28
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\PerfilController.php(28): PDOStatement->execute(Array)
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(77): PerfilController->index()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\controllers\PerfilController.php on line 28
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 234
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Deprecated:  ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 234
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "peso_actual" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 261
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "fecha_nacimiento" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 276
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "genero" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 282
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "genero" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 283
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "genero" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 284
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 291
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 292
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 293
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 294
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 295
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "descripcion" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 301
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 301
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "peso_actual" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 324
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "fecha_nacimiento" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 355
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "genero" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 361
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "genero" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 362
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "genero" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 363
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 370
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 371
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 372
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 373
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 374
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "descripcion" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 380
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 380
+[10-Apr-2025 10:28:32 Europe/Madrid] PHP Warning:  Undefined array key "fecha_nacimiento" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 355
+[10-Apr-2025 10:28:32 Europe/Madrid] PHP Warning:  Undefined array key "genero" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 361
+[10-Apr-2025 10:28:32 Europe/Madrid] PHP Warning:  Undefined array key "genero" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 362
+[10-Apr-2025 10:28:32 Europe/Madrid] PHP Warning:  Undefined array key "genero" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 363
+[10-Apr-2025 10:28:32 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 370
+[10-Apr-2025 10:28:32 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 371
+[10-Apr-2025 10:28:32 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 372
+[10-Apr-2025 10:28:32 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 373
+[10-Apr-2025 10:28:32 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 374
+[10-Apr-2025 10:31:13 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 187
+[10-Apr-2025 10:31:13 Europe/Madrid] PHP Deprecated:  ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 187
+[10-Apr-2025 10:31:13 Europe/Madrid] PHP Warning:  Undefined array key "peso_actual" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 214
+[10-Apr-2025 10:31:13 Europe/Madrid] PHP Warning:  Undefined array key "peso_actual" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 247
+[10-Apr-2025 10:32:57 Europe/Madrid] PHP Warning:  require_once(D:\Xaamp\htdocs\corecraft\app\views/../../../public/config/config.php): Failed to open stream: No such file or directory in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 1
+[10-Apr-2025 10:32:57 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\Xaamp\htdocs\corecraft\app\views/../../../public/config/config.php' (include_path='D:\Xaamp\php\PEAR') in D:\Xaamp\htdocs\corecraft\app\views\perfil.php:1
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\PerfilController.php(52): require_once()
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(77): PerfilController->index()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 1
+[10-Apr-2025 10:38:26 Europe/Madrid] Error al actualizar datos: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'peso_actual' in 'field list'
+[10-Apr-2025 10:39:18 Europe/Madrid] Error al actualizar datos: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'peso_actual' in 'field list'
+[10-Apr-2025 10:41:54 Europe/Madrid] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in D:\Xaamp\htdocs\corecraft\app\controllers\PerfilController.php on line 217
+[24-Apr-2025 10:31:44 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[24-Apr-2025 10:31:44 Europe/Madrid] Usuario encontrado: Sí
+[24-Apr-2025 10:31:44 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[24-Apr-2025 10:31:44 Europe/Madrid] Contraseña válida: Sí
+[24-Apr-2025 10:31:44 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[24-Apr-2025 10:31:44 Europe/Madrid] SESSION data: Array
+(
+    [usuario] => Array
+        (
+            [id_usuario] => 13
+            [nombre] => victor
+            [apellido] => ardite
+            [email] => ar@gmail.com
+            [rol] => cliente
+        )
+
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 69.00
+    [user_altura] => 214.00
+    [user_objetivo] => ganar_masa_muscular
+    [authenticated] => 1
+)
+
+[05-May-2025 18:29:33 Europe/Madrid] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'corecraft.dias_entrenamiento' doesn't exist in C:\xampp\htdocs\corecraft\app\controllers\CalendarioController.php:30
+Stack trace:
+#0 C:\xampp\htdocs\corecraft\app\controllers\CalendarioController.php(30): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\corecraft\public\index.php(169): CalendarioController->index()
+#2 {main}
+  thrown in C:\xampp\htdocs\corecraft\app\controllers\CalendarioController.php on line 30
