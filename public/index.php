@@ -159,10 +159,15 @@ switch ($action) {
                 $controller->index();
                 break;
     case 'contact':
-                    require_once '../app/controllers/ContactoController.php';
-                    $controller = new ContactoController();
-                    $controller->index();
-                    break;
+        require_once '../app/controllers/ContactoController.php';
+        $controller = new ContactoController();
+        $controller->index();
+        break;
+    case 'dietas':
+        require_once '../app/controllers/DietasController.php';
+        $controller = new DietasController();
+        $controller->index();
+        break;                
                 
             
         
