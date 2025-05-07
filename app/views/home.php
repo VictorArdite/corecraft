@@ -78,9 +78,28 @@
             <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
         </div>
 
-        <!-- Mensaje complementario debajo del carrusel -->
-        <div class="motivational-message">
-            <p>¡No esperes más! Empieza hoy mismo tu camino hacia el cambio. Aprovecha nuestras rutinas diseñadas especialmente para ti y tus objetivos. ¡El momento de transformar tu vida es ahora!</p>
+        <!-- Recuadros informativos -->
+        <div class="info-cards">
+            <div class="info-card">
+                <img src="img/card-rutina.png" alt="Crea tu Rutina" class="card-img">
+                <h3>Crea tu Rutina</h3>
+                <p>Diseña tu propio plan de entrenamiento personalizado según tus objetivos y nivel de experiencia. ¡Tú decides cómo alcanzar tus metas!</p>
+                <a href="index.php?action=rutinas" class="card-button">Crear Rutina</a>
+            </div>
+            
+            <div class="info-card">
+                <img src="img/card-nivel.png" alt="Calcula tu Nivel" class="card-img">
+                <h3>Calcula tu Nivel</h3>
+                <p>Descubre tu nivel actual de entrenamiento con nuestra calculadora especializada. Optimiza tu progreso con rutinas adaptadas a ti.</p>
+                <a href="index.php?action=calculadora-nivel" class="card-button">Calcular Nivel</a>
+            </div>
+            
+            <div class="info-card">
+                <img src="img/card-suplementos.png" alt="Suplementación" class="card-img">
+                <h3>Suplementación</h3>
+                <p>Aprende todo sobre suplementos deportivos: qué tomar, cuándo y por qué. Maximiza tus resultados con la nutrición adecuada.</p>
+                <a href="index.php?action=suplementacion" class="card-button">Saber Más</a>
+            </div>
         </div>
     </main>
     
