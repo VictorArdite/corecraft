@@ -76,19 +76,6 @@ nav ul li a:hover, nav ul li a.active {
     color: #ffd600;
 }
 
-/* Eliminar cualquier estilo específico anterior */
-.auth-buttons a:first-child,
-.auth-buttons a:last-child {
-    background-color: #bcc0c1;
-    color: #000;
-}
-
-.auth-buttons a:first-child:hover,
-.auth-buttons a:last-child:hover {
-    background-color: #000;
-    color: #fff;
-}
-
 main {
     display: flex;
     flex-direction: column;
