@@ -1,14 +1,16 @@
 /* Estilos específicos para la página de registro con fondo gris y recuadro ajustado */
 
 body {
-    background-color: #49494b; /* Fondo gris oscuro para la página */
-    color: #000000; /* Color de texto negro */
-    font-family: Arial, sans-serif; /* Tipografía clara */
+    background-color: #23272b;
+    color: #fff;
+    font-family: Arial, sans-serif;
 }
 
 header {
     text-align: center;
     margin-bottom: 20px;
+    background-color: #111;
+    padding: 20px 0;
 }
 
 nav ul {
@@ -23,11 +25,13 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #1d2d56; /* Azul fuerte para los enlaces */
+    color: #fff;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
+    color: #ffd600;
     text-decoration: underline;
 }
 
@@ -35,47 +39,47 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ocupa toda la pantalla */
+    height: 100vh;
     padding: 20px;
 }
 
 section {
-    background-color: #919294; /* Fondo gris para el recuadro */
-    padding: 30px; /* Aumento el padding para darle más espacio */
-    border-radius: 12px; /* Bordes más redondeados */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra más suave */
+    background-color: #23272b;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     width: 100%;
-    max-width: 500px; /* Ancho máximo ajustado para hacerlo más pequeño */
-    border: 3px solid #000000; /* Borde negro más grueso */
+    max-width: 500px;
+    border: 3px solid #ffd600;
     text-align: center;
 }
 
 section img {
-    width: 100%; /* La imagen ocupa el 100% del ancho disponible */
-    max-width: 150px; /* Tamaño máximo de la imagen */
-    margin-bottom: 20px; /* Espacio debajo de la imagen */
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 20px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Espaciado entre los campos */
+    gap: 10px;
 }
 
 label {
     font-weight: bold;
-    color: #000000; /* Color negro para las etiquetas */
+    color: #ffd600;
 }
 
 input, select {
-    padding: 6px; /* Reducido padding para hacer los campos más pequeños */
-    margin-top: 10px; /* Aumento el margen superior para los inputs */
+    padding: 6px;
+    margin-top: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     background-color: #fff;
     color: #333;
-    font-size: 14px; /* Tamaño de fuente reducido para que ocupe menos espacio */
-    width: 100%; /* Los campos ocupan todo el ancho disponible */
+    font-size: 14px;
+    width: 100%;
 }
 
 input[type="email"], input[type="text"], input[type="password"], input[type="number"], select {
@@ -83,19 +87,20 @@ input[type="email"], input[type="text"], input[type="password"], input[type="num
 }
 
 button {
-    margin-top: 25px; /* Aumento el margen superior del botón */
-    padding: 15px; /* Aumento el padding para que el botón sea más grande */
-    font-size: 18px; /* Aumento el tamaño de la fuente del botón */
-    background-color: #bcc0c1; /* Fondo gris claro para el botón */
-    color: #000; /* Texto en negro */
+    margin-top: 25px;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #ffd600;
+    color: #111;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 2px 8px rgba(255,214,0,0.10);
 }
 
 button:hover {
-    background-color: #000; /* Fondo negro cuando se pasa el ratón sobre el botón */
-    color: #fff; /* Texto blanco cuando el mouse está sobre el botón */
+    background-color: #fff;
+    color: #ffd600;
 }

@@ -38,7 +38,7 @@ header nav ul li a {
     transition: color 0.3s;
 }
 
-header nav ul li a:hover {
+header nav ul li a:hover, header nav ul li a.active {
     color: #ffd600;
 }
 

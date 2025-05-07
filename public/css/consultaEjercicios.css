@@ -1,12 +1,13 @@
 /* Estilos generales */
 body {
+    background-color: #23272b;
+    color: #fff;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #333333;
-    color: #fff;
 }
 
 main {
@@ -16,7 +17,7 @@ main {
 
 /* Estilos del header */
 header {
-    background-color: #1c1c1c;
+    background-color: #111;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -53,10 +54,11 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+nav ul li a:hover, nav ul li a.active {
+    color: #ffd600;
 }
 
 .auth-buttons {
@@ -66,8 +68,8 @@ nav ul li a:hover {
 
 .auth-button {
     padding: 12px 25px;
-    background-color: #bcc0c1;
-    color: #000;
+    background-color: #ffd600;
+    color: #111;
     font-size: 1em;
     text-decoration: none;
     border-radius: 5px;
@@ -76,11 +78,12 @@ nav ul li a:hover {
     border: none;
     display: inline-block;
     white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(255,214,0,0.10);
 }
 
 .auth-button:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #ffd600;
 }
 
 /* Eliminar cualquier estilo específico anterior */
@@ -108,21 +111,22 @@ nav ul li a:hover {
 
 /* Tarjetas de ejercicios */
 .ejercicio-card {
-    background: #2a2a2a;
+    background: #23272b;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
     display: flex;
     flex-direction: column;
     height: 100%;
     min-height: 350px;
-    border: 1px solid #333;
+    border: 2px solid #ffd600;
 }
 
 .ejercicio-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(255, 214, 0, 0.18);
+    border-color: #fff;
 }
 
 .ejercicio-card img {
@@ -134,7 +138,7 @@ nav ul li a:hover {
 .ejercicio-card h3 {
     padding: 1rem;
     margin: 0;
-    color: #ffffff;
+    color: #ffd600;
     font-size: 1.2rem;
     text-align: center;
     flex-grow: 0;
@@ -152,25 +156,27 @@ nav ul li a:hover {
 .ver-mas {
     display: block;
     padding: 0.8rem 1rem;
-    background: #142e52;
-    color: white;
+    background: #ffd600;
+    color: #23272b;
     text-decoration: none;
     text-align: center;
     margin: 1rem;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+    border: none;
+    font-weight: bold;
 }
 
 .ver-mas:hover {
-    background: #1a1a1a;
-    color: #142e52;
-    border: 1px solid #142e52;
+    background: #23272b;
+    color: #ffd600;
+    border: 1px solid #ffd600;
 }
 
 /* Título principal */
 h1 {
     text-align: center;
-    color: #ffffff;
+    color: #ffd600;
     margin: 2rem 0;
     font-size: 2rem;
     text-transform: uppercase;
@@ -179,10 +185,7 @@ h1 {
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 2rem 0;
-    margin-top: auto;
+    display: none;
 }
 
 .footer-container {
@@ -365,7 +368,7 @@ footer p {
 .grupo-muscular {
     margin-bottom: 3rem;
     padding: 2rem;
-    background-color: #333333;
+    background-color: transparent;
 }
 
 .grupo-muscular h2 {
@@ -373,7 +376,7 @@ footer p {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #666666;
+    border-bottom: 2px solid #ffd600;
     text-transform: uppercase;
 }
 
