@@ -1,11 +1,11 @@
 body {
-    background-color: #49494b; /* Fondo de un solo color */
-    color: #333;
+    background-color: #23272b; /* Gris oscuro más claro */
+    color: #fff;
     font-family: Arial, sans-serif;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #111;
     padding: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -35,10 +35,11 @@ header nav ul li a {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
+    transition: color 0.3s;
 }
 
 header nav ul li a:hover {
-    text-decoration: underline;
+    color: #ffd600;
 }
 
 .rutinas-container {
@@ -52,7 +53,7 @@ header nav ul li a:hover {
 }
 
 .rutina-card {
-    background-color: #fff;
+    background-color: #23272b;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -62,6 +63,14 @@ header nav ul li a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 2px solid #ffd600;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.rutina-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(255, 214, 0, 0.18);
+    border-color: #fff;
 }
 
 .rutina-card img {
@@ -73,7 +82,7 @@ header nav ul li a:hover {
 .rutina-card h3 {
     margin: 10px 0;
     font-size: 1.5em; /* Aumentar el tamaño del texto */
-    color: #333;
+    color: #ffd600;
 }
 
 .rutina-card a {
@@ -92,15 +101,17 @@ header nav ul li a:hover {
 
 .btn-crear-rutina {
     display: inline-block;
-    background-color: #4299e1;
-    color: white;
+    background-color: #ffd600;
+    color: #23272b;
     padding: 1rem 2rem;
     border-radius: 0.5rem;
     text-decoration: none;
     font-weight: 600;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
+    border: none;
 }
 
 .btn-crear-rutina:hover {
-    background-color: #3182ce;
+    background-color: #23272b;
+    color: #ffd600;
 }

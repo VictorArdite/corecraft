@@ -166,3 +166,23 @@ nav ul li a:hover {
     color: #721c24;
     border: 1px solid #f5c6cb;
 }
+
+.auth-button {
+    padding: 12px 25px;
+    background-color: #ffd600;
+    color: #111;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    display: inline-block;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(255,214,0,0.10);
+}
+
+.auth-button:hover {
+    background-color: #fff;
+    color: #ffd600;
+}

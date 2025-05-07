@@ -53,7 +53,7 @@
                     <img src="img/banca.png" alt="Banca">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/sentadilla.png" alt="Sentadilla">
+                    <img src="img/mujer.jpg" alt="Mujer">
                 </div>
                 <div class="carousel-item">
                     <img src="img/pesomuerto.png" alt="Peso Muerto">
@@ -62,10 +62,10 @@
                     <img src="img/halterofilia.png" alt="Halterofilia">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/banca.png" alt="Banca">
+                    <img src="img/sentadilla.png" alt="Sentadilla">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/sentadilla.png" alt="Sentadilla">
+                    <img src="img/mujer1.jpg" alt="Mujer 1">
                 </div>
                 <div class="carousel-item">
                     <img src="img/pesomuerto.png" alt="Peso Muerto">

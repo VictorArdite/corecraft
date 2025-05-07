@@ -212,12 +212,12 @@ footer {
 
 .footer-social a i {
     font-size: 25px;
-    color: #ffd600;
+    color: #fff;
     transition: color 0.3s ease;
 }
 
 .footer-social a i:hover {
-    color: #fff;
+    color: #ffd600;
 }
 
 footer p {
