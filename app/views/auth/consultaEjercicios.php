@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoreCraft - Ejercicios</title>
+    <title>CoreCraft - Catálogo de Ejercicios</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/consultaEjercicios.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -12,7 +12,7 @@
     <header>
         <div class="logo">
             <a href="index.php?action=home">
-                <img src="img/logo.jpg" alt="CoreCraft Logo"> 
+                <img src="img/logo.jpg" alt="CoreCraft Logo">
             </a>
         </div>
         <nav>
@@ -60,10 +60,14 @@
                     <?php if (isset($ejerciciosPorGrupo[$key])): ?>
                         <?php foreach ($ejerciciosPorGrupo[$key] as $id => $ejercicio): ?>
                             <div class="ejercicio-card">
-                                <img src="<?php echo $ejercicio['imagen']; ?>" alt="<?php echo $ejercicio['nombre']; ?>">
-                                <h3><?php echo $ejercicio['nombre']; ?></h3>
-                                <p><?php echo $ejercicio['descripcion']; ?></p>
-                                <a href="index.php?action=ejercicio&id=<?php echo $id; ?>" class="ver-mas" data-id="<?php echo $id; ?>">Ver más detalles</a>
+                                <div class="ejercicio-imagen">
+                                    <img src="<?php echo $ejercicio['imagen']; ?>" alt="<?php echo $ejercicio['nombre']; ?>">
+                                </div>
+                                <div class="ejercicio-info">
+                                    <h3><?php echo $ejercicio['nombre']; ?></h3>
+                                    <p><?php echo $ejercicio['descripcion']; ?></p>
+                                    <a href="index.php?action=ejercicio&id=<?php echo $id; ?>" class="ver-mas" data-id="<?php echo $id; ?>">Ver más detalles</a>
+                                </div>
                             </div>
                         <?php endforeach; ?>
                     <?php endif; ?>
@@ -78,14 +82,9 @@
             <h2 id="modalTitle"></h2>
             <img id="modalImage" src="" alt="">
             <div class="descripcion">
-                <h3>Descripción</h3>
                 <p id="modalDescription"></p>
             </div>
-            <div class="instrucciones">
-                <h3>Instrucciones</h3>
-                <ol id="modalSteps"></ol>
-            </div>
-            <a id="modalVideo" href="" target="_blank" class="video-link">Ver video </a>
+            <a id="modalVideo" href="" target="_blank" class="video-link">Ver tutorial en YouTube</a>
         </div>
     </div>
 
@@ -94,16 +93,14 @@
         const modal = document.getElementById('ejercicioModal');
         const closeBtn = document.querySelector('.close-modal');
         const verMasButtons = document.querySelectorAll('.ver-mas');
+        const placeholderImg = 'img/placeholder.png'; // Usa una imagen de placeholder que tengas en tu proyecto
+        const defaultVideo = 'https://www.youtube.com/results?search_query=ejercicio+gimnasio';
 
         verMasButtons.forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
                 const ejercicioId = this.getAttribute('data-id');
-                
-                // Mostrar el modal inmediatamente
                 modal.style.display = 'block';
-                
-                // Cargar los datos del ejercicio
                 fetch(`index.php?action=ejercicio&id=${ejercicioId}`)
                     .then(response => {
                         if (!response.ok) {
@@ -114,33 +111,27 @@
                     .then(data => {
                         if (data) {
                             document.getElementById('modalTitle').textContent = data.nombre || 'Ejercicio';
-                            document.getElementById('modalImage').src = data.imagen || '';
+                            document.getElementById('modalImage').src = data.imagen || placeholderImg;
                             document.getElementById('modalImage').alt = data.nombre || 'Ejercicio';
                             document.getElementById('modalDescription').textContent = data.descripcion || 'Sin descripción disponible';
-                            
-                            const stepsList = document.getElementById('modalSteps');
-                            stepsList.innerHTML = '';
-                            if (data.pasos && Array.isArray(data.pasos)) {
-                                data.pasos.forEach(paso => {
-                                    const li = document.createElement('li');
-                                    li.textContent = paso;
-                                    stepsList.appendChild(li);
-                                });
-                            }
-                            
                             const videoLink = document.getElementById('modalVideo');
-                            if (data.video) {
+                            if (data.video && data.video.trim() !== '') {
                                 videoLink.href = data.video;
                                 videoLink.style.display = 'block';
                             } else {
-                                videoLink.style.display = 'none';
+                                videoLink.href = defaultVideo;
+                                videoLink.style.display = 'block';
                             }
                         }
                     })
                     .catch(error => {
                         console.error('Error:', error);
                         document.getElementById('modalTitle').textContent = 'Error';
+                        document.getElementById('modalImage').src = placeholderImg;
                         document.getElementById('modalDescription').textContent = 'No se pudieron cargar los datos del ejercicio. Por favor, inténtalo de nuevo.';
+                        const videoLink = document.getElementById('modalVideo');
+                        videoLink.href = defaultVideo;
+                        videoLink.style.display = 'block';
                     });
             });
         });

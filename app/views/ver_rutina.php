@@ -4,25 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo htmlspecialchars($rutina['nombre']); ?> - CoreCraft</title>
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/public/css/global.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/public/css/ver_rutina.css">
+    <title>CoreCraft - <?php echo htmlspecialchars($rutina['nombre']); ?></title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/ver_rutina.css">
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="index.php?action=home">
-                <img src="<?php echo BASE_URL; ?>/public/img/logo.jpg" alt="CoreCraft Logo">
+                <img src="img/logo.jpg" alt="CoreCraft Logo">
             </a>
         </div>
         <nav>
             <ul>
                 <li><a href="index.php?action=home">Inicio</a></li>
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
+                <li><a href="index.php?action=consultaEjercicios">Ejercicios</a></li>
+                <?php if (isset($_SESSION['user_id'])): ?>
+                    <li><a href="index.php?action=registro-peso">Registro de Pesos</a></li>
+                <?php endif; ?>
                 <li><a href="index.php?action=mis-rutinas">Mis Rutinas</a></li>
+                <li><a href="index.php?action=calculadora-nivel">Calculadora de Nivel</a></li>
                 <li><a href="index.php?action=suplementacion">Suplementación</a></li>
                 <li><a href="index.php?action=perfil">Perfil</a></li>
             </ul>
+            <?php if (!isset($_SESSION['user_id'])): ?>
+            <div class="auth-buttons">
+                <a href="index.php?action=login" class="auth-button">Iniciar Sesión</a>
+                <a href="index.php?action=register" class="auth-button">Registrarse</a>
+            </div>
+            <?php else: ?>
+            <div class="auth-buttons">
+                <a href="index.php?action=logout" class="auth-button">Cerrar Sesión</a>
+            </div>
+            <?php endif; ?>
         </nav>
     </header>
 
