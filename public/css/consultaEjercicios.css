@@ -397,4 +397,36 @@ section.grupo-muscular + section.grupo-muscular {
 
 .footer-social a i:hover {
     color: #ccc;
+}
+
+.nav-ejercicios {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1em;
+}
+
+.nav-ejercicios a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 0.5em;
+    transition: color 0.2s;
+}
+
+.nav-ejercicios a:hover {
+    color: #ffd600;
+    text-decoration: underline;
+}
+
+.nav-ejercicios {
+    letter-spacing: 0.5px;
+}
+
+.nav-ejercicios a + a::before {
+    content: '|';
+    color: #ffd600;
+    margin: 0 0.5em;
+    font-weight: bold;
+    position: relative;
+    top: 0.5px;
 } 

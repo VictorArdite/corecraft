@@ -43,6 +43,13 @@
     
     <main>
         <h1>Catálogo de Ejercicios</h1>
+        <nav class="nav-ejercicios" style="text-align:center; margin-bottom:2rem;">
+            <a href="#pecho">Pecho</a>
+            <a href="#espalda">Espalda</a>
+            <a href="#piernas">Piernas</a>
+            <a href="#brazos">Brazos</a>
+            <a href="#core">Core</a>
+        </nav>
         
         <?php
         $gruposMusculares = [
@@ -54,7 +61,7 @@
         ];
         
         foreach ($gruposMusculares as $key => $grupo): ?>
-            <section class="grupo-muscular">
+            <section class="grupo-muscular" id="<?php echo $key; ?>">
                 <h2><?php echo $grupo; ?></h2>
                 <div class="ejercicios-container">
                     <?php if (isset($ejerciciosPorGrupo[$key])): ?>
