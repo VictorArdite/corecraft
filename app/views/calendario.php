@@ -477,6 +477,53 @@
                 padding: 8px 15px;
             }
         }
+
+        /* Hover amarillo en los enlaces del header */
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover, nav ul li a.active {
+            color: #ffd600;
+        }
+
+        /* Botón de cerrar sesión igual que home */
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .auth-button {
+            padding: 12px 25px;
+            background-color: #ffd600;
+            color: #111;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border: none;
+            display: inline-block;
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(255,214,0,0.10);
+        }
+        .auth-button:hover {
+            background-color: #fff;
+            color: #ffd600;
+        }
+
+        /* Título en amarillo */
+        .page-title {
+            color: #ffd600 !important;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            padding-bottom: 15px;
+        }
     </style>
 </head>
 <body>
@@ -540,6 +587,7 @@
                 <li><a href="index.php?action=calendario">Calendario</a></li>
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
                 <li><a href="index.php?action=consultaEjercicios">Ejercicios</a></li>
+                <li><a href="index.php?action=dietas">Dietas</a></li>
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <li><a href="index.php?action=registro-peso">Registro de Pesos</a></li>
                 <?php endif; ?>

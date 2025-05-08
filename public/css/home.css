@@ -155,12 +155,13 @@ main {
 
 /* Estilos del footer */
 footer {
-    background-color: #111;
+    background-color: #111 !important;
+    color: #fff;
     padding: 40px 20px;
     text-align: center;
-    color: #fff;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Arial', sans-serif;
     border-top: 3px solid #ffd600;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .footer-container {
@@ -170,12 +171,19 @@ footer {
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+    background: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
 }
 
 .footer-section {
     flex: 1;
     margin: 20px;
     text-align: left;
+    background: none;
+    box-shadow: none;
+    border: none;
 }
 
 .footer-section h4 {
@@ -184,6 +192,7 @@ footer {
     margin-bottom: 10px;
     border-bottom: 2px solid #ffd600;
     padding-bottom: 5px;
+    background: none;
 }
 
 .footer-links {
@@ -208,6 +217,7 @@ footer {
     display: flex;
     gap: 15px;
     justify-content: flex-start;
+    margin-top: 8px;
 }
 
 .footer-social a i {
@@ -216,13 +226,39 @@ footer {
     transition: color 0.3s ease;
 }
 
-.footer-social a i:hover {
+.footer-social a i.fa-x-twitter, .footer-social a .fa-x-twitter {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    color: #fff;
+    display: inline-block;
+    width: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.footer-social a i:hover, .footer-social a .fa-x-twitter:hover {
     color: #ffd600;
 }
 
 footer p {
     margin-top: 20px;
     font-size: 0.9em;
+    color: #fff;
+}
+
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .footer-section {
+        min-width: unset;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .featured-tools {

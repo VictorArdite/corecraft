@@ -51,11 +51,16 @@ header nav ul li a:hover, header nav ul li a.active {
 .auth-button {
     background-color: #ffd600;
     color: #23272b;
-    padding: 8px 16px;
+    padding: 12px 25px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1em;
     transition: background-color 0.3s, color 0.3s;
+    border: none;
+    display: inline-block;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(255,214,0,0.10);
 }
 
 .auth-button:hover {

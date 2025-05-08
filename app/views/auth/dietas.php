@@ -12,12 +12,13 @@
     <header>
         <div class="logo">
             <a href="index.php?action=home">
-                <img src="img/logo.jpg" alt="CoreCraft Logo" style="max-height: 50px; width: auto;"> 
+                <img src="img/logo.jpg" alt="CoreCraft Logo"> 
             </a>
         </div>
         <nav>
             <ul>
                 <li><a href="index.php?action=home">Inicio</a></li>
+                <li><a href="index.php?action=calendario">Calendario</a></li>
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
                 <li><a href="index.php?action=consultaEjercicios">Ejercicios</a></li>
                 <li><a href="index.php?action=dietas">Dietas</a></li>

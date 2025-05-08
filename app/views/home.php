@@ -112,27 +112,19 @@
         <div class="footer-section">
             <h4>Compañía</h4>
             <div class="footer-links">
-                
-            <a href="index.php?action=nosotros">Nosotros</a>
-
-
-            <a href="index.php?action=services">Nuestros servicios</a>
-
-            <a href="index.php?action=privacy">Política de privacidad</a>
-
+                <a href="index.php?action=nosotros">Nosotros</a>
+                <a href="index.php?action=services">Nuestros servicios</a>
+                <a href="index.php?action=privacy">Política de privacidad</a>
             </div>
         </div>
-
         <!-- Apartado Ayuda -->
         <div class="footer-section">
             <h4>Ayuda</h4>
             <div class="footer-links">
-            <a href="index.php?action=faq">Preguntas frecuentes</a>
-            <a href="index.php?action=contact">Contacto</a>
-
+                <a href="index.php?action=faq">Preguntas frecuentes</a>
+                <a href="index.php?action=contact">Contacto</a>
             </div>
         </div>
-
         <!-- Apartado Síguenos -->
         <div class="footer-section">
             <h4>Síguenos</h4>
@@ -144,7 +136,7 @@
                     <i class="fab fa-instagram"></i>
                 </a>
                 <a href="https://x.com/Corecraft__" target="_blank">
-                    <i class="fab fa-twitter"></i>
+                    <span class="fa-x-twitter">X</span>
                 </a>
             </div>
         </div>

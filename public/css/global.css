@@ -114,14 +114,15 @@ nav ul {
 }
 
 nav ul li a {
-    color: #333;
+    color: #fff !important;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bold;
+    font-size: 1.1em;
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #007bff;
+nav ul li a:hover, nav ul li a.active {
+    color: #ffd600 !important;
 }
 
 /* Responsive header */
@@ -168,11 +169,9 @@ nav ul li a:hover {
 }
 
 /* HEADER: Enlaces blancos */
-header nav ul li a {
-    color: #fff !important;
-}
-header nav ul li a:hover {
-    color: #bcc0c1 !important;
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #ffd600 !important;
 }
 
 /* FOOTER: Organización en columnas */

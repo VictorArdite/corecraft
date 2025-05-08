@@ -100,8 +100,10 @@
         <nav>
             <ul>
                 <li><a href="index.php?action=home">Inicio</a></li>
+                <li><a href="index.php?action=calendario">Calendario</a></li>
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
                 <li><a href="index.php?action=consultaEjercicios">Ejercicios</a></li>
+                <li><a href="index.php?action=dietas">Dietas</a></li>
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <li><a href="index.php?action=registro-peso">Registro de Pesos</a></li>
                 <?php endif; ?>
