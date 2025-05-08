@@ -16,7 +16,7 @@
         }
 
         .rutina-card {
-            background: white;
+            background: #23272b;
             border-radius: 8px;
             padding: 20px;
             width: 300px;
@@ -30,20 +30,22 @@
         .form-group label {
             display: block;
             margin-bottom: 5px;
-            color: #333;
+            color: #fff;
         }
 
         .form-control {
             width: 100%;
             padding: 8px;
-            border: 1px solid #ddd;
+            border: 1px solid #ffd600;
             border-radius: 4px;
+            background-color: #23272b;
+            color: #fff;
         }
 
         .btn-primary {
-            background: #142e52;
-            color: white;
-            border: none;
+            background: #23272b;
+            color: #fff;
+            border: 2px solid #ffd600;
             padding: 10px 20px;
             border-radius: 4px;
             cursor: pointer;
@@ -51,19 +53,21 @@
         }
 
         .btn-primary:hover {
-            background: #0e2238;
+            background: #ffd600;
+            color: #23272b;
         }
 
         .historial {
             margin-top: 20px;
             padding-top: 20px;
-            border-top: 1px solid #eee;
+            border-top: 1px solid #ffd600;
+            color: #fff;
         }
 
         .page-title {
             text-align: center;
             margin: 20px 0;
-            color: white;
+            color: #ffd600;
         }
 
         .ejercicios-grid {
@@ -74,10 +78,15 @@
         }
 
         .ejercicio-card {
-            background: white;
+            background: #23272b;
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 2px solid #ffd600;
+        }
+
+        .ejercicio-card h3 {
+            color: #ffd600;
         }
     </style>
 </head>
@@ -92,17 +101,30 @@
             <ul>
                 <li><a href="index.php?action=home">Inicio</a></li>
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
+                <li><a href="index.php?action=consultaEjercicios">Ejercicios</a></li>
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <li><a href="index.php?action=registro-peso">Registro de Pesos</a></li>
                 <?php endif; ?>
+                <li><a href="index.php?action=mis-rutinas">Mis Rutinas</a></li>
+                <li><a href="index.php?action=calculadora-nivel">Calculadora de Nivel</a></li>
                 <li><a href="index.php?action=suplementacion">Suplementación</a></li>
                 <li><a href="index.php?action=perfil">Perfil</a></li>
             </ul>
+            <?php if (!isset($_SESSION['user_id'])): ?>
+            <div class="auth-buttons">
+                <a href="index.php?action=login" class="auth-button">Iniciar Sesión</a>
+                <a href="index.php?action=register" class="auth-button">Registrarse</a>
+            </div>
+            <?php else: ?>
+            <div class="auth-buttons">
+                <a href="index.php?action=logout" class="auth-button">Cerrar Sesión</a>
+            </div>
+            <?php endif; ?>
         </nav>
     </header>
 
     <main>
-        <h1 class="page-title">Registro de Pesos</h1>
+        <h1 class="page-title" style="color: #ffd600;">Registro de Pesos</h1>
         
         <div class="ejercicios-grid">
             <?php if (!empty($ejercicios)): ?>
@@ -119,7 +141,7 @@
                             <label for="repeticiones_<?php echo md5($ejercicio['ejercicio']); ?>">Repeticiones</label>
                             <input type="number" class="form-control" id="repeticiones_<?php echo md5($ejercicio['ejercicio']); ?>" name="repeticiones" value="<?php echo htmlspecialchars($ejercicio['repeticiones']); ?>" required>
                         </div>
-                        <button type="submit" class="btn-primary">Guardar</button>
+                        <button type="submit" class="btn-primary" style="background-color: #23272b; color: #fff; border: 2px solid #ffd600;">Guardar</button>
                     </form>
 
                     <div class="historial">

@@ -1,8 +1,8 @@
 /* Estilos específicos para la página de login con fondo gris y recuadro grande */
 
 body {
-    background-color: #49494b; /* Fondo gris oscuro para la página */
-    color: #000000; /* Color de texto negro */
+    background-color: #23272b; /* Fondo gris oscuro para la página */
+    color: #fff; /* Color de texto negro */
     font-family: Arial, sans-serif; /* Tipografía clara */
 }
 
@@ -23,11 +23,12 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #1d2d56; /* Azul fuerte para los enlaces */
+    color: #ffd600; /* Azul fuerte para los enlaces */
     text-decoration: none;
 }
 
 nav ul li a:hover {
+    color: #fff;
     text-decoration: underline;
 }
 
@@ -40,13 +41,13 @@ main {
 }
 
 section {
-    background-color: #919294; /* Fondo gris para el recuadro */
+    background-color: #23272b; /* Fondo gris para el recuadro */
     padding: 40px; /* Aumento del padding para hacer el recuadro más grande */
     border-radius: 12px; /* Bordes más redondeados */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Sombra más suave */
     width: 100%;
     max-width: 450px; /* Ajuste del ancho máximo para hacerlo igual de grande que el de Epic Games */
-    border: 3px solid #000000; /* Borde negro más grueso */
+    border: 3px solid #ffd600; /* Borde negro más grueso */
     text-align: center;
 }
 
@@ -64,16 +65,16 @@ form {
 label {
     font-weight: bold;
     margin-top: 20px; /* Aumento el margen superior para más espacio */
-    color: #000000; /* Color negro para las etiquetas */
+    color: #ffd600; /* Color negro para las etiquetas */
 }
 
 input, select {
     padding: 15px; /* Aumento el padding para hacer los inputs más grandes */
     margin-top: 10px; /* Aumento el margen superior para los inputs */
     border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    color: #333;
+    border: 1px solid #ffd600;
+    background-color: #23272b;
+    color: #fff;
     font-size: 16px;
 }
 
@@ -81,12 +82,12 @@ input[type="email"], input[type="text"], input[type="password"], input[type="num
     width: 100%; /* Asegura que los inputs y select ocupen todo el ancho */
 }
 
-button {
+button, .btn-primary {
     margin-top: 25px; /* Aumento el margen superior del botón */
     padding: 15px; /* Aumento el padding para que el botón sea más grande */
     font-size: 18px; /* Aumento el tamaño de la fuente del botón */
-    background-color: #bcc0c1; /* Fondo gris claro para el botón */
-    color: #000; /* Texto en negro */
+    background-color: #ffd600;
+    color: #23272b;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -94,7 +95,20 @@ button {
     transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
 }
 
-button:hover {
-    background-color: #000; /* Fondo negro cuando el mouse está sobre el botón */
-    color: #fff; /* Texto blanco cuando el mouse está sobre el botón */
+button:hover, .btn-primary:hover {
+    background-color: #23272b;
+    color: #ffd600;
+    border: 2px solid #ffd600;
+}
+
+.forgot-password a, .register-link a {
+    color: #ffd600;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.forgot-password a:hover, .register-link a:hover {
+    color: #fff;
+    text-decoration: underline;
 }

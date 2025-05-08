@@ -4,21 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Rutina Personalizada - CoreCraft</title>
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/public/css/global.css">
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>/public/css/rutina_personalizada.css">
+    <title>CoreCraft - Crear Rutina Personalizada</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/rutina_personalizada.css">
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="index.php?action=home">
-                <img src="<?php echo BASE_URL; ?>/public/img/logo.jpg" alt="CoreCraft Logo">
+                <img src="img/logo.jpg" alt="CoreCraft Logo">
             </a>
         </div>
         <nav>
             <ul>
                 <li><a href="index.php?action=home">Inicio</a></li>
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
+                <li><a href="index.php?action=consultaEjercicios">Ejercicios</a></li>
+                <?php if (isset($_SESSION['user_id'])): ?>
+                    <li><a href="index.php?action=registro-peso">Registro de Pesos</a></li>
+                <?php endif; ?>
                 <li><a href="index.php?action=mis-rutinas">Mis Rutinas</a></li>
                 <li><a href="index.php?action=calculadora-nivel">Calculadora de Nivel</a></li>
                 <li><a href="index.php?action=suplementacion">Suplementación</a></li>

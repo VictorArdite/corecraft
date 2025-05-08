@@ -63,30 +63,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.auth-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.auth-button {
-    padding: 12px 25px;
-    background-color: #bcc0c1;
-    color: #000;
-    font-size: 1em;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border: none;
-    display: inline-block;
-    white-space: nowrap;
-}
-
-.auth-button:hover {
-    background-color: #000;
-    color: #fff;
-}
-
 /* Encabezados */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Arial', sans-serif;
@@ -148,32 +124,6 @@ nav ul li a:hover {
     color: #007bff;
 }
 
-.auth-buttons {
-    display: flex;
-    gap: 1rem;
-}
-
-.auth-button {
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.auth-button:first-child {
-    background-color: #007bff;
-    color: white;
-}
-
-.auth-button:last-child {
-    background-color: #6c757d;
-    color: white;
-}
-
-.auth-button:hover {
-    opacity: 0.9;
-}
-
 /* Responsive header */
 @media (max-width: 768px) {
     nav {
@@ -215,4 +165,24 @@ nav ul li a:hover {
     background-color: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
+}
+
+.auth-button {
+    padding: 12px 25px;
+    background-color: #ffd600;
+    color: #111;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    display: inline-block;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(255,214,0,0.10);
+}
+
+.auth-button:hover {
+    background-color: #fff;
+    color: #ffd600;
 }

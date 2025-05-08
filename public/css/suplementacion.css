@@ -1,11 +1,11 @@
 body {
-    background-color: #49494b; /* Fondo oscuro similar al de Epic Games */
+    background-color: #23272b;
     color: #fff;
     font-family: Arial, sans-serif;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #111;
     padding: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -14,7 +14,7 @@ header {
 }
 
 header .logo img {
-    height: 50px; /* Ajusta el tamaño del logo según sea necesario */
+    height: 50px;
     margin-left: 20px;
 }
 
@@ -35,10 +35,32 @@ header nav ul li a {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
+    transition: color 0.3s;
 }
 
-header nav ul li a:hover {
-    text-decoration: underline;
+header nav ul li a:hover, header nav ul li a.active {
+    color: #ffd600;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+.auth-button {
+    background-color: #ffd600;
+    color: #23272b;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.auth-button:hover {
+    background-color: #23272b;
+    color: #ffd600;
 }
 
 .container {
@@ -59,15 +81,16 @@ header nav ul li a:hover {
 }
 
 .supplement-tips {
-    background-color: #2c2c2c;
+    background-color: #23272b;
     padding: 2rem;
     border-radius: 10px;
     margin-bottom: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffd600;
 }
 
 .supplement-tips h2 {
-    color: #fff;
+    color: #ffd600;
     margin-bottom: 1.5rem;
 }
 
@@ -79,26 +102,28 @@ header nav ul li a:hover {
 .supplement-tips li {
     margin-bottom: 1.5rem;
     padding: 1rem;
-    background-color: #3c3c3c;
+    background-color: #23272b;
     border-radius: 8px;
+    border: 1px solid #ffd600;
 }
 
 .supplement-tips strong {
-    color: #00bcd4;
+    color: #ffd600;
     display: block;
     margin-bottom: 0.5rem;
 }
 
 .supplement-section {
-    background-color: #2c2c2c;
+    background-color: #23272b;
     padding: 2rem;
     border-radius: 10px;
     margin-bottom: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffd600;
 }
 
 .supplement-section h3 {
-    color: #fff;
+    color: #ffd600;
     margin-bottom: 1rem;
 }
 
@@ -108,10 +133,11 @@ header nav ul li a:hover {
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1rem;
+    border: 2px solid #ffd600;
 }
 
 .supplement-section p {
-    color: #ccc;
+    color: #fff;
     margin-bottom: 1rem;
     line-height: 1.6;
 }
@@ -122,7 +148,7 @@ header nav ul li a:hover {
 }
 
 .supplement-section li {
-    color: #ccc;
+    color: #fff;
     margin-bottom: 0.5rem;
     padding-left: 1.5rem;
     position: relative;
@@ -130,25 +156,26 @@ header nav ul li a:hover {
 
 .supplement-section li:before {
     content: "•";
-    color: #00bcd4;
+    color: #ffd600;
     position: absolute;
     left: 0;
 }
 
 .supplement-section strong {
-    color: #00bcd4;
+    color: #ffd600;
 }
 
 .calculator {
-    background-color: #2c2c2c;
+    background-color: #23272b;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     flex: 1;
+    border: 2px solid #ffd600;
 }
 
 .calculator h2 {
-    color: #fff;
+    color: #ffd600;
     margin-bottom: 1.5rem;
 }
 
@@ -166,9 +193,9 @@ header nav ul li a:hover {
 .calculator input,
 .calculator select {
     padding: 0.8rem;
-    border: 2px solid #00bcd4;
+    border: 2px solid #ffd600;
     border-radius: 5px;
-    background-color: #3c3c3c;
+    background-color: #23272b;
     color: #fff;
     font-size: 1rem;
     transition: border-color 0.3s ease;
@@ -177,31 +204,34 @@ header nav ul li a:hover {
 .calculator input:focus,
 .calculator select:focus {
     outline: none;
-    border-color: #00bcd4;
-    box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+    border-color: #ffd600;
+    box-shadow: 0 0 5px rgba(255, 214, 0, 0.5);
 }
 
 .calculator button {
-    background-color: #00bcd4;
-    color: #fff;
+    background-color: #ffd600;
+    color: #23272b;
     padding: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.1rem;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .calculator button:hover {
-    background-color: #0097a7;
+    background-color: #23272b;
+    color: #ffd600;
+    border: 2px solid #ffd600;
 }
 
 .result {
     margin-top: 1.5rem;
     padding: 1rem;
-    background-color: #3c3c3c;
+    background-color: #23272b;
     border-radius: 5px;
-    border-left: 4px solid #00bcd4;
+    border: 2px solid #ffd600;
 }
 
 @media (max-width: 768px) {

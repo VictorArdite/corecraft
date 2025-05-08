@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoreCraft - Registro</title>
     <link rel="stylesheet" href="/corecraft/public/css/global.css">
-    <link rel="stylesheet" href="/corecraft/public/css/login.css">
+    <link rel="stylesheet" href="/corecraft/public/css/registro.css">
 </head>
 <body>
     <main>
