@@ -50,7 +50,7 @@
 
             <?php if (empty($rutinas)): ?>
                 <div class="no-rutinas">
-                    <p>No tienes rutinas personalizadas creadas.</p>
+                    <p>No tienes rutinas personalizadas creadas!.</p>
                     <a href="index.php?action=rutina-personalizada" class="btn-crear">Crear mi primera rutina</a>
                 </div>
             <?php else: ?>
