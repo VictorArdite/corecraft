@@ -57,24 +57,69 @@
 
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <div class="stat-icon">🎯</div>
-                        <div class="stat-info">
-                            <h3>Objetivo a cumplir</h3>
-                            <p><?php echo ucfirst($user['objetivo']); ?></p>
-                        </div>
-                    </div>
-                    <div class="stat-card">
                         <div class="stat-icon">⚖️</div>
                         <div class="stat-info">
                             <h3>Peso Actual</h3>
-                            <p><?php echo isset($ultimoPeso['peso']) ? $ultimoPeso['peso'] . ' kg' : 'No registrado'; ?></p>
+                            <p class="stat-value"><?php echo htmlspecialchars($user['peso'] ?? 'No registrado'); ?> kg</p>
+                            <form action="index.php?action=actualizarPesoObjetivo" method="POST" class="mt-3">
+                                <div class="form-group">
+                                    <input type="number" 
+                                           name="peso_actual" 
+                                           class="form-control" 
+                                           step="0.1" 
+                                           min="0" 
+                                           placeholder="Nuevo peso actual"
+                                           required>
+                                </div>
+                                <button type="submit" class="btn-update">
+                                    <span class="btn-icon">🔄</span>
+                                    <span class="btn-text">Actualizar</span>
+                                </button>
+                            </form>
                         </div>
                     </div>
+
                     <div class="stat-card">
                         <div class="stat-icon">🎯</div>
                         <div class="stat-info">
                             <h3>Peso Objetivo</h3>
-                            <p><?php echo isset($user['peso_objetivo']) ? $user['peso_objetivo'] . ' kg' : 'No establecido'; ?></p>
+                            <p class="stat-value"><?php echo htmlspecialchars($user['peso_objetivo'] ?? 'No establecido'); ?> kg</p>
+                            <form action="index.php?action=actualizarPesoObjetivo" method="POST" class="mt-3">
+                                <div class="form-group">
+                                    <input type="number" 
+                                           name="peso_objetivo" 
+                                           class="form-control" 
+                                           step="0.1" 
+                                           min="0" 
+                                           placeholder="Nuevo peso objetivo"
+                                           required>
+                                </div>
+                                <button type="submit" class="btn-update">
+                                    <span class="btn-icon">🔄</span>
+                                    <span class="btn-text">Actualizar</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-info">
+                            <h3>Objetivo a Cumplir</h3>
+                            <p class="stat-value"><?php echo ucwords(str_replace('_', ' ', $user['objetivo'] ?? 'No establecido')); ?></p>
+                            <form action="index.php?action=actualizarPesoObjetivo" method="POST" class="mt-3">
+                                <div class="form-group">
+                                    <select name="objetivo" class="form-control" required>
+                                        <option value="perder peso" <?php echo ($user['objetivo'] ?? '') == 'perder_peso' ? 'selected' : ''; ?>>Perder Peso</option>
+                                        <option value="ganar masa muscular" <?php echo ($user['objetivo'] ?? '') == 'ganar_masa_muscular' ? 'selected' : ''; ?>>Ganar Masa Muscular</option>
+                                        <option value="mejorar resistencia" <?php echo ($user['objetivo'] ?? '') == 'mejorar_resistencia' ? 'selected' : ''; ?>>Mejorar Resistencia</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn-update">
+                                    <span class="btn-icon">🔄</span>
+                                    <span class="btn-text">Actualizar</span>
+                                </button>
+                            </form>
                         </div>
                     </div>
                     <div class="stat-card">
