@@ -105,7 +105,7 @@ header nav ul li a:hover {
 
 /* Footer */
 footer {
-    background: linear-gradient(135deg, #444, #222);
+    background: #23272b !important;
     color: #fff;
     padding: 40px 20px;
     text-align: center;

@@ -39,13 +39,14 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     padding: 20px;
+    overflow: auto;
 }
 
 section {
     background-color: #23272b;
-    padding: 30px;
+    padding: 48px 32px;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     width: 100%;
@@ -56,14 +57,14 @@ section {
 
 section img {
     width: 100%;
-    max-width: 150px;
+    max-width: 90px;
     margin-bottom: 20px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 22px;
 }
 
 label {

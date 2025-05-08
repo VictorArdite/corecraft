@@ -396,3 +396,20 @@ Stack trace:
     [authenticated] => 1
 )
 
+[08-May-2025 16:21:58 Europe/Madrid] Intento de login - Email: francesc_arjona@ceroca.cat
+[08-May-2025 16:21:58 Europe/Madrid] Usuario encontrado: Sí
+[08-May-2025 16:21:58 Europe/Madrid] Verificando contraseña para usuario: francesc_arjona@ceroca.cat
+[08-May-2025 16:21:58 Europe/Madrid] Contraseña válida: Sí
+[08-May-2025 16:21:58 Europe/Madrid] Sesión iniciada para usuario: francesc_arjona@ceroca.cat
+[08-May-2025 16:21:58 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 6
+    [user_name] => Fran
+    [user_email] => francesc_arjona@ceroca.cat
+    [user_edad] => 21
+    [user_peso] => 65.00
+    [user_altura] => 178.00
+    [user_objetivo] => 
+    [authenticated] => 1
+)
+

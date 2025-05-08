@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/global.css"> <!-- Estilos globales -->
     <link rel="stylesheet" href="css/footer.css"> <!-- Estilos específicos -->
     <link rel="stylesheet" href="css/nosotros.css"> <!-- Estilos específicos para la página Nosotros -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* Estilo opcional para el contenedor del mapa */
         .map-container {
@@ -28,9 +29,25 @@
             <ul>
                 <li><a href="index.php?action=home">Inicio</a></li>
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
+                <li><a href="index.php?action=consultaEjercicios">Ejercicios</a></li>
+                <?php if (isset($_SESSION['user_id'])): ?>
+                    <li><a href="index.php?action=registro-peso">Registro de Pesos</a></li>
+                <?php endif; ?>
+                <li><a href="index.php?action=mis-rutinas">Mis Rutinas</a></li>
+                <li><a href="index.php?action=calculadora-nivel">Calculadora de Nivel</a></li>
                 <li><a href="index.php?action=suplementacion">Suplementación</a></li>
                 <li><a href="index.php?action=perfil">Perfil</a></li>
             </ul>
+            <?php if (!isset($_SESSION['user_id'])): ?>
+            <div class="auth-buttons">
+                <a href="index.php?action=login" class="auth-button">Iniciar Sesión</a>
+                <a href="index.php?action=register" class="auth-button">Registrarse</a>
+            </div>
+            <?php else: ?>
+            <div class="auth-buttons">
+                <a href="index.php?action=logout" class="auth-button">Cerrar Sesión</a>
+            </div>
+            <?php endif; ?>
         </nav>
     </header>
 
