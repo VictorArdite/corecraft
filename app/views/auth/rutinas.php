@@ -58,8 +58,5 @@
             <?php endforeach; ?>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 CoreCraft</p>
-    </footer>
 </body>
 </html>
