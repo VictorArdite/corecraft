@@ -13,6 +13,7 @@ header {
 
 .logo img {
     height: 50px;
+    margin-left: 20px;
 }
 
 nav {
@@ -44,20 +45,31 @@ nav ul li a:hover {
 .auth-buttons {
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
 
 .auth-button {
     background-color: #ffd600;
     color: #23272b;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.5rem;
     border-radius: 4px;
     text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(255, 214, 0, 0.2);
+    white-space: nowrap;
+    width: auto;
+    min-width: 120px;
+    text-align: center;
 }
 
 .auth-button:hover {
-    background-color: #e6c200;
+    background-color: #fff;
+    color: #23272b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 214, 0, 0.3);
 }
 
 main {
@@ -158,21 +170,25 @@ h1 {
 
 .ver-mas {
     display: inline-block;
-    background-color: #23272b;
-    color: #fff;
-    border: 2px solid #ffd600;
-    padding: 0.5rem 1rem;
+    background-color: #ffd600;
+    color: #23272b;
+    padding: 0.8rem 1.2rem;
     border-radius: 4px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bold;
     transition: all 0.3s ease;
     text-align: center;
-    font-size: 0.9em;
+    font-size: 0.95em;
+    border: none;
+    width: 100%;
+    margin-top: auto;
 }
 
 .ver-mas:hover {
-    background-color: #ffd600;
+    background-color: #fff;
     color: #23272b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 214, 0, 0.2);
 }
 
 @media (max-width: 768px) {
