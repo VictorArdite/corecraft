@@ -1,59 +1,52 @@
 let currentSlide = 0;
-let isTransitioning = false;
+let slideInterval = null;
 
 function showSlide(index) {
     const slides = document.querySelectorAll('.carousel-item');
     const totalSlides = slides.length;
-    const visibleSlides = 3; // Mostrar tres elementos a la vez
 
+    // Ajusta el índice para que sea circular
     if (index >= totalSlides) {
         currentSlide = 0;
     } else if (index < 0) {
-        currentSlide = totalSlides - visibleSlides;
+        currentSlide = totalSlides - 1;
     } else {
         currentSlide = index;
     }
 
-    const offset = -currentSlide * 100 / visibleSlides;
-    document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+    // Quita la clase 'active' de todos y ponla solo en el actual
+    slides.forEach((slide, i) => {
+        if (i === currentSlide) {
+            slide.classList.add('active');
+        } else {
+            slide.classList.remove('active');
+        }
+    });
 }
 
 function nextSlide() {
-    if (isTransitioning) return;
-    isTransitioning = true;
-    const slides = document.querySelectorAll('.carousel-item');
-    const totalSlides = slides.length;
-    const visibleSlides = 3;
-
     showSlide(currentSlide + 1);
-
-    if (currentSlide === totalSlides - visibleSlides) {
-        setTimeout(() => {
-            document.querySelector('.carousel-inner').style.transition = 'none';
-            showSlide(0);
-            setTimeout(() => {
-                document.querySelector('.carousel-inner').style.transition = 'transform 1s ease-in-out';
-                isTransitioning = false;
-            }, 50);
-        }, 1000);
-    } else {
-        setTimeout(() => {
-            isTransitioning = false;
-        }, 1000);
-    }
 }
 
 function prevSlide() {
-    if (isTransitioning) return;
-    isTransitioning = true;
     showSlide(currentSlide - 1);
-    setTimeout(() => {
-        isTransitioning = false;
-    }, 1000);
+}
+
+function startAutoSlide() {
+    if (slideInterval) clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, 4000); // Cambia cada 4 segundos
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('.carousel-inner').style.transition = 'transform 1s ease-in-out';
     showSlide(currentSlide);
-    setInterval(nextSlide, 4000); // Cambia de imagen cada 5 segundos
+    startAutoSlide();
+    // Reinicia el intervalo si el usuario usa los controles
+    document.querySelector('.carousel-control.next').addEventListener('click', () => {
+        nextSlide();
+        startAutoSlide();
+    });
+    document.querySelector('.carousel-control.prev').addEventListener('click', () => {
+        prevSlide();
+        startAutoSlide();
+    });
 });

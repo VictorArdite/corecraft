@@ -8,6 +8,86 @@
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/public/css/global.css">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>/public/css/perfil.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #23272b;
+            --secondary-dark: #1a1a1a;
+            --accent-color: #ffd600;
+            --text-light: #fff;
+        }
+        .btn-update {
+            background-color: var(--accent-color);
+            color: var(--primary-dark);
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent-color);
+            font-size: 1em;
+            box-shadow: 0 4px 15px rgba(255, 214, 0, 0.2);
+            white-space: nowrap;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .btn-update:hover {
+            background-color: transparent;
+            color: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 214, 0, 0.3);
+        }
+        .btn-icon {
+            font-size: 1.2em;
+            color: var(--primary-dark);
+        }
+        .btn-update:hover .btn-icon {
+            color: var(--accent-color);
+        }
+        /* Asegurar que el color sea el mismo que el botón de cerrar sesión */
+        .auth-button, .btn-update {
+            background-color: var(--accent-color);
+            color: var(--primary-dark);
+        }
+        .auth-button:hover, .btn-update:hover {
+            background-color: transparent;
+            color: var(--accent-color);
+            border: 2px solid var(--accent-color);
+        }
+        /* Estilo específico para el botón de actualizar peso actual */
+        .stat-card .btn-update {
+            background-color: var(--accent-color);
+            color: var(--primary-dark);
+        }
+        .stat-card .btn-update:hover {
+            background-color: transparent;
+            color: var(--accent-color);
+        }
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            margin-right: 20px;
+        }
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .stat-icon {
+            font-size: 1.75rem;
+            margin-right: 1rem;
+            background: linear-gradient(135deg, #ffd600, #ffed4a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: 0.5rem;
+            border-radius: 8px;
+            background-color: rgba(255, 214, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -46,11 +126,8 @@
 
     <div class="container">
         <div class="profile-container">
-            <div class="profile-info">x
+            <div class="profile-info">
                 <div class="profile-header">
-                    <div class="profile-avatar">
-                        <img src="<?php echo BASE_URL; ?>/public/img/avatar-default.png" alt="Avatar">
-                    </div>
                     <div class="profile-details">
                         <h2><?php echo htmlspecialchars($user['nombre']); ?></h2>
                         <p class="email"><?php echo htmlspecialchars($user['email']); ?></p>

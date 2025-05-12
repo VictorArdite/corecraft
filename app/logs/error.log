@@ -558,3 +558,63 @@ Stack trace:
 #1 C:\xampp\htdocs\corecraft\public\index.php(169): CalendarioController->index()
 #2 {main}
   thrown in C:\xampp\htdocs\corecraft\app\controllers\CalendarioController.php on line 30
+[09-May-2025 19:57:03 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[09-May-2025 19:57:03 Europe/Madrid] Usuario encontrado: Sí
+[09-May-2025 19:57:03 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[09-May-2025 19:57:03 Europe/Madrid] Contraseña válida: Sí
+[09-May-2025 19:57:03 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[09-May-2025 19:57:03 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 69.00
+    [user_altura] => 214.00
+    [user_objetivo] => ganar_masa_muscular
+    [authenticated] => 1
+)
+
+[09-May-2025 20:11:06 Europe/Madrid] PHP Warning:  include(header.php): Failed to open stream: No such file or directory in D:\Xaamp\htdocs\corecraft\app\views\auth\dietas.php on line 12
+[09-May-2025 20:11:06 Europe/Madrid] PHP Warning:  include(): Failed opening 'header.php' for inclusion (include_path='D:\Xaamp\php\PEAR') in D:\Xaamp\htdocs\corecraft\app\views\auth\dietas.php on line 12
+[10-May-2025 11:14:40 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[10-May-2025 11:14:40 Europe/Madrid] Usuario encontrado: Sí
+[10-May-2025 11:14:40 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[10-May-2025 11:14:40 Europe/Madrid] Contraseña válida: Sí
+[10-May-2025 11:14:40 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[10-May-2025 11:14:40 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 69.00
+    [user_altura] => 214.00
+    [user_objetivo] => ganar_masa_muscular
+    [authenticated] => 1
+)
+
+[10-May-2025 11:15:22 Europe/Madrid] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in D:\Xaamp\htdocs\corecraft\app\controllers\PerfilController.php on line 217
+[10-May-2025 17:34:38 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[10-May-2025 17:34:39 Europe/Madrid] Error de autenticación: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+[10-May-2025 17:34:39 Europe/Madrid] Stack trace: #0 D:\Xaamp\htdocs\corecraft\app\controllers\AuthController.php(48): PDOStatement->execute(Array)
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(45): AuthController->authenticate()
+#2 {main}
+[10-May-2025 17:34:43 Europe/Madrid] Error de conexión: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[10-May-2025 17:34:52 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[10-May-2025 17:34:52 Europe/Madrid] Usuario encontrado: Sí
+[10-May-2025 17:34:52 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[10-May-2025 17:34:52 Europe/Madrid] Contraseña válida: Sí
+[10-May-2025 17:34:52 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[10-May-2025 17:34:52 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 69.00
+    [user_altura] => 214.00
+    [user_objetivo] => ganar_masa_muscular
+    [authenticated] => 1
+)
+
