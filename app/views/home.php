@@ -7,6 +7,31 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .carousel-item {
+            width: 100vw;
+            flex-shrink: 0;
+            height: 48vw; /* o la altura que prefieras */
+            max-height: 600px;
+            min-height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-item img {
+            width: 100vw;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -42,43 +67,28 @@
             <?php endif; ?>
         </nav>
     </header>
-    <main>
-        <!-- Mensaje Motivacional justo arriba del carrusel -->
-        <div class="motivational-message">
-            <p>Supera tus límites. Con dedicación, esfuerzo y constancia, tu mejor versión está más cerca de lo que imaginas.</p>
-        </div>
-
-        <!-- Carrusel de imágenes -->
+    <div class="carousel-wrapper">
         <div class="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item">
-                    <img src="img/banca.png" alt="Banca">
+                <div class="carousel-item active">
+                    <img src="img/nueva1.jpg" alt="Imagen nueva 1">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/mujer.jpg" alt="Mujer">
+                    <img src="img/nueva2.jpg" alt="Imagen nueva 2">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/pesomuerto.png" alt="Peso Muerto">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/halterofilia.png" alt="Halterofilia">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/sentadilla.png" alt="Sentadilla">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/mujer1.jpg" alt="Mujer 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/pesomuerto.png" alt="Peso Muerto">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/halterofilia.png" alt="Halterofilia">
+                    <img src="img/nueva3.jpg" alt="Imagen nueva 3">
                 </div>
             </div>
             <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
             <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
         </div>
+    </div>
+    <main>
+        <!-- Mensaje Motivacional justo arriba del carrusel -->
+        <!-- <div class="motivational-message">
+            <p>Supera tus límites. Con dedicación, esfuerzo y constancia, tu mejor versión está más cerca de lo que imaginas.</p>
+        </div> -->
 
         <!-- Recuadros informativos -->
         <div class="info-cards">

@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/dietas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+    .input-activo {
+        border: 2px solid #ffd600 !important;
+        background: #23272b !important;
+        box-shadow: 0 0 8px #ffd60033;
+    }
+    </style>
 </head>
 <body>
     <header>
@@ -191,9 +198,7 @@
         document.querySelectorAll('.diet-plan').forEach(plan => {
             plan.style.display = 'none';
         });
-        
         document.getElementById(dietType).style.display = 'block';
-        
         document.querySelectorAll('.diet-type-button').forEach(button => {
             button.classList.remove('active');
         });
@@ -202,3 +207,4 @@
     </script>
 </body>
 </html>
+
