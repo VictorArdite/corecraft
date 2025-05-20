@@ -66,6 +66,7 @@ class RegistroPesoController {
             
             $esPrimerPeso = $resultado['total'] == 0;
 
+            // Primero guardar el registro
             $resultado = $this->registroPesoModel->guardarRegistro(
                 $_SESSION['user_id'],
                 $_POST['ejercicio'],
@@ -77,9 +78,27 @@ class RegistroPesoController {
             if ($resultado) {
                 // Si es el primer peso registrado, verificar el logro
                 if ($esPrimerPeso) {
-                    $this->logroModel->verificarLogro($_SESSION['user_id'], 'registrar_primer_peso');
+                    $logroDesbloqueado = $this->logroModel->verificarLogro($_SESSION['user_id'], 'registrar_primer_peso');
+                    if ($logroDesbloqueado) {
+                        echo json_encode([
+                            'success' => true, 
+                            'message' => 'Registro guardado exitosamente y logro desbloqueado',
+                            'logro' => true
+                        ]);
+                    } else {
+                        echo json_encode([
+                            'success' => true, 
+                            'message' => 'Registro guardado exitosamente',
+                            'logro' => false
+                        ]);
+                    }
+                } else {
+                    echo json_encode([
+                        'success' => true, 
+                        'message' => 'Registro guardado exitosamente',
+                        'logro' => false
+                    ]);
                 }
-                echo json_encode(['success' => true, 'message' => 'Registro guardado exitosamente']);
             } else {
                 echo json_encode(['success' => false, 'message' => 'Error al guardar en la base de datos']);
             }

@@ -85,6 +85,10 @@
         <?php endforeach; ?>
     </main>
 
+    <button id="btnScrollTop" title="Subir arriba" style="position:fixed;bottom:30px;right:30px;z-index:999;background:#ffd600;color:#23272b;border:none;border-radius:50%;width:50px;height:50px;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-size:2em;display:none;align-items:center;justify-content:center;cursor:pointer;transition:background 0.3s;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <div id="ejercicioModal" class="modal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
@@ -153,6 +157,19 @@
             if (e.target == modal) {
                 modal.style.display = 'none';
             }
+        });
+
+        // Botón de scroll top
+        const btnScrollTop = document.getElementById('btnScrollTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 200) {
+                btnScrollTop.style.display = 'flex';
+            } else {
+                btnScrollTop.style.display = 'none';
+            }
+        });
+        btnScrollTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     });
     </script>

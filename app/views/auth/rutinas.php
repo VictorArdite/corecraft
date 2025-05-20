@@ -43,7 +43,7 @@
     </header>
     <main>
         <div class="crear-rutina-container">
-            <a href="index.php?action=rutina-personalizada" class="btn-crear-rutina">
+            <a href="index.php?action=rutina-personalizada" class="auth-button btn-crear-rutina">
                 Crear Rutina Personalizada
             </a>
         </div>
