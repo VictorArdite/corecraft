@@ -78,9 +78,6 @@ nav ul li a:hover, nav ul li a.active {
     background-color: var(--primary-dark);
     padding: 2rem;
     min-height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
 }
 
 .rutina-card {
@@ -88,34 +85,13 @@ nav ul li a:hover, nav ul li a.active {
     border: 2px solid var(--accent-yellow);
     border-radius: 12px;
     padding: 1.5rem;
-    margin: 0 auto;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    margin-bottom: 1.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .rutina-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-.rutina-card img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    object-fit: cover;
-    display: block;
-}
-
-.rutina-card h3 {
-    color: var(--accent-yellow);
-    margin: 0.5rem 0 0 0;
-    font-size: 1.3rem;
-    font-weight: bold;
 }
 
 .rutina-header {
@@ -282,17 +258,10 @@ nav ul li a:hover, nav ul li a.active {
     gap: 1rem;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .rutinas-container {
-        grid-template-columns: 1fr;
         padding: 1rem;
-    }
-    .rutina-card {
-        max-width: 100%;
-        padding: 1rem;
-    }
-    .rutina-card img {
-        max-width: 100%;
     }
 
     .rutina-header {
@@ -302,27 +271,15 @@ nav ul li a:hover, nav ul li a.active {
     }
 
     .rutina-actions {
-        flex-direction: column;
         width: 100%;
+        justify-content: center;
     }
 
     .action-buttons {
         flex-direction: column;
-        width: 100%;
     }
 
     .btn-primary, .btn-secondary {
         width: 100%;
-        text-align: center;
     }
-}
-
-.crear-rutina-container {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.crear-rutina-container .auth-button {
-    margin: 0 auto;
-    display: inline-block;
 }

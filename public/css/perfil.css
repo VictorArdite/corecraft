@@ -59,21 +59,30 @@ nav ul li a:hover, nav ul li a.active {
 .auth-button {
     padding: 12px 25px;
     background-color: #ffd600;
-    color: #fff;
-    font-size: 1em;
+    color: #23272b;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border: none;
-    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid #ffd600;
+    font-size: 1em;
+    box-shadow: 0 4px 15px rgba(255, 214, 0, 0.2);
     white-space: nowrap;
-    box-shadow: 0 2px 8px rgba(255,214,0,0.10);
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .auth-button:hover {
-    background-color: #fff;
+    background-color: transparent;
     color: #ffd600;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 214, 0, 0.3);
 }
 
 .container {

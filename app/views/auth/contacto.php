@@ -9,6 +9,22 @@
     <link rel="stylesheet" href="css/nosotros.css"> <!-- Estilos específicos para la página Nosotros -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        main, .contact {
+            flex: 1 0 auto;
+        }
+        footer {
+            flex-shrink: 0;
+        }
         /* Estilo opcional para el contenedor del mapa */
         .map-container {
             max-width: 600px;
@@ -91,7 +107,6 @@
                     <a href="index.php?action=privacy">Política de privacidad</a>
                 </div>
             </div>
-
             <!-- Apartado Ayuda -->
             <div class="footer-section">
                 <h4>Ayuda</h4>
@@ -100,7 +115,23 @@
                     <a href="index.php?action=contact">Contacto</a>
                 </div>
             </div>
+            <!-- Apartado Síguenos -->
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=61574264483708" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/corecraft__/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/Corecraft__" target="_blank">
+                        <span class="fa-x-twitter">X</span>
+                    </a>
+                </div>
+            </div>
         </div>
+        <p>&copy; 2025 CoreCraft. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
