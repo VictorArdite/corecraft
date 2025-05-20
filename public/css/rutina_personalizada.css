@@ -1,6 +1,6 @@
 body {
-    background-color: #23272b;
-    color: #fff;
+    background-color: var(--secondary-dark);
+    color: var(--text-light);
     font-family: Arial, sans-serif;
 }
 
@@ -79,18 +79,17 @@ nav ul li a:hover {
 }
 
 h1 {
-    color: #ffd600;
+    color: var(--accent-yellow);
     text-align: center;
     margin-bottom: 2rem;
-    font-size: 2.5em;
 }
 
 .rutina-form-container {
-    background-color: #23272b;
+    background-color: var(--primary-dark);
+    border: 2px solid var(--accent-yellow);
+    border-radius: 12px;
     padding: 2rem;
-    border-radius: 8px;
-    border: 2px solid #ffd600;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
 }
 
 .form-group {
@@ -99,28 +98,28 @@ h1 {
 
 .form-group label {
     display: block;
+    color: var(--text-primary);
     margin-bottom: 0.5rem;
-    color: #fff;
     font-weight: 500;
 }
 
-input[type="text"],
-input[type="number"],
-textarea {
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 2px solid #ffd600;
-    border-radius: 4px;
-    background-color: #23272b;
-    color: #fff;
-    font-size: 1rem;
+    border: 2px solid var(--accent-yellow);
+    border-radius: 6px;
+    background-color: var(--secondary-dark);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
 }
 
-input[type="text"]:focus,
-input[type="number"]:focus,
-textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
     outline: none;
-    border-color: #e6c200;
+    border-color: var(--accent-yellow);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
 }
 
 .ejercicios-container {
@@ -128,14 +127,14 @@ textarea:focus {
 }
 
 .ejercicios-container h2 {
-    color: #ffd600;
-    margin-bottom: 1.5rem;
+    color: var(--accent-yellow);
+    margin-bottom: 1rem;
 }
 
 .ejercicio-item {
-    background-color: #23272b;
-    border: 1px solid #ffd600;
-    border-radius: 4px;
+    background-color: var(--secondary-dark);
+    border: 1px solid var(--accent-yellow);
+    border-radius: 8px;
     padding: 1rem;
     margin-bottom: 1rem;
 }
@@ -144,42 +143,45 @@ textarea:focus {
     display: flex;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .ejercicio-header input[type="checkbox"] {
     width: 20px;
     height: 20px;
-    accent-color: #ffd600;
+    accent-color: var(--accent-yellow);
 }
 
 .ejercicio-header label {
-    color: #fff;
-    font-size: 1.1rem;
-    cursor: pointer;
+    color: var(--text-primary);
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 .ejercicio-details {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid #ffd600;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding-left: 2rem;
 }
 
 .btn-primary {
-    background-color: #23272b;
-    color: #fff;
-    border: 2px solid #ffd600;
-    padding: 1rem 2rem;
-    border-radius: 4px;
+    background-color: var(--accent-yellow);
+    color: var(--primary-dark);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 1.1rem;
-    font-weight: 500;
-    width: 100%;
     transition: all 0.3s ease;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 2rem;
 }
 
 .btn-primary:hover {
-    background-color: #ffd600;
-    color: #23272b;
+    background-color: transparent;
+    color: var(--accent-yellow);
+    border: 2px solid var(--accent-yellow);
 }
 
 @media (max-width: 768px) {

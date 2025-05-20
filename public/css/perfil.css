@@ -59,7 +59,7 @@ nav ul li a:hover, nav ul li a.active {
 .auth-button {
     padding: 12px 25px;
     background-color: #ffd600;
-    color: #fff;
+    color: #23272b;
     font-size: 1em;
     text-decoration: none;
     border-radius: 5px;
@@ -72,7 +72,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .auth-button:hover {
-    background-color: transparent;
+    background-color: #fff;
     color: #ffd600;
 }
 

@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoreCraft - Crear Rutina Personalizada</title>
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/rutina_personalizada.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -75,16 +77,17 @@
         document.addEventListener('DOMContentLoaded', function() {
             const ejercicios = <?php echo json_encode($ejercicios); ?>;
             const ejerciciosList = document.getElementById('ejerciciosList');
-
+            
+            // Crear elementos para cada ejercicio
             ejercicios.forEach(ejercicio => {
                 const ejercicioDiv = document.createElement('div');
                 ejercicioDiv.className = 'ejercicio-item';
                 ejercicioDiv.innerHTML = `
                     <div class="ejercicio-header">
-                        <input type="checkbox" id="ejercicio_${ejercicio.id}" name="ejercicios[]" value="${ejercicio.id}">
+                        <input type="checkbox" name="ejercicios[]" value="${ejercicio.id}" id="ejercicio_${ejercicio.id}">
                         <label for="ejercicio_${ejercicio.id}">${ejercicio.nombre}</label>
                     </div>
-                    <div class="ejercicio-details" id="detalles_${ejercicio.id}" style="display: none;">
+                    <div class="ejercicio-details">
                         <div class="form-group">
                             <label for="series_${ejercicio.id}">Series:</label>
                             <input type="number" id="series_${ejercicio.id}" name="series_${ejercicio.id}" min="1" value="3">
@@ -95,14 +98,6 @@
                         </div>
                     </div>
                 `;
-
-                const checkbox = ejercicioDiv.querySelector('input[type="checkbox"]');
-                const detalles = ejercicioDiv.querySelector('.ejercicio-details');
-
-                checkbox.addEventListener('change', function() {
-                    detalles.style.display = this.checked ? 'block' : 'none';
-                });
-
                 ejerciciosList.appendChild(ejercicioDiv);
             });
 

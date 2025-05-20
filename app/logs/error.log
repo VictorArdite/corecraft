@@ -792,3 +792,21 @@ Stack trace:
 [19-May-2025 12:49:46 Europe/Madrid] Verificando logro para usuario 10 con requisito alcanzar_peso_objetivo
 [19-May-2025 12:49:46 Europe/Madrid] Encontrado logro con ID: 2
 [19-May-2025 12:49:46 Europe/Madrid] El usuario 10 ya tiene el logro con ID 2
+[20-May-2025 15:51:16 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[20-May-2025 15:51:16 Europe/Madrid] Usuario encontrado: Sí
+[20-May-2025 15:51:16 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[20-May-2025 15:51:16 Europe/Madrid] Contraseña válida: Sí
+[20-May-2025 15:51:16 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[20-May-2025 15:51:16 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 55.00
+    [user_altura] => 214.00
+    [user_objetivo] => mejorar_resistencia
+    [user_peso_objetivo] => 70.00
+    [authenticated] => 1
+)
+
