@@ -7,6 +7,78 @@
     <title>CoreCraft - <?php echo htmlspecialchars($rutina['nombre']); ?></title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/ver_rutina.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        header {
+            background-color: #111;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        header .logo img {
+            height: 50px;
+        }
+
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: #ffd600;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .auth-button {
+            padding: 12px 25px;
+            background-color: #ffd600;
+            color: #fff;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border: none;
+            display: inline-block;
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(255,214,0,0.10);
+        }
+
+        .auth-button:hover {
+            background-color: #fff;
+            color: #ffd600;
+        }
+    </style>
 </head>
 <body>
     <header>

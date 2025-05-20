@@ -9,22 +9,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --primary-color: #142e52;
-            --primary-dark: #0e2238;
-            --secondary-color: #6c757d;
-            --success-color: #28a745;
-            --danger-color: #dc3545;
-            --info-color: #17a2b8;
-            --warning-color: #ffc107;
+            --primary-dark: #23272b;
+            --secondary-dark: #1a1a1a;
+            --accent-yellow: #ffd600;
+            --text-light: #fff;
+            --border-color: #ffd600;
         }
-
         body {
-            background: linear-gradient(135deg, #1a1a1c 0%, #2c2c2e 100%);
+            background: #23272b;
             min-height: 100vh;
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         .main-content {
             min-height: calc(100vh - 100px);
             display: flex;
@@ -34,19 +30,6 @@
             position: relative;
             overflow: hidden;
         }
-
-        .main-content::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('img/pattern.png') repeat;
-            opacity: 0.05;
-            z-index: 0;
-        }
-
         .content-wrapper {
             width: 100%;
             max-width: 1200px;
@@ -54,17 +37,15 @@
             position: relative;
             z-index: 1;
         }
-
         .page-title {
             text-align: center;
-            color: white;
+            color: var(--accent-yellow);
             margin-bottom: 30px;
             font-size: 2.5em;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             position: relative;
             padding-bottom: 15px;
         }
-
         .page-title::after {
             content: '';
             position: absolute;
@@ -73,69 +54,47 @@
             transform: translateX(-50%);
             width: 100px;
             height: 3px;
-            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+            background: linear-gradient(90deg, transparent, var(--accent-yellow), transparent);
         }
-
         .calendar-container {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
+            background: var(--primary-dark);
+            border-radius: 16px;
             padding: 30px;
             margin: 20px auto;
             max-width: 900px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 2px solid var(--accent-yellow);
             transition: transform 0.3s ease;
         }
-
         .calendar-container:hover {
             transform: translateY(-5px);
         }
-
         .calendar-header {
             margin-bottom: 30px;
         }
-
         .calendar-navigation {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 20px;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-            color: white;
-            border-radius: 15px;
+            background: var(--secondary-dark);
+            color: var(--accent-yellow);
+            border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             position: relative;
             overflow: hidden;
+            border: 1.5px solid var(--accent-yellow);
         }
-
-        .calendar-navigation::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-            animation: shine 3s infinite;
-        }
-
-        @keyframes shine {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-
         .calendar-navigation h2 {
             margin: 0;
             font-size: 1.5em;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
-            position: relative;
+            color: var(--accent-yellow);
         }
-
         .nav-button {
-            background: rgba(255,255,255,0.1);
-            border: none;
-            color: white;
+            background: transparent;
+            border: 2px solid var(--accent-yellow);
+            color: var(--accent-yellow);
             font-size: 1.2em;
             cursor: pointer;
             padding: 12px 20px;
@@ -144,43 +103,25 @@
             position: relative;
             overflow: hidden;
         }
-
-        .nav-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
-            transform: translateX(-100%);
-            transition: transform 0.3s;
-        }
-
-        .nav-button:hover::before {
-            transform: translateX(100%);
-        }
-
         .nav-button:hover {
-            background: rgba(255,255,255,0.2);
+            background: var(--accent-yellow);
+            color: var(--primary-dark);
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
-
         .calendar-grid {
-            background: white;
-            border-radius: 15px;
+            background: var(--secondary-dark);
+            border-radius: 12px;
             overflow: hidden;
-            border: 1px solid rgba(0,0,0,0.1);
+            border: 1.5px solid var(--accent-yellow);
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-
         .weekdays {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             gap: 5px;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-            color: white;
+            background: var(--primary-dark);
+            color: var(--accent-yellow);
             padding: 15px;
             text-align: center;
             font-weight: bold;
@@ -189,127 +130,83 @@
             letter-spacing: 1px;
             position: relative;
         }
-
-        .weekdays::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
-        }
-
         .days {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             gap: 5px;
             padding: 15px;
-            background: white;
+            background: var(--secondary-dark);
         }
-
         .day {
             aspect-ratio: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 10px;
+            border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s;
-            border: 1px solid rgba(0,0,0,0.1);
+            border: 1.5px solid var(--accent-yellow);
             position: relative;
             font-weight: bold;
-            background: white;
-            color: #333;
+            background: var(--primary-dark);
+            color: var(--text-light);
             min-height: 50px;
             font-size: 1.1em;
             overflow: hidden;
         }
-
-        .day::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(0,0,0,0.05), transparent);
-            transition: transform 0.3s;
-        }
-
-        .day:hover::before {
-            transform: translateX(100%);
-        }
-
         .day:hover {
+            background: var(--accent-yellow);
+            color: var(--primary-dark);
             transform: translateY(-3px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            border-color: var(--primary-color);
+            border-color: var(--accent-yellow);
         }
-
         .day.empty {
-            background: #f8f9fa;
+            background: var(--secondary-dark);
             cursor: default;
             border: none;
         }
-
         .day.training {
-            color: white;
-            position: relative;
-            overflow: hidden;
+            color: var(--accent-yellow);
+            background: #333;
         }
-
-        .day.training::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
-            animation: shine 2s infinite;
-        }
-
         .day.fuerza {
-            background: linear-gradient(135deg, var(--danger-color) 0%, #c82333 100%);
+            background: #b71c1c;
         }
-
         .day.cardio {
-            background: linear-gradient(135deg, var(--success-color) 0%, #218838 100%);
+            background: #388e3c;
         }
-
         .day.flexibilidad {
-            background: linear-gradient(135deg, var(--info-color) 0%, #138496 100%);
+            background: #1976d2;
         }
-
         .day.descanso {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, #5a6268 100%);
+            background: #616161;
         }
-
         .modal {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.7);
+            top: 0; left: 0;
+            width: 100vw;
+            height: 100vh;
             z-index: 1000;
-            backdrop-filter: blur(5px);
+            background: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
         }
-
         .modal-content {
-            background: white;
-            border-radius: 20px;
+            background: var(--primary-dark);
+            border-radius: 10px;
             width: 90%;
             max-width: 500px;
-            margin: 50px auto;
+            margin: 0;
             position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             animation: modalSlideIn 0.3s ease-out;
             overflow: hidden;
+            border: 2px solid var(--accent-yellow);
+            display: flex;
+            flex-direction: column;
         }
-
         @keyframes modalSlideIn {
             from {
                 transform: translateY(-50px);
@@ -320,209 +217,238 @@
                 opacity: 1;
             }
         }
-
         .modal-header {
             padding: 20px;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
+            border-bottom: 2px solid var(--accent-yellow);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-            color: white;
+            background: var(--secondary-dark);
+            color: var(--accent-yellow);
             position: relative;
-            overflow: hidden;
         }
-
-        .modal-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-            animation: shine 3s infinite;
+        .modal-header h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: var(--accent-yellow);
         }
-
         .modal-body {
             padding: 25px;
-            background: white;
+            background: var(--primary-dark);
+            color: var(--text-light);
+            flex-grow: 1;
         }
-
         .modal-footer {
             padding: 20px;
-            border-top: 1px solid rgba(0,0,0,0.1);
-            text-align: right;
-            background: #f8f9fa;
+            border-top: 2px solid var(--accent-yellow);
+            background: var(--secondary-dark);
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            align-items: center;
+            flex-wrap: nowrap;
         }
-
-        .form-group {
-            margin-bottom: 20px;
-            position: relative;
+        .modal-footer .button {
+            margin: 0 10px;
         }
-
+        .modal-footer .button:first-child {
+            margin-left: 0;
+        }
+        .modal-footer .button:last-child {
+            margin-right: 0;
+        }
         .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
+            color: var(--accent-yellow);
             font-weight: bold;
-            font-size: 1.1em;
         }
-
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
             padding: 12px;
-            border: 1px solid rgba(0,0,0,0.1);
+            border: 1.5px solid var(--accent-yellow);
             border-radius: 10px;
-            background: white;
-            color: #333;
+            background: var(--secondary-dark);
+            color: var(--text-light);
             font-size: 1em;
             transition: all 0.3s;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-
         .form-group input:focus,
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(20, 46, 82, 0.1);
+            border-color: var(--accent-yellow);
+            box-shadow: 0 0 0 3px rgba(255, 214, 0, 0.1);
             transform: translateY(-2px);
         }
-
         .close-modal {
             cursor: pointer;
             font-size: 1.8em;
-            color: white;
+            color: var(--accent-yellow);
             opacity: 0.8;
             transition: all 0.3s;
             background: none;
             border: none;
             padding: 5px;
         }
-
         .close-modal:hover {
             opacity: 1;
             transform: scale(1.1) rotate(90deg);
         }
-
         .button {
-            padding: 12px 25px;
+            padding: 8px 14px;
             border: none;
             border-radius: 10px;
             cursor: pointer;
-            margin-left: 15px;
             font-weight: bold;
             transition: all 0.3s;
             text-transform: uppercase;
             letter-spacing: 1px;
             position: relative;
             overflow: hidden;
+            min-width: 90px;
+            text-align: center;
+            font-size: 0.85em;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 36px;
+            margin: 0;
         }
-
-        .button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
-            transform: translateX(-100%);
-            transition: transform 0.3s;
-        }
-
-        .button:hover::before {
-            transform: translateX(100%);
-        }
-
         .button:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
-
         .button.primary {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-            color: white;
+            background: var(--accent-yellow);
+            color: var(--primary-dark);
         }
-
+        .button.primary:hover {
+            background: #fff;
+            color: var(--primary-dark);
+        }
         .button.secondary {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, #5a6268 100%);
-            color: white;
+            background: var(--secondary-dark);
+            color: var(--accent-yellow);
+            border: 1.5px solid var(--accent-yellow);
+            min-width: 90px;
+            height: 36px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
-
+        .button.secondary:hover {
+            background: var(--accent-yellow);
+            color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .button.danger {
+            background: #dc3545;
+            color: white;
+            border: none;
+            min-width: 90px;
+            height: 36px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .button.danger:hover {
+            background: #c82333;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
         @media (max-width: 768px) {
             .calendar-container {
                 padding: 15px;
                 margin: 10px;
             }
-
             .day {
                 font-size: 0.9em;
                 min-height: 40px;
             }
-
             .modal-content {
                 width: 95%;
                 margin: 20px auto;
             }
-
             .page-title {
                 font-size: 2em;
             }
-
             .nav-button {
                 padding: 8px 15px;
             }
+            .modal-footer {
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px;
+                width: 100%;
+                justify-content: center;
+                align-items: stretch;
+            }
+            .modal-footer .button {
+                margin: 0 0 10px 0;
+            }
+            .modal-footer .button:last-child {
+                margin-bottom: 0;
+            }
+            .button {
+                width: 100%;
+                min-width: unset;
+                padding: 8px 14px;
+                font-size: 0.8em;
+                height: 34px;
+            }
+            .button.danger,
+            .button.secondary {
+                height: 34px;
+                font-size: 0.8em;
+                padding: 8px 14px;
+            }
+            .modal-body {
+                padding: 15px;
+            }
+            .form-group {
+                margin-bottom: 15px;
+            }
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 10px;
+                font-size: 0.9em;
+            }
         }
-
-        /* Hover amarillo en los enlaces del header */
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--accent-yellow);
             font-weight: bold;
-            font-size: 1.1em;
-            transition: color 0.3s ease;
+            font-size: 0.95em;
         }
-        nav ul li a:hover, nav ul li a.active {
-            color: #ffd600;
-        }
-
-        /* Botón de cerrar sesión igual que home */
-        .auth-buttons {
-            display: flex;
-            gap: 10px;
-        }
-        .auth-button {
-            padding: 12px 25px;
-            background-color: #ffd600;
-            color: #111;
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1.5px solid var(--accent-yellow);
+            border-radius: 10px;
+            background: var(--secondary-dark);
+            color: var(--text-light);
             font-size: 1em;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            border: none;
-            display: inline-block;
-            white-space: nowrap;
-            box-shadow: 0 2px 8px rgba(255,214,0,0.10);
+            transition: all 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        .auth-button:hover {
-            background-color: #fff;
-            color: #ffd600;
-        }
-
-        /* Título en amarillo */
-        .page-title {
-            color: #ffd600 !important;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            position: relative;
-            padding-bottom: 15px;
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-yellow);
+            box-shadow: 0 0 0 3px rgba(255, 214, 0, 0.1);
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -651,7 +577,33 @@
                             $clase = 'day';
                             $data_attr = "data-fecha='$fecha_actual'";
                             
-                            echo "<div class='$clase' $data_attr>$dia</div>";
+                            // Buscar si hay entrenamiento para este día
+                            foreach ($dias_entrenamiento as $entrenamiento) {
+                                if ($entrenamiento['fecha'] === $fecha_actual) {
+                                    $clase .= ' training ' . $entrenamiento['tipo_entrenamiento'];
+                                    $data_attr .= " data-tipo='" . $entrenamiento['tipo_entrenamiento'] . "'";
+                                    $data_attr .= " data-duracion='" . $entrenamiento['duracion'] . "'";
+                                    $data_attr .= " data-notas='" . htmlspecialchars($entrenamiento['notas']) . "'";
+                                    break;
+                                }
+                            }
+                            
+                            $icono = '';
+                            if (strpos($clase, 'descanso') !== false) {
+                                $icono = "<img src='img/cama.png' alt='Descanso' style='width:22px;height:22px;display:block;margin:auto;'>";
+                            } elseif (strpos($clase, 'fuerza') !== false) {
+                                $icono = "<img src='img/fuerza.png' alt='Fuerza' style='width:22px;height:22px;display:block;margin:auto;'>";
+                            } elseif (strpos($clase, 'cardio') !== false) {
+                                $icono = "<img src='img/correr.png' alt='Cardio' style='width:22px;height:22px;display:block;margin:auto;'>";
+                            } elseif (strpos($clase, 'flexibilidad') !== false) {
+                                $icono = "<img src='img/flexibilidad.png' alt='Flexibilidad' style='width:22px;height:22px;display:block;margin:auto;'>";
+                            }
+                            echo "<div class='$clase' $data_attr>
+                                    <div style='display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;'>
+                                        <span>$dia</span>
+                                        $icono
+                                    </div>
+                                  </div>";
                         }
                         ?>
                     </div>
@@ -689,6 +641,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="button secondary" onclick="closeModal()">Cancelar</button>
+                <button type="button" class="button danger" id="borrarEntrenamiento" style="display: none;">Borrar</button>
                 <button type="button" class="button primary" id="guardarEntrenamiento">Guardar</button>
             </div>
         </div>
@@ -698,16 +651,19 @@
     document.addEventListener('DOMContentLoaded', function() {
         const modal = document.getElementById('entrenamientoModal');
         const form = document.getElementById('entrenamientoForm');
+        const btnBorrar = document.getElementById('borrarEntrenamiento');
         let diaSeleccionado = null;
 
         // Función para abrir el modal
         function openModal() {
-            modal.style.display = 'block';
+            modal.style.display = 'flex';
         }
 
         // Función para cerrar el modal
         window.closeModal = function() {
             modal.style.display = 'none';
+            form.reset();
+            btnBorrar.style.display = 'none';
         }
 
         // Cerrar modal al hacer clic fuera de él
@@ -732,10 +688,14 @@
                 document.getElementById('duracion').value = duracion;
                 document.getElementById('notas').value = notas;
 
+                // Mostrar u ocultar el botón de borrar según si hay entrenamiento
+                btnBorrar.style.display = this.classList.contains('training') ? 'inline-block' : 'none';
+
                 openModal();
             });
         });
 
+        // Función para guardar entrenamiento
         document.getElementById('guardarEntrenamiento').addEventListener('click', function() {
             const formData = new FormData(form);
             formData.append('fecha', diaSeleccionado.dataset.fecha);
@@ -752,6 +712,21 @@
                     diaSeleccionado.dataset.tipo = tipo;
                     diaSeleccionado.dataset.duracion = formData.get('duracion');
                     diaSeleccionado.dataset.notas = formData.get('notas');
+
+                    // Eliminar icono anterior
+                    diaSeleccionado.innerHTML = '';
+                    // Añadir número y el icono correspondiente
+                    let icono = '';
+                    if (tipo === 'descanso') {
+                        icono = "<img src='img/cama.png' alt='Descanso' style='width:22px;height:22px;display:block;margin:auto;'>";
+                    } else if (tipo === 'fuerza') {
+                        icono = "<img src='img/fuerza.png' alt='Fuerza' style='width:22px;height:22px;display:block;margin:auto;'>";
+                    } else if (tipo === 'cardio') {
+                        icono = "<img src='img/correr.png' alt='Cardio' style='width:22px;height:22px;display:block;margin:auto;'>";
+                    } else if (tipo === 'flexibilidad') {
+                        icono = "<img src='img/flexibilidad.png' alt='Flexibilidad' style='width:22px;height:22px;display:block;margin:auto;'>";
+                    }
+                    diaSeleccionado.innerHTML = `<div style='display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;'><span>${diaSeleccionado.dataset.fecha.split('-')[2].replace(/^0/, '')}</span>${icono}</div>`;
                     closeModal();
                 } else {
                     alert('Error al guardar el entrenamiento');
@@ -761,6 +736,37 @@
                 console.error('Error:', error);
                 alert('Error al conectar con el servidor');
             });
+        });
+
+        // Actualizar el día al borrar entrenamiento
+        btnBorrar.addEventListener('click', function() {
+            if (confirm('¿Estás seguro de que deseas borrar este entrenamiento?')) {
+                const formData = new FormData();
+                formData.append('fecha', diaSeleccionado.dataset.fecha);
+
+                fetch('index.php?action=toggleDia', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        diaSeleccionado.className = 'day';
+                        diaSeleccionado.removeAttribute('data-tipo');
+                        diaSeleccionado.removeAttribute('data-duracion');
+                        diaSeleccionado.removeAttribute('data-notas');
+                        // Eliminar icono y dejar solo el número
+                        diaSeleccionado.innerHTML = `<div style='display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;'><span>${diaSeleccionado.dataset.fecha.split('-')[2].replace(/^0/, '')}</span></div>`;
+                        closeModal();
+                    } else {
+                        alert('Error al borrar el entrenamiento');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error al conectar con el servidor');
+                });
+            }
         });
     });
     </script>

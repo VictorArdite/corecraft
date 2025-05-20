@@ -7,20 +7,22 @@ body {
 
 header {
     background-color: #111;
-    padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.logo img {
+header .logo img {
     height: 50px;
-    margin-left: 20px;
 }
 
 nav {
+    flex-grow: 1;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
+    justify-content: center;
 }
 
 nav ul {
@@ -28,48 +30,49 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 1.5rem;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bold;
+    font-size: 1.1em;
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, nav ul li a.active {
     color: #ffd600;
 }
 
 .auth-buttons {
     display: flex;
-    gap: 1rem;
-    align-items: center;
+    gap: 10px;
 }
 
 .auth-button {
+    padding: 12px 25px;
     background-color: #ffd600;
-    color: #23272b;
-    padding: 0.8rem 1.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    border: none;
+    color: #fff;
     font-size: 1em;
-    box-shadow: 0 2px 4px rgba(255, 214, 0, 0.2);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    display: inline-block;
     white-space: nowrap;
-    width: auto;
-    min-width: 120px;
-    text-align: center;
+    box-shadow: 0 2px 8px rgba(255,214,0,0.10);
 }
 
 .auth-button:hover {
     background-color: #fff;
-    color: #23272b;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(255, 214, 0, 0.3);
+    color: #ffd600;
 }
 
 main {
