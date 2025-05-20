@@ -268,4 +268,75 @@
         width: 95%;
         margin: 20px auto;
     }
+}
+
+/* HEADER igual que home y rutinas */
+header {
+    background-color: #111;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacio entre el logo y los botones */
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header .logo img {
+    height: 50px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+nav {
+    flex-grow: 1; /* Permite que el contenedor de navegación ocupe el espacio disponible */
+    display: flex;
+    justify-content: center; /* Centramos todo el contenido dentro de la barra de navegación */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Asegura que los elementos se centren */
+    width: 100%;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #ffd600;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-button {
+    padding: 12px 25px;
+    background-color: #ffd600;
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    display: inline-block;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(255,214,0,0.10);
+}
+
+.auth-button:hover {
+    background-color: #fff;
+    color: #ffd600;
 } 

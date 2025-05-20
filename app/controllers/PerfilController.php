@@ -46,10 +46,19 @@ class PerfilController {
             $ultimoPeso = $stmt->fetch(PDO::FETCH_ASSOC);
 
             // Verificar si ha alcanzado su objetivo
-            if ($user['objetivo'] === 'perder peso' && $ultimoPeso && $ultimoPeso['peso'] <= $user['peso_objetivo']) {
-                $this->logroModel->verificarLogro($_SESSION['user_id'], 'alcanzar_objetivo');
-            } elseif ($user['objetivo'] === 'ganar músculo' && $ultimoPeso && $ultimoPeso['peso'] >= $user['peso_objetivo']) {
-                $this->logroModel->verificarLogro($_SESSION['user_id'], 'alcanzar_objetivo');
+            if ($user['objetivo'] === 'perder_peso' && $ultimoPeso && $ultimoPeso['peso'] <= $user['peso_objetivo']) {
+                $this->logroModel->verificarLogro($_SESSION['user_id'], 'alcanzar_peso_objetivo');
+            } elseif ($user['objetivo'] === 'ganar_masa_muscular' && $ultimoPeso && $ultimoPeso['peso'] >= $user['peso_objetivo']) {
+                $this->logroModel->verificarLogro($_SESSION['user_id'], 'alcanzar_peso_objetivo');
+            }
+
+            // Verificar si ha perdido 5kg desde el peso inicial
+            if ($user['objetivo'] === 'perder_peso' && $ultimoPeso) {
+                $pesoInicial = $user['peso'];
+                $pesoActual = $ultimoPeso['peso'];
+                if (($pesoInicial - $pesoActual) >= 5) {
+                    $this->logroModel->verificarLogro($_SESSION['user_id'], 'perder_5kg');
+                }
             }
 
             // Obtener los logros del usuario
