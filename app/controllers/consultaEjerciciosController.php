@@ -53,7 +53,7 @@ class ConsultaEjerciciosController {
             ],
             5 => [
                 'nombre' => 'Fondos en Paralelas',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/fond.jpg',
                 'descripcion' => 'Los fondos en paralelas son excelentes para trabajar la parte baja del pecho y los tríceps, además de mejorar la fuerza funcional.',
                 'pasos' => [
                     'Acuéstate en el banco con los pies planos en el suelo',
@@ -223,7 +223,7 @@ class ConsultaEjerciciosController {
             ],
             19 => [
                 'nombre' => 'Remo Meadows',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/remos.jpg',
                 'descripcion' => 'El remo Meadows es una variante unilateral que enfatiza la espalda alta y el core.',
                 'pasos' => [
                     'Acuéstate en el suelo o en un banco',
@@ -235,7 +235,7 @@ class ConsultaEjerciciosController {
             ],
             20 => [
                 'nombre' => 'Good Morning',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/Good.jpg',
                 'descripcion' => 'El good morning es un ejercicio avanzado para la cadena posterior, especialmente la zona lumbar y glúteos.',
                 'pasos' => [
                     'Acuéstate en el suelo o en un banco',
@@ -467,7 +467,7 @@ class ConsultaEjerciciosController {
             ],
             39 => [
                 'nombre' => 'Curl de Concentración',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/katana.jpg',
                 'descripcion' => 'El curl de concentración permite máxima contracción y enfoque en el bíceps.',
                 'pasos' => [
                     'Acuéstate en el banco con los pies planos en el suelo',
@@ -479,7 +479,7 @@ class ConsultaEjerciciosController {
             ],
             40 => [
                 'nombre' => 'Extensiones sobre la Cabeza',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/extens.jpg',
                 'descripcion' => 'Las extensiones sobre la cabeza trabajan el tríceps largo y mejoran la fuerza general del brazo.',
                 'pasos' => [
                     'Acuéstate en el banco con los pies planos en el suelo',
@@ -577,7 +577,7 @@ class ConsultaEjerciciosController {
             ],
             48 => [
                 'nombre' => 'Pallof Press',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/pallof.jpg',
                 'descripcion' => 'El pallof press es un ejercicio anti-rotacional que mejora la estabilidad del core.',
                 'pasos' => [
                     'Acuéstate en el suelo o en un banco',
@@ -589,7 +589,7 @@ class ConsultaEjerciciosController {
             ],
             49 => [
                 'nombre' => 'Hollow Hold',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/hollow.jpg',
                 'descripcion' => 'El hollow hold es un isométrico que fortalece el abdomen profundo.',
                 'pasos' => [
                     'Acuéstate en el suelo o en un banco',
@@ -601,7 +601,7 @@ class ConsultaEjerciciosController {
             ],
             50 => [
                 'nombre' => 'Wood Chops',
-                'imagen' => 'img/banca.png',
+                'imagen' => 'img/wood.jpg',
                 'descripcion' => 'El wood chop es excelente para trabajar la rotación y la fuerza funcional del core.',
                 'pasos' => [
                     'Acuéstate en el suelo o en un banco',
