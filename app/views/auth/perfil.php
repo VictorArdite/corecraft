@@ -87,23 +87,6 @@
             border-radius: 8px;
             background-color: rgba(255, 214, 0, 0.1);
         }
-        /* Estilos para los inputs */
-        input[type="number"],
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        select,
-        textarea {
-            color: #000 !important;
-            background-color: #fff !important;
-        }
-
-        input[type="number"]::placeholder,
-        input[type="text"]::placeholder,
-        input[type="email"]::placeholder,
-        input[type="password"]::placeholder {
-            color: #666 !important;
-        }
     </style>
 </head>
 <body>
@@ -231,10 +214,20 @@
             <div class="achievements-section">
                 <h2>Mis Logros</h2>
                 <div class="achievements-grid">
-                    <?php if (!empty($logros)): ?>
-                        <?php foreach ($logros as $logro): ?>
-                            <div class="achievement-card <?php echo isset($logro['fecha_obtencion']) ? 'obtained' : 'locked'; ?>">
-                                <div class="achievement-icon">
+                    <?php foreach ($logros as $logro): ?>
+                        <div class="achievement-card <?php echo isset($logro['fecha_obtencion']) ? 'obtained' : 'locked'; ?>">
+                            <div class="achievement-icon">
+                                <?php if (isset($logro['fecha_obtencion'])): ?>
+                                    <img src="<?php echo BASE_URL . '/public/img/logros/medalla_oro.png'; ?>" alt="Medalla de oro" style="width:48px;height:48px;filter:none;">
+                                <?php else: ?>
+                                    <img src="<?php echo BASE_URL . '/public/img/logros/medalla_gris.png'; ?>" alt="Medalla gris" style="width:48px;height:48px;filter:none;">
+                                <?php endif; ?>
+                            </div>
+                            <div class="achievement-info">
+                                <h3><?php echo htmlspecialchars($logro['nombre']); ?></h3>
+                                <p><?php echo htmlspecialchars($logro['descripcion']); ?></p>
+                                <div class="achievement-meta">
+                                    <span class="points"><?php echo $logro['puntos']; ?> pts</span>
                                     <?php if (isset($logro['fecha_obtencion'])): ?>
                                         <img src="<?php echo BASE_URL . '/public/img/logros/medalla_oro.png'; ?>" alt="<?php echo htmlspecialchars($logro['nombre']); ?>" style="width:48px;height:48px;filter:none;">
                                     <?php else: ?>
