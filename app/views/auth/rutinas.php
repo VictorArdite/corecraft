@@ -46,16 +46,22 @@
     <main>
         <div class="crear-rutina-container">
             <a href="index.php?action=rutina-personalizada" class="auth-button btn-crear-rutina">
-                Crear Rutina Personalizada
+                <i class="fas fa-plus"></i> Crear Rutina Personalizada
             </a>
         </div>
+
         <section class="rutinas-container">
             <?php foreach ($rutinas as $index => $nombre): ?>
                 <div class="rutina-card">
-                    <a href="index.php?action=verRutinaPorNombre&nombre=<?= urlencode($nombre) ?>">
+                    <div class="rutina-image">
                         <img src="img/<?= $index + 1 ?>.png" alt="Rutina <?= htmlspecialchars($nombre) ?>">
+                    </div>
+                    <div class="rutina-content">
                         <h3><?= htmlspecialchars($nombre) ?></h3>
-                    </a>
+                        <a href="index.php?action=verRutinaPorNombre&nombre=<?= urlencode($nombre) ?>" class="btn-ver-rutina">
+                            Ver Detalles <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             <?php endforeach; ?>
         </section>

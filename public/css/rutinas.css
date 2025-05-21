@@ -74,246 +74,183 @@ nav ul li a:hover, nav ul li a.active {
     color: #ffd600;
 }
 
+.page-header {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: var(--primary-dark);
+    border-bottom: 2px solid var(--accent-yellow);
+}
+
+.page-header h1 {
+    color: var(--accent-yellow);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-description {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
 .rutinas-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
 }
 
 .rutina-card {
     background-color: var(--primary-dark);
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--accent-yellow);
     display: flex;
     flex-direction: column;
 }
 
 .rutina-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-.rutina-card img {
+.rutina-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.rutina-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.rutina-card h3 {
-    padding: 1rem;
-    margin: 0;
-    text-align: center;
-    color: var(--accent-yellow);
+.rutina-card:hover .rutina-image img {
+    transform: scale(1.05);
 }
 
-.rutina-header {
+.rutina-content {
+    padding: 1.5rem;
+    flex-grow: 1;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--accent-yellow);
+    flex-direction: column;
 }
 
-.rutina-title {
+.rutina-content h3 {
     color: var(--accent-yellow);
     font-size: 1.5rem;
-    margin: 0;
+    margin: 0 0 1rem 0;
+    text-align: center;
 }
 
-.rutina-actions {
+.rutina-info {
     display: flex;
+    justify-content: center;
     gap: 1rem;
-}
-
-.rutina-btn {
-    background-color: var(--accent-yellow);
-    color: var(--primary-dark);
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: bold;
-}
-
-.rutina-btn:hover {
-    background-color: transparent;
-    color: var(--accent-yellow);
-    border: 2px solid var(--accent-yellow);
-}
-
-.ejercicio-item {
-    background-color: var(--primary-dark);
-    border: 1px solid var(--accent-yellow);
-    border-radius: 8px;
-    padding: 1rem;
     margin-bottom: 1rem;
 }
 
-.ejercicio-nombre {
-    color: var(--text-primary);
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.ejercicio-detalles {
-    color: var(--text-secondary);
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-light);
     font-size: 0.9rem;
 }
 
-/* Estilos para el formulario de creación/edición */
-.rutina-form {
-    background-color: var(--secondary-dark);
-    border: 2px solid var(--accent-yellow);
-    border-radius: 12px;
-    padding: 2rem;
-    margin-top: 2rem;
+.info-item i {
+    color: var(--accent-yellow);
 }
 
-.form-group {
+.rutina-description {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.5;
     margin-bottom: 1.5rem;
+    flex-grow: 1;
 }
 
-.form-group label {
-    display: block;
-    color: var(--text-primary);
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-.form-control {
-    width: 100%;
-    padding: 0.75rem;
-    border: 2px solid var(--accent-yellow);
-    border-radius: 6px;
-    background-color: var(--primary-dark);
-    color: var(--text-primary);
-    transition: all 0.3s ease;
-}
-
-.form-control:focus {
-    outline: none;
-    border-color: var(--accent-yellow);
-    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
-}
-
-/* Estilos para los botones de acción */
-.action-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-.btn-primary {
+.btn-ver-rutina {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     background-color: var(--accent-yellow);
     color: var(--primary-dark);
-    border: none;
-    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
     border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
     font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: auto;
 }
 
-.btn-primary:hover {
+.btn-ver-rutina:hover {
     background-color: transparent;
     color: var(--accent-yellow);
     border: 2px solid var(--accent-yellow);
 }
 
-.btn-secondary {
-    background-color: transparent;
-    color: var(--accent-yellow);
-    border: 2px solid var(--accent-yellow);
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: bold;
+.btn-ver-rutina i {
+    transition: transform 0.3s ease;
 }
 
-.btn-secondary:hover {
-    background-color: var(--accent-yellow);
-    color: var(--primary-dark);
-}
-
-/* Estilos para el modal de confirmación */
-.modal {
-    background-color: var(--primary-dark);
-    border: 2px solid var(--accent-yellow);
-    border-radius: 12px;
-    padding: 2rem;
-    max-width: 500px;
-    margin: 2rem auto;
-}
-
-.modal-header {
-    border-bottom: 1px solid var(--accent-yellow);
-    padding-bottom: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.modal-title {
-    color: var(--accent-yellow);
-    margin: 0;
-}
-
-.modal-body {
-    color: var(--text-primary);
-    margin-bottom: 1.5rem;
-}
-
-.modal-footer {
-    display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
+.btn-ver-rutina:hover i {
+    transform: translateX(5px);
 }
 
 @media (max-width: 768px) {
+    .page-header {
+        padding: 1.5rem 1rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-description {
+        font-size: 1rem;
+    }
+
     .rutinas-container {
         grid-template-columns: 1fr;
-        padding: 1rem;
+        padding: 0 1rem;
     }
+
     .rutina-card {
-        max-width: 100%;
-        padding: 1rem;
-    }
-    .rutina-card img {
-        max-width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
     }
 
-    .rutina-header {
+    .rutina-info {
         flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-
-    .rutina-actions {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .action-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .btn-primary, .btn-secondary {
-        width: 100%;
-        text-align: center;
+        align-items: center;
     }
 }
 
 .crear-rutina-container {
     text-align: center;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 }
 
 .crear-rutina-container .auth-button {
-    margin: 0 auto;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+}
+
+.crear-rutina-container .auth-button i {
+    font-size: 1.2rem;
 }
 
 .btn-crear-rutina {
