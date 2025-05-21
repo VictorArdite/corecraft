@@ -71,13 +71,13 @@
         <div class="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/nueva1.jpg" alt="Imagen nueva 1">
+                    <img src="img/prueba.jpg" alt="Imagen nueva 1">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/nueva2.jpg" alt="Imagen nueva 2">
+                    <img src="img/prueba2.jpg" alt="Imagen nueva 2">
                 </div>
                 <div class="carousel-item">
-                    <img src="img/nueva3.jpg" alt="Imagen nueva 3">
+                    <img src="img/prueba3.jpg" alt="Imagen nueva 3">
                 </div>
             </div>
             <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
