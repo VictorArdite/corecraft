@@ -810,3 +810,89 @@ Stack trace:
     [authenticated] => 1
 )
 
+[22-May-2025 00:14:10 Europe/Madrid] Intento de login - Email: victorprueba433@gmail.com
+[22-May-2025 00:14:10 Europe/Madrid] Usuario encontrado: No
+[22-May-2025 00:14:10 Europe/Madrid] Credenciales inválidas
+[22-May-2025 00:14:12 Europe/Madrid] Intento de login - Email: victorprueba43@gmail.com
+[22-May-2025 00:14:12 Europe/Madrid] Usuario encontrado: No
+[22-May-2025 00:14:12 Europe/Madrid] Credenciales inválidas
+[22-May-2025 00:14:18 Europe/Madrid] Intento de login - Email: ar@gmail.com
+[22-May-2025 00:14:18 Europe/Madrid] Usuario encontrado: No
+[22-May-2025 00:14:18 Europe/Madrid] Credenciales inválidas
+[22-May-2025 00:14:26 Europe/Madrid] Intento de login - Email: victorprueba@gmail.com
+[22-May-2025 00:14:26 Europe/Madrid] Usuario encontrado: Sí
+[22-May-2025 00:14:26 Europe/Madrid] Verificando contraseña para usuario: victorprueba@gmail.com
+[22-May-2025 00:14:26 Europe/Madrid] Contraseña válida: No
+[22-May-2025 00:14:26 Europe/Madrid] Credenciales inválidas
+[22-May-2025 00:14:29 Europe/Madrid] Intento de login - Email: victorprueba11@gmail.com
+[22-May-2025 00:14:29 Europe/Madrid] Usuario encontrado: No
+[22-May-2025 00:14:29 Europe/Madrid] Credenciales inválidas
+[22-May-2025 00:15:56 Europe/Madrid] Intento de login - Email: victor1@gmail.com
+[22-May-2025 00:15:56 Europe/Madrid] Usuario encontrado: Sí
+[22-May-2025 00:15:56 Europe/Madrid] Verificando contraseña para usuario: victor1@gmail.com
+[22-May-2025 00:15:56 Europe/Madrid] Contraseña válida: Sí
+[22-May-2025 00:15:56 Europe/Madrid] Sesión iniciada para usuario: victor1@gmail.com
+[22-May-2025 00:15:56 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 11
+    [user_name] => victor1
+    [user_email] => victor1@gmail.com
+    [user_edad] => 23
+    [user_peso] => 80.00
+    [user_altura] => 172.00
+    [user_objetivo] => perder_peso
+    [user_peso_objetivo] => 75.00
+    [authenticated] => 1
+)
+
+[22-May-2025 00:21:36 Europe/Madrid] Verificando logro para usuario 12 con requisito alcanzar_peso_objetivo
+[22-May-2025 00:21:36 Europe/Madrid] Encontrado logro con ID: 2
+[22-May-2025 00:21:36 Europe/Madrid] Logro asignado exitosamente al usuario 12
+[22-May-2025 00:22:31 Europe/Madrid] Verificando logro para usuario 12 con requisito alcanzar_peso_objetivo
+[22-May-2025 00:22:31 Europe/Madrid] Encontrado logro con ID: 2
+[22-May-2025 00:22:31 Europe/Madrid] El usuario 12 ya tiene el logro con ID 2
+[22-May-2025 00:35:51 Europe/Madrid] Intento de login - Email: victor1@gmail.com
+[22-May-2025 00:35:51 Europe/Madrid] Usuario encontrado: Sí
+[22-May-2025 00:35:51 Europe/Madrid] Verificando contraseña para usuario: victor1@gmail.com
+[22-May-2025 00:35:51 Europe/Madrid] Contraseña válida: Sí
+[22-May-2025 00:35:51 Europe/Madrid] Sesión iniciada para usuario: victor1@gmail.com
+[22-May-2025 00:35:51 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 11
+    [user_name] => victor1
+    [user_email] => victor1@gmail.com
+    [user_edad] => 23
+    [user_peso] => 80.00
+    [user_altura] => 172.00
+    [user_objetivo] => perder_peso
+    [user_peso_objetivo] => 75.00
+    [authenticated] => 1
+)
+
+[22-May-2025 00:36:03 Europe/Madrid] Verificando logro para usuario 11 con requisito alcanzar_peso_objetivo
+[22-May-2025 00:36:03 Europe/Madrid] Encontrado logro con ID: 2
+[22-May-2025 00:36:03 Europe/Madrid] Logro asignado exitosamente al usuario 11
+[22-May-2025 00:38:10 Europe/Madrid] Verificando logro para usuario 11 con requisito alcanzar_peso_objetivo
+[22-May-2025 00:38:10 Europe/Madrid] Encontrado logro con ID: 2
+[22-May-2025 00:38:10 Europe/Madrid] El usuario 11 ya tiene el logro con ID 2
+[22-May-2025 00:38:27 Europe/Madrid] Verificando logro para usuario 11 con requisito crear_rutina_personalizada
+[22-May-2025 00:38:27 Europe/Madrid] Encontrado logro con ID: 5
+[22-May-2025 00:38:27 Europe/Madrid] Logro asignado exitosamente al usuario 11
+[22-May-2025 00:38:44 Europe/Madrid] Verificando logro para usuario 11 con requisito alcanzar_peso_objetivo
+[22-May-2025 00:38:44 Europe/Madrid] Encontrado logro con ID: 2
+[22-May-2025 00:38:44 Europe/Madrid] El usuario 11 ya tiene el logro con ID 2
+[22-May-2025 15:33:30 Europe/Madrid] Verificando logro para usuario 13 con requisito alcanzar_peso_objetivo
+[22-May-2025 15:33:30 Europe/Madrid] Encontrado logro con ID: 2
+[22-May-2025 15:33:30 Europe/Madrid] Logro asignado exitosamente al usuario 13
+[22-May-2025 15:36:41 Europe/Madrid] Verificando logro para usuario 14 con requisito alcanzar_peso_objetivo
+[22-May-2025 15:36:41 Europe/Madrid] Encontrado logro con ID: 2
+[22-May-2025 15:36:41 Europe/Madrid] Logro asignado exitosamente al usuario 14
+[22-May-2025 15:37:21 Europe/Madrid] Verificando logro para usuario 14 con requisito crear_rutina_personalizada
+[22-May-2025 15:37:21 Europe/Madrid] Encontrado logro con ID: 5
+[22-May-2025 15:37:21 Europe/Madrid] Logro asignado exitosamente al usuario 14
+[22-May-2025 15:38:58 Europe/Madrid] Verificando logro para usuario 14 con requisito alcanzar_peso_objetivo
+[22-May-2025 15:38:58 Europe/Madrid] Encontrado logro con ID: 2
+[22-May-2025 15:38:58 Europe/Madrid] El usuario 14 ya tiene el logro con ID 2
+[22-May-2025 15:40:21 Europe/Madrid] Verificando logro para usuario 14 con requisito alcanzar_peso_objetivo
+[22-May-2025 15:40:21 Europe/Madrid] Encontrado logro con ID: 2
+[22-May-2025 15:40:21 Europe/Madrid] El usuario 14 ya tiene el logro con ID 2
