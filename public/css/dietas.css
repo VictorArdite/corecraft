@@ -1,0 +1,241 @@
+body {
+    background-color: #23272b;
+}
+
+.diet-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #23272b;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.18);
+}
+
+.diet-type-selector {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.diet-type-button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: #23272b;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(255,214,0,0.10);
+}
+
+.diet-type-button:hover,
+.diet-type-button.active {
+    background-color: #ffd600;
+    color: #23272b;
+}
+
+.meal-plan {
+    background-color: #23272b;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(255,214,0,0.10);
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #ffd600;
+}
+
+.meal-plan h3 {
+    color: #ffd600;
+    border-bottom: 2px solid #ffd600;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.meal-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #bcc0c1;
+    transition: background-color 0.3s ease;
+}
+
+.meal-item:hover {
+    background-color: #2d3136;
+}
+
+.meal-item:last-child {
+    border-bottom: none;
+}
+
+.meal-time {
+    font-weight: bold;
+    color: #ffd600;
+    min-width: 100px;
+}
+
+.meal-description {
+    flex-grow: 1;
+    margin: 0 20px;
+    color: #fff;
+}
+
+.meal-calories {
+    color: #bcc0c1;
+    font-size: 0.9em;
+    min-width: 80px;
+    text-align: right;
+}
+
+.macros-info {
+    background-color: #23272b;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 2px solid #ffd600;
+    box-shadow: 0 2px 8px rgba(255,214,0,0.10);
+}
+
+.macros-info h4 {
+    color: #ffd600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.macros-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.macro-item {
+    text-align: center;
+    padding: 15px;
+    background-color: #23272b;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(255,214,0,0.10);
+    border: 2px solid #ffd600;
+}
+
+.macro-item h5 {
+    color: #ffd600;
+    margin-bottom: 8px;
+}
+
+.macro-item p {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .diet-type-selector {
+        flex-direction: column;
+    }
+
+    .diet-type-button {
+        width: 100%;
+    }
+
+    .meal-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .meal-time, .meal-description, .meal-calories {
+        margin: 5px 0;
+    }
+
+    .macros-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animaciones */
+.diet-plan {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HEADER igual que home, rutinas, calendario y ejercicios */
+header {
+    background-color: #111;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacio entre el logo y los botones */
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header .logo img {
+    height: 50px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+nav {
+    flex-grow: 1; /* Permite que el contenedor de navegación ocupe el espacio disponible */
+    display: flex;
+    justify-content: center; /* Centramos todo el contenido dentro de la barra de navegación */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Asegura que los elementos se centren */
+    width: 100%;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #ffd600;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-button {
+    padding: 12px 25px;
+    background-color: #ffd600;
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    display: inline-block;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(255,214,0,0.10);
+}
+
+.auth-button:hover {
+    background-color: #fff;
+    color: #ffd600;
+}
+

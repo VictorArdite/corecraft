@@ -6,85 +6,251 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-dark: #1f1f1f;
+    --secondary-dark: #2d2d2d;
+    --accent-yellow: #FFD700;
+    --hover-dark: #2a2a2a;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --border-color: #FFD700;
+}
+
 body {
-    font-family: 'Arial', sans-serif; /* Tipografía básica */
-    line-height: 1.6; /* Mejor legibilidad entre líneas */
-    background-color: #49494b; /* Fondo oscuro similar al de Epic Games */
-    color: #fff; /* Texto blanco */
+    background-color: var(--primary-dark);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    padding: 0;
+    min-height: 100vh;
 }
 
 /* Header */
 header {
-    background-color: #1c1c1c;
-    padding: 20px;
+    background-color: var(--primary-dark);
+    padding: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid var(--accent-yellow);
 }
 
-.logo img {
+header .logo img {
     height: 50px;
-    width: auto;
+    margin-left: 20px;
 }
 
 nav {
-    flex-grow: 1;
     display: flex;
-    justify-content: center;
-}
-
-nav ul {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
     width: 100%;
 }
 
-nav ul li {
-    margin: 0 15px;
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
 }
 
-nav a {
-    color: #fff;
+nav ul li a {
+    color: var(--text-primary);
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
+    font-weight: 500;
     transition: color 0.3s ease;
+    font-size: 1.1em;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav ul li a:hover {
+    color: var(--accent-yellow);
 }
 
 .auth-buttons {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
 }
 
 .auth-button {
-    padding: 12px 25px;
-    background-color: #bcc0c1;
-    color: #000;
-    font-size: 1em;
+    background-color: var(--accent-yellow);
+    color: var(--primary-dark);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border: none;
-    display: inline-block;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent-yellow);
+    font-size: 1em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     white-space: nowrap;
+    width: auto;
+    min-width: 120px;
+    text-align: center;
 }
 
 .auth-button:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: transparent;
+    color: var(--accent-yellow);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Estilos comunes para tarjetas */
+.card {
+    background-color: var(--secondary-dark);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 2px solid var(--accent-yellow);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos comunes para formularios */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--accent-yellow);
+    border-radius: 8px;
+    background-color: var(--primary-dark);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--accent-yellow);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+}
+
+/* Estilos comunes para botones */
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent-yellow);
+    font-size: 1em;
+}
+
+.btn-primary {
+    background-color: var(--accent-yellow);
+    color: var(--primary-dark);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--accent-yellow);
+    transform: translateY(-2px);
+}
+
+/* Estilos comunes para títulos */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--accent-yellow);
+    margin-bottom: 1rem;
+}
+
+/* Estilos comunes para tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid var(--accent-yellow);
+}
+
+th {
+    background-color: var(--secondary-dark);
+    color: var(--accent-yellow);
+    font-weight: bold;
+}
+
+td {
+    background-color: var(--primary-dark);
+    color: var(--text-primary);
+}
+
+/* Estilos comunes para modales */
+.modal {
+    background-color: var(--primary-dark);
+    border-radius: 12px;
+    border: 2px solid var(--accent-yellow);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    border-bottom: 2px solid var(--accent-yellow);
+    padding: 1rem;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    border-top: 2px solid var(--accent-yellow);
+    padding: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .auth-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container {
+        padding: 1rem;
+    }
 }
 
 /* Encabezados */
@@ -138,63 +304,15 @@ nav ul {
 }
 
 nav ul li a {
-    color: #333;
+    color: #fff !important;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: bold;
+    font-size: 1.1em;
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #007bff;
-}
-
-.auth-buttons {
-    display: flex;
-    gap: 1rem;
-}
-
-.auth-button {
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.auth-button:first-child {
-    background-color: #007bff;
-    color: white;
-}
-
-.auth-button:last-child {
-    background-color: #6c757d;
-    color: white;
-}
-
-.auth-button:hover {
-    opacity: 0.9;
-}
-
-/* Responsive header */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.5rem;
-    }
-
-    .auth-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .auth-button {
-        text-align: center;
-    }
+nav ul li a:hover, nav ul li a.active {
+    color: #ffd600 !important;
 }
 
 /* Estilos para alertas */
@@ -215,4 +333,74 @@ nav ul li a:hover {
     background-color: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
+}
+
+/* HEADER: Enlaces blancos */
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: #ffd600 !important;
+}
+
+/* FOOTER: Organización en columnas */
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    background: #49494b;
+    padding: 40px 0 10px 0;
+    flex-wrap: wrap;
+}
+.footer-section {
+    min-width: 180px;
+}
+.footer-section h4 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.footer-links a {
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-links a:hover {
+    color: #bcc0c1;
+}
+.footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 8px;
+}
+.footer-social a {
+    color: #fff;
+    font-size: 1.3em;
+    transition: color 0.3s;
+}
+.footer-social a:hover {
+    color: #bcc0c1;
+}
+footer p {
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+@media (max-width: 900px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .footer-section {
+        min-width: unset;
+        width: 100%;
+        text-align: center;
+    }
 }

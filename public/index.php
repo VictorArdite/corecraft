@@ -15,6 +15,7 @@ require_once __DIR__ . '/../app/controllers/PerfilController.php';
 require_once __DIR__ . '/../app/controllers/RegistroPesoController.php';
 require_once __DIR__ . '/../app/controllers/ConsultaEjerciciosController.php';
 require_once __DIR__ . '/../app/controllers/RutinaPersonalizadaController.php';
+require_once __DIR__ . '/../app/controllers/CalendarioController.php';
 
 // Obtener la conexión a la base de datos
 $database = Database::getInstance();
@@ -163,6 +164,27 @@ switch ($action) {
                     $controller = new ContactoController();
                     $controller->index();
                     break;
+    case 'calendario':
+        $controller = new CalendarioController($db);
+        $controller->index();
+        break;
+    case 'toggleDia':
+        $controller = new CalendarioController($db);
+        $controller->toggleDia();
+        break;
+    case 'actualizarPesoObjetivo':
+        $controller = new PerfilController($db);
+        $controller->actualizarPesoObjetivo();
+        break;
+        require_once '../app/controllers/ContactoController.php';
+        $controller = new ContactoController();
+        $controller->index();
+        break;
+    case 'dietas':
+        require_once '../app/controllers/DietasController.php';
+        $controller = new DietasController();
+        $controller->index();
+        break;                
                 
             
         

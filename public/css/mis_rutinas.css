@@ -1,3 +1,80 @@
+body {
+    background-color: #23272b;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #111;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo img {
+    height: 50px;
+    margin-left: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover, header nav ul li a.active {
+    color: #ffd600;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+}
+
+.auth-button {
+    background-color: #ffd600;
+    color: #23272b;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    border: none;
+    font-size: 1em;
+    box-shadow: 0 2px 8px rgba(255,214,0,0.10);
+    white-space: nowrap;
+    width: auto;
+    min-width: 120px;
+    text-align: center;
+}
+
+.auth-button:hover {
+    background-color: #fff;
+    color: #ffd600;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 214, 0, 0.2);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -12,30 +89,32 @@
 }
 
 .btn-crear {
-    background-color: #4299e1;
-    color: white;
+    background-color: #ffd600;
+    color: #23272b;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     text-decoration: none;
     font-weight: 600;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 .btn-crear:hover {
-    background-color: #3182ce;
+    background-color: #23272b;
+    color: #ffd600;
 }
 
 .no-rutinas {
     text-align: center;
     padding: 3rem;
-    background-color: #2d3748;
+    background-color: #23272b;
     border-radius: 0.5rem;
+    border: 2px solid #ffd600;
 }
 
 .no-rutinas p {
     margin-bottom: 1rem;
     font-size: 1.1rem;
-    color: #a0aec0;
+    color: #fff;
 }
 
 .rutinas-grid {
@@ -45,14 +124,16 @@
 }
 
 .rutina-card {
-    background-color: #2d3748;
+    background-color: #23272b;
     border-radius: 0.5rem;
     padding: 1.5rem;
     transition: transform 0.2s;
+    border: 2px solid #ffd600;
 }
 
 .rutina-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(255, 214, 0, 0.18);
 }
 
 .rutina-header {
@@ -64,16 +145,16 @@
 
 .rutina-header h2 {
     margin: 0;
-    color: #fff;
+    color: #ffd600;
 }
 
 .fecha {
-    color: #a0aec0;
+    color: #fff;
     font-size: 0.9rem;
 }
 
 .descripcion {
-    color: #a0aec0;
+    color: #fff;
     margin-bottom: 1rem;
     font-size: 0.95rem;
 }
@@ -83,7 +164,7 @@
 }
 
 .ejercicios {
-    color: #4299e1;
+    color: #ffd600;
     font-weight: 500;
 }
 
@@ -113,17 +194,18 @@
 }
 
 .btn-ver {
-    background-color: #007bff;
-    color: white;
+    background-color: #ffd600;
+    color: #23272b;
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 4px;
     font-weight: 500;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-ver:hover {
-    background-color: #0056b3;
+    background-color: #23272b;
+    color: #ffd600;
 }
 
 @media (max-width: 768px) {

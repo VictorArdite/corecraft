@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoreCraft - Ejercicios</title>
+    <title>CoreCraft - Catálogo de Ejercicios</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/consultaEjercicios.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -12,17 +12,21 @@
     <header>
         <div class="logo">
             <a href="index.php?action=home">
-                <img src="img/logo.jpg" alt="CoreCraft Logo"> 
+                <img src="img/logo.jpg" alt="CoreCraft Logo">
             </a>
         </div>
         <nav>
             <ul>
                 <li><a href="index.php?action=home">Inicio</a></li>
+                <li><a href="index.php?action=calendario">Calendario</a></li>
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
                 <li><a href="index.php?action=consultaEjercicios">Ejercicios</a></li>
+                <li><a href="index.php?action=dietas">Dietas</a></li>
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <li><a href="index.php?action=registro-peso">Registro de Pesos</a></li>
                 <?php endif; ?>
+                <li><a href="index.php?action=mis-rutinas">Mis Rutinas</a></li>
+                <li><a href="index.php?action=calculadora-nivel">Calculadora de Nivel</a></li>
                 <li><a href="index.php?action=suplementacion">Suplementación</a></li>
                 <li><a href="index.php?action=perfil">Perfil</a></li>
             </ul>
@@ -41,6 +45,13 @@
     
     <main>
         <h1>Catálogo de Ejercicios</h1>
+        <nav class="nav-ejercicios" style="text-align:center; margin-bottom:2rem;">
+            <a href="#pecho">Pecho</a>
+            <a href="#espalda">Espalda</a>
+            <a href="#piernas">Piernas</a>
+            <a href="#brazos">Brazos</a>
+            <a href="#core">Core</a>
+        </nav>
         
         <?php
         $gruposMusculares = [
@@ -52,16 +63,20 @@
         ];
         
         foreach ($gruposMusculares as $key => $grupo): ?>
-            <section class="grupo-muscular">
+            <section class="grupo-muscular" id="<?php echo $key; ?>">
                 <h2><?php echo $grupo; ?></h2>
                 <div class="ejercicios-container">
                     <?php if (isset($ejerciciosPorGrupo[$key])): ?>
                         <?php foreach ($ejerciciosPorGrupo[$key] as $id => $ejercicio): ?>
                             <div class="ejercicio-card">
-                                <img src="<?php echo $ejercicio['imagen']; ?>" alt="<?php echo $ejercicio['nombre']; ?>">
-                                <h3><?php echo $ejercicio['nombre']; ?></h3>
-                                <p><?php echo $ejercicio['descripcion']; ?></p>
-                                <a href="index.php?action=ejercicio&id=<?php echo $id; ?>" class="ver-mas" data-id="<?php echo $id; ?>">Ver más detalles</a>
+                                <div class="ejercicio-imagen">
+                                    <img src="<?php echo $ejercicio['imagen']; ?>" alt="<?php echo $ejercicio['nombre']; ?>">
+                                </div>
+                                <div class="ejercicio-info">
+                                    <h3><?php echo $ejercicio['nombre']; ?></h3>
+                                    <p><?php echo $ejercicio['descripcion']; ?></p>
+                                    <a href="index.php?action=ejercicio&id=<?php echo $id; ?>" class="ver-mas" data-id="<?php echo $id; ?>">Ver más detalles</a>
+                                </div>
                             </div>
                         <?php endforeach; ?>
                     <?php endif; ?>
@@ -70,45 +85,9 @@
         <?php endforeach; ?>
     </main>
 
-    <footer>
-        <div class="footer-container">
-            <!-- Apartado Compañía -->
-            <div class="footer-section">
-                <h4>Compañía</h4>
-                <div class="footer-links">
-                    <a href="index.php?action=nosotros">Nosotros</a>
-                    <a href="index.php?action=services">Nuestros servicios</a>
-                    <a href="index.php?action=privacy">Política de privacidad</a>
-                </div>
-            </div>
-
-            <!-- Apartado Ayuda -->
-            <div class="footer-section">
-                <h4>Ayuda</h4>
-                <div class="footer-links">
-                    <a href="index.php?action=faq">Preguntas frecuentes</a>
-                    <a href="index.php?action=contact">Contacto</a>
-                </div>
-            </div>
-
-            <!-- Apartado Síguenos -->
-            <div class="footer-section">
-                <h4>Síguenos</h4>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/profile.php?id=61574264483708" target="_blank">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/corecraft__/" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://x.com/Corecraft__" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <p>&copy; 2025 CoreCraft. Todos los derechos reservados.</p>
-    </footer>
+    <button id="btnScrollTop" title="Subir arriba" style="position:fixed;bottom:30px;right:30px;z-index:999;background:#ffd600;color:#23272b;border:none;border-radius:50%;width:50px;height:50px;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-size:2em;display:none;align-items:center;justify-content:center;cursor:pointer;transition:background 0.3s;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <div id="ejercicioModal" class="modal">
         <div class="modal-content">
@@ -116,14 +95,9 @@
             <h2 id="modalTitle"></h2>
             <img id="modalImage" src="" alt="">
             <div class="descripcion">
-                <h3>Descripción</h3>
                 <p id="modalDescription"></p>
             </div>
-            <div class="instrucciones">
-                <h3>Instrucciones</h3>
-                <ol id="modalSteps"></ol>
-            </div>
-            <a id="modalVideo" href="" target="_blank" class="video-link">Ver video </a>
+            <a id="modalVideo" href="" target="_blank" class="video-link">Ver tutorial en YouTube</a>
         </div>
     </div>
 
@@ -132,16 +106,14 @@
         const modal = document.getElementById('ejercicioModal');
         const closeBtn = document.querySelector('.close-modal');
         const verMasButtons = document.querySelectorAll('.ver-mas');
+        const placeholderImg = 'img/placeholder.png'; // Usa una imagen de placeholder que tengas en tu proyecto
+        const defaultVideo = 'https://www.youtube.com/results?search_query=ejercicio+gimnasio';
 
         verMasButtons.forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
                 const ejercicioId = this.getAttribute('data-id');
-                
-                // Mostrar el modal inmediatamente
                 modal.style.display = 'block';
-                
-                // Cargar los datos del ejercicio
                 fetch(`index.php?action=ejercicio&id=${ejercicioId}`)
                     .then(response => {
                         if (!response.ok) {
@@ -152,33 +124,27 @@
                     .then(data => {
                         if (data) {
                             document.getElementById('modalTitle').textContent = data.nombre || 'Ejercicio';
-                            document.getElementById('modalImage').src = data.imagen || '';
+                            document.getElementById('modalImage').src = data.imagen || placeholderImg;
                             document.getElementById('modalImage').alt = data.nombre || 'Ejercicio';
                             document.getElementById('modalDescription').textContent = data.descripcion || 'Sin descripción disponible';
-                            
-                            const stepsList = document.getElementById('modalSteps');
-                            stepsList.innerHTML = '';
-                            if (data.pasos && Array.isArray(data.pasos)) {
-                                data.pasos.forEach(paso => {
-                                    const li = document.createElement('li');
-                                    li.textContent = paso;
-                                    stepsList.appendChild(li);
-                                });
-                            }
-                            
                             const videoLink = document.getElementById('modalVideo');
-                            if (data.video) {
+                            if (data.video && data.video.trim() !== '') {
                                 videoLink.href = data.video;
                                 videoLink.style.display = 'block';
                             } else {
-                                videoLink.style.display = 'none';
+                                videoLink.href = defaultVideo;
+                                videoLink.style.display = 'block';
                             }
                         }
                     })
                     .catch(error => {
                         console.error('Error:', error);
                         document.getElementById('modalTitle').textContent = 'Error';
+                        document.getElementById('modalImage').src = placeholderImg;
                         document.getElementById('modalDescription').textContent = 'No se pudieron cargar los datos del ejercicio. Por favor, inténtalo de nuevo.';
+                        const videoLink = document.getElementById('modalVideo');
+                        videoLink.href = defaultVideo;
+                        videoLink.style.display = 'block';
                     });
             });
         });
@@ -191,6 +157,19 @@
             if (e.target == modal) {
                 modal.style.display = 'none';
             }
+        });
+
+        // Botón de scroll top
+        const btnScrollTop = document.getElementById('btnScrollTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 200) {
+                btnScrollTop.style.display = 'flex';
+            } else {
+                btnScrollTop.style.display = 'none';
+            }
+        });
+        btnScrollTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     });
     </script>

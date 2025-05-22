@@ -1,3 +1,64 @@
+body {
+    background-color: #23272b;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #111;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd600;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.auth-button {
+    background-color: #ffd600;
+    color: #23272b;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #e6c200;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -7,12 +68,13 @@
 .rutina-header {
     margin-bottom: 2rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid #4a5568;
+    border-bottom: 2px solid #ffd600;
 }
 
 .rutina-header h1 {
     margin: 0;
-    color: #fff;
+    color: #ffd600;
+    font-size: 2.5em;
 }
 
 .meta-info {
@@ -20,25 +82,26 @@
 }
 
 .fecha {
-    color: #a0aec0;
+    color: #fff;
     font-size: 0.9rem;
 }
 
 .descripcion {
-    background-color: #2d3748;
+    background-color: #23272b;
     padding: 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     margin-bottom: 2rem;
+    border: 2px solid #ffd600;
 }
 
 .descripcion h2 {
     margin-top: 0;
     margin-bottom: 1rem;
-    color: #fff;
+    color: #ffd600;
 }
 
 .descripcion p {
-    color: #a0aec0;
+    color: #fff;
     line-height: 1.6;
 }
 
@@ -48,7 +111,7 @@
 
 .ejercicios-section h2 {
     margin-bottom: 1.5rem;
-    color: #fff;
+    color: #ffd600;
 }
 
 .ejercicios-grid {
@@ -58,14 +121,16 @@
 }
 
 .ejercicio-card {
-    background-color: #2d3748;
-    border-radius: 0.5rem;
+    background-color: #23272b;
+    border-radius: 8px;
     padding: 1.5rem;
     transition: transform 0.2s;
+    border: 2px solid #ffd600;
 }
 
 .ejercicio-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(255, 214, 0, 0.18);
 }
 
 .ejercicio-header {
@@ -77,15 +142,16 @@
 
 .ejercicio-header h3 {
     margin: 0;
-    color: #fff;
+    color: #ffd600;
 }
 
 .grupo-muscular {
-    background-color: #4299e1;
-    color: white;
+    background-color: #ffd600;
+    color: #23272b;
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     font-size: 0.85rem;
+    font-weight: 500;
 }
 
 .ejercicio-card .descripcion {
@@ -93,6 +159,7 @@
     padding: 0;
     margin-bottom: 1rem;
     font-size: 0.95rem;
+    border: none;
 }
 
 .ejercicio-stats {
@@ -107,13 +174,13 @@
 }
 
 .stat .label {
-    color: #a0aec0;
+    color: #fff;
     font-size: 0.9rem;
     margin-bottom: 0.25rem;
 }
 
 .stat .value {
-    color: #48bb78;
+    color: #ffd600;
     font-weight: 600;
     font-size: 1.1rem;
 }
@@ -125,19 +192,46 @@
 
 .btn-volver {
     display: inline-block;
-    background-color: #4a5568;
-    color: white;
+    background-color: #23272b;
+    color: #fff;
+    border: 2px solid #ffd600;
     padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
+    border-radius: 4px;
     text-decoration: none;
-    transition: background-color 0.2s;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 .btn-volver:hover {
-    background-color: #2d3748;
+    background-color: #ffd600;
+    color: #23272b;
 }
 
 @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .auth-button {
+        text-align: center;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
     .ejercicios-grid {
         grid-template-columns: 1fr;
     }

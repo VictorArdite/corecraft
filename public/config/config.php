@@ -3,7 +3,12 @@
 require_once __DIR__ . '/session.php';
 
 // Configuración de la aplicación
-define('BASE_URL', 'http://localhost/corecraft');
+$protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://';
+$host = $_SERVER['HTTP_HOST'];
+define('BASE_URL', $protocol . $host . '/corecraft');
+
+// Incluir helpers
+require_once __DIR__ . '/helpers.php';
 
 // Configuración de la base de datos para XAMPP
 define('DB_HOST', 'localhost');

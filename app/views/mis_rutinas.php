@@ -12,17 +12,34 @@
     <header>
         <div class="logo">
             <a href="index.php?action=home">
-                <img src="<?php echo BASE_URL; ?>/public/img/logo.jpg" alt="CoreCraft Logo">
+                <img src="img/logo.jpg" alt="CoreCraft Logo">
             </a>
         </div>
         <nav>
             <ul>
                 <li><a href="index.php?action=home">Inicio</a></li>
+                <li><a href="index.php?action=calendario">Calendario</a></li>
                 <li><a href="index.php?action=rutinas">Rutinas</a></li>
+                <li><a href="index.php?action=consultaEjercicios">Ejercicios</a></li>
+                <li><a href="index.php?action=dietas">Dietas</a></li>
+                <?php if (isset($_SESSION['user_id'])): ?>
+                    <li><a href="index.php?action=registro-peso">Registro de Pesos</a></li>
+                <?php endif; ?>
                 <li><a href="index.php?action=mis-rutinas">Mis Rutinas</a></li>
+                <li><a href="index.php?action=calculadora-nivel">Calculadora de Nivel</a></li>
                 <li><a href="index.php?action=suplementacion">Suplementación</a></li>
                 <li><a href="index.php?action=perfil">Perfil</a></li>
             </ul>
+            <?php if (!isset($_SESSION['user_id'])): ?>
+            <div class="auth-buttons">
+                <a href="index.php?action=login" class="auth-button">Iniciar Sesión</a>
+                <a href="index.php?action=register" class="auth-button">Registrarse</a>
+            </div>
+            <?php else: ?>
+            <div class="auth-buttons">
+                <a href="index.php?action=logout" class="auth-button">Cerrar Sesión</a>
+            </div>
+            <?php endif; ?>
         </nav>
     </header>
 
@@ -35,7 +52,7 @@
 
             <?php if (empty($rutinas)): ?>
                 <div class="no-rutinas">
-                    <p>No tienes rutinas personalizadas creadas.</p>
+                    <p>No tienes rutinas personalizadas creadas!.</p>
                     <a href="index.php?action=rutina-personalizada" class="btn-crear">Crear mi primera rutina</a>
                 </div>
             <?php else: ?>

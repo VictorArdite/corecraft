@@ -376,3 +376,547 @@ Stack trace:
     [authenticated] => 1
 )
 
+[07-Apr-2025 18:55:20 Europe/Madrid] Intento de login - Email: victor_ardite33@ceroca.cat
+[07-Apr-2025 18:55:20 Europe/Madrid] Usuario encontrado: Sí
+[07-Apr-2025 18:55:20 Europe/Madrid] Verificando contraseña para usuario: victor_ardite33@ceroca.cat
+[07-Apr-2025 18:55:20 Europe/Madrid] Contraseña válida: No
+[07-Apr-2025 18:55:20 Europe/Madrid] Credenciales inválidas
+[07-Apr-2025 18:55:25 Europe/Madrid] Intento de login - Email: victor_ardite33@ceroca.cat
+[07-Apr-2025 18:55:25 Europe/Madrid] Usuario encontrado: Sí
+[07-Apr-2025 18:55:25 Europe/Madrid] Verificando contraseña para usuario: victor_ardite33@ceroca.cat
+[07-Apr-2025 18:55:25 Europe/Madrid] Contraseña válida: Sí
+[07-Apr-2025 18:55:25 Europe/Madrid] Sesión iniciada para usuario: victor_ardite33@ceroca.cat
+[07-Apr-2025 18:55:25 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 5
+    [user_name] => victor3
+    [user_email] => victor_ardite33@ceroca.cat
+    [user_edad] => 34
+    [user_peso] => 43.00
+    [user_altura] => 43.00
+    [user_objetivo] => 
+    [authenticated] => 1
+)
+
+[10-Apr-2025 10:07:32 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[10-Apr-2025 10:07:32 Europe/Madrid] Usuario encontrado: Sí
+[10-Apr-2025 10:07:32 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[10-Apr-2025 10:07:32 Europe/Madrid] Contraseña válida: Sí
+[10-Apr-2025 10:07:32 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[10-Apr-2025 10:07:32 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 60.00
+    [user_altura] => 214.00
+    [user_objetivo] => perder_peso
+    [authenticated] => 1
+)
+
+[10-Apr-2025 10:07:55 Europe/Madrid] PHP Warning:  Undefined array key "04" in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 38
+[10-Apr-2025 10:12:33 Europe/Madrid] PHP Warning:  require_once(D:\Xaamp\htdocs\corecraft\app\views/footer.php): Failed to open stream: No such file or directory in D:\Xaamp\htdocs\corecraft\app\views\home.php on line 63
+[10-Apr-2025 10:12:33 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\Xaamp\htdocs\corecraft\app\views/footer.php' (include_path='D:\Xaamp\php\PEAR') in D:\Xaamp\htdocs\corecraft\app\views\home.php:63
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\HomeController.php(4): require_once()
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(37): HomeController->index()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\views\home.php on line 63
+[10-Apr-2025 10:13:15 Europe/Madrid] PHP Warning:  Undefined array key "04" in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 42
+[10-Apr-2025 10:13:15 Europe/Madrid] PHP Warning:  require_once(D:\Xaamp\htdocs\corecraft\app\views/footer.php): Failed to open stream: No such file or directory in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 259
+[10-Apr-2025 10:13:15 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\Xaamp\htdocs\corecraft\app\views/footer.php' (include_path='D:\Xaamp\php\PEAR') in D:\Xaamp\htdocs\corecraft\app\views\calendario.php:259
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\CalendarioController.php(37): require_once()
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(169): CalendarioController->index()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 259
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  Undefined variable $mes_anterior in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 52
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  Undefined variable $anio_anterior in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 52
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  Undefined variable $meses in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 56
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  Trying to access array offset on value of type null in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 56
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  Undefined variable $mes_siguiente in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 57
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  Undefined variable $anio_siguiente in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 57
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  Undefined variable $primer_dia in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 77
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  Undefined variable $dias_mes in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 82
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  Undefined variable $tipos_entrenamiento in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 116
+[10-Apr-2025 10:15:09 Europe/Madrid] PHP Warning:  foreach() argument must be of type array|object, null given in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 116
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  Undefined variable $mes_anterior in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 53
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  Undefined variable $anio_anterior in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 53
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  Undefined variable $meses in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 57
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  Trying to access array offset on value of type null in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 57
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  Undefined variable $mes_siguiente in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 58
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  Undefined variable $anio_siguiente in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 58
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  Undefined variable $primer_dia in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 78
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  Undefined variable $dias_mes in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 83
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  Undefined variable $tipos_entrenamiento in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 117
+[10-Apr-2025 10:17:19 Europe/Madrid] PHP Warning:  foreach() argument must be of type array|object, null given in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 117
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  Undefined variable $mes_anterior in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 52
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  Undefined variable $anio_anterior in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 52
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  Undefined variable $meses in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 56
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  Trying to access array offset on value of type null in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 56
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  Undefined variable $mes_siguiente in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 57
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  Undefined variable $anio_siguiente in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 57
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  Undefined variable $primer_dia in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 77
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  Undefined variable $dias_mes in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 82
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  Undefined variable $tipos_entrenamiento in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 116
+[10-Apr-2025 10:17:27 Europe/Madrid] PHP Warning:  foreach() argument must be of type array|object, null given in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 116
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  Undefined variable $mes_anterior in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 52
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  Undefined variable $anio_anterior in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 52
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  Undefined variable $meses in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 56
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  Trying to access array offset on value of type null in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 56
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  Undefined variable $mes_siguiente in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 57
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  Undefined variable $anio_siguiente in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 57
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  Undefined variable $primer_dia in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 77
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  Undefined variable $dias_mes in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 82
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  Undefined variable $tipos_entrenamiento in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 116
+[10-Apr-2025 10:18:04 Europe/Madrid] PHP Warning:  foreach() argument must be of type array|object, null given in D:\Xaamp\htdocs\corecraft\app\views\calendario.php on line 116
+[10-Apr-2025 10:25:09 Europe/Madrid] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'corecraft.registro_peso' doesn't exist in D:\Xaamp\htdocs\corecraft\app\controllers\PerfilController.php:28
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\PerfilController.php(28): PDOStatement->execute(Array)
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(77): PerfilController->index()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\controllers\PerfilController.php on line 28
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 234
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Deprecated:  ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 234
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "peso_actual" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 261
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "fecha_nacimiento" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 276
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "genero" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 282
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "genero" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 283
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "genero" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 284
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 291
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 292
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 293
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 294
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 295
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "descripcion" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 301
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 301
+[10-Apr-2025 10:26:11 Europe/Madrid] PHP Warning:  Undefined array key "peso_actual" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 324
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "fecha_nacimiento" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 355
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "genero" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 361
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "genero" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 362
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "genero" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 363
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 370
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 371
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 372
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 373
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 374
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Warning:  Undefined array key "descripcion" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 380
+[10-Apr-2025 10:27:04 Europe/Madrid] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 380
+[10-Apr-2025 10:28:32 Europe/Madrid] PHP Warning:  Undefined array key "fecha_nacimiento" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 355
+[10-Apr-2025 10:28:32 Europe/Madrid] PHP Warning:  Undefined array key "genero" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 361
+[10-Apr-2025 10:28:32 Europe/Madrid] PHP Warning:  Undefined array key "genero" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 362
+[10-Apr-2025 10:28:32 Europe/Madrid] PHP Warning:  Undefined array key "genero" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 363
+[10-Apr-2025 10:28:32 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 370
+[10-Apr-2025 10:28:32 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 371
+[10-Apr-2025 10:28:32 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 372
+[10-Apr-2025 10:28:32 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 373
+[10-Apr-2025 10:28:32 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 374
+[10-Apr-2025 10:31:13 Europe/Madrid] PHP Warning:  Undefined array key "nivel_actividad" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 187
+[10-Apr-2025 10:31:13 Europe/Madrid] PHP Deprecated:  ucfirst(): Passing null to parameter #1 ($string) of type string is deprecated in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 187
+[10-Apr-2025 10:31:13 Europe/Madrid] PHP Warning:  Undefined array key "peso_actual" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 214
+[10-Apr-2025 10:31:13 Europe/Madrid] PHP Warning:  Undefined array key "peso_actual" in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 247
+[10-Apr-2025 10:32:57 Europe/Madrid] PHP Warning:  require_once(D:\Xaamp\htdocs\corecraft\app\views/../../../public/config/config.php): Failed to open stream: No such file or directory in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 1
+[10-Apr-2025 10:32:57 Europe/Madrid] PHP Fatal error:  Uncaught Error: Failed opening required 'D:\Xaamp\htdocs\corecraft\app\views/../../../public/config/config.php' (include_path='D:\Xaamp\php\PEAR') in D:\Xaamp\htdocs\corecraft\app\views\perfil.php:1
+Stack trace:
+#0 D:\Xaamp\htdocs\corecraft\app\controllers\PerfilController.php(52): require_once()
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(77): PerfilController->index()
+#2 {main}
+  thrown in D:\Xaamp\htdocs\corecraft\app\views\perfil.php on line 1
+[10-Apr-2025 10:38:26 Europe/Madrid] Error al actualizar datos: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'peso_actual' in 'field list'
+[10-Apr-2025 10:39:18 Europe/Madrid] Error al actualizar datos: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'peso_actual' in 'field list'
+[10-Apr-2025 10:41:54 Europe/Madrid] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in D:\Xaamp\htdocs\corecraft\app\controllers\PerfilController.php on line 217
+[24-Apr-2025 10:31:44 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[24-Apr-2025 10:31:44 Europe/Madrid] Usuario encontrado: Sí
+[24-Apr-2025 10:31:44 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[24-Apr-2025 10:31:44 Europe/Madrid] Contraseña válida: Sí
+[24-Apr-2025 10:31:44 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[24-Apr-2025 10:31:44 Europe/Madrid] SESSION data: Array
+(
+    [usuario] => Array
+        (
+            [id_usuario] => 13
+            [nombre] => victor
+            [apellido] => ardite
+            [email] => ar@gmail.com
+            [rol] => cliente
+        )
+
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 69.00
+    [user_altura] => 214.00
+    [user_objetivo] => ganar_masa_muscular
+    [authenticated] => 1
+)
+
+[05-May-2025 18:29:33 Europe/Madrid] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'corecraft.dias_entrenamiento' doesn't exist in C:\xampp\htdocs\corecraft\app\controllers\CalendarioController.php:30
+Stack trace:
+#0 C:\xampp\htdocs\corecraft\app\controllers\CalendarioController.php(30): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\corecraft\public\index.php(169): CalendarioController->index()
+#2 {main}
+  thrown in C:\xampp\htdocs\corecraft\app\controllers\CalendarioController.php on line 30
+[09-May-2025 19:57:03 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[09-May-2025 19:57:03 Europe/Madrid] Usuario encontrado: Sí
+[09-May-2025 19:57:03 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[09-May-2025 19:57:03 Europe/Madrid] Contraseña válida: Sí
+[09-May-2025 19:57:03 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[09-May-2025 19:57:03 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 69.00
+    [user_altura] => 214.00
+    [user_objetivo] => ganar_masa_muscular
+    [authenticated] => 1
+)
+
+[09-May-2025 20:11:06 Europe/Madrid] PHP Warning:  include(header.php): Failed to open stream: No such file or directory in D:\Xaamp\htdocs\corecraft\app\views\auth\dietas.php on line 12
+[09-May-2025 20:11:06 Europe/Madrid] PHP Warning:  include(): Failed opening 'header.php' for inclusion (include_path='D:\Xaamp\php\PEAR') in D:\Xaamp\htdocs\corecraft\app\views\auth\dietas.php on line 12
+[10-May-2025 11:14:40 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[10-May-2025 11:14:40 Europe/Madrid] Usuario encontrado: Sí
+[10-May-2025 11:14:40 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[10-May-2025 11:14:40 Europe/Madrid] Contraseña válida: Sí
+[10-May-2025 11:14:40 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[10-May-2025 11:14:40 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 69.00
+    [user_altura] => 214.00
+    [user_objetivo] => ganar_masa_muscular
+    [authenticated] => 1
+)
+
+[10-May-2025 11:15:22 Europe/Madrid] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in D:\Xaamp\htdocs\corecraft\app\controllers\PerfilController.php on line 217
+[10-May-2025 17:34:38 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[10-May-2025 17:34:39 Europe/Madrid] Error de autenticación: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away
+[10-May-2025 17:34:39 Europe/Madrid] Stack trace: #0 D:\Xaamp\htdocs\corecraft\app\controllers\AuthController.php(48): PDOStatement->execute(Array)
+#1 D:\Xaamp\htdocs\corecraft\public\index.php(45): AuthController->authenticate()
+#2 {main}
+[10-May-2025 17:34:43 Europe/Madrid] Error de conexión: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[10-May-2025 17:34:52 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[10-May-2025 17:34:52 Europe/Madrid] Usuario encontrado: Sí
+[10-May-2025 17:34:52 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[10-May-2025 17:34:52 Europe/Madrid] Contraseña válida: Sí
+[10-May-2025 17:34:52 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[10-May-2025 17:34:52 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 69.00
+    [user_altura] => 214.00
+    [user_objetivo] => ganar_masa_muscular
+    [authenticated] => 1
+)
+
+[12-May-2025 22:02:21 Europe/Madrid] Error de conexión: SQLSTATE[HY000] [2002] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión
+[12-May-2025 22:02:28 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[12-May-2025 22:02:28 Europe/Madrid] Usuario encontrado: Sí
+[12-May-2025 22:02:28 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[12-May-2025 22:02:28 Europe/Madrid] Contraseña válida: Sí
+[12-May-2025 22:02:28 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[12-May-2025 22:02:28 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 69.00
+    [user_altura] => 214.00
+    [user_objetivo] => ganar_masa_muscular
+    [authenticated] => 1
+)
+
+[13-May-2025 09:25:17 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[13-May-2025 09:25:17 Europe/Madrid] Usuario encontrado: Sí
+[13-May-2025 09:25:17 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[13-May-2025 09:25:17 Europe/Madrid] Contraseña válida: Sí
+[13-May-2025 09:25:17 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[13-May-2025 09:25:17 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 55.00
+    [user_altura] => 214.00
+    [user_objetivo] => ganar_masa_muscular
+    [authenticated] => 1
+)
+
+[13-May-2025 09:38:15 Europe/Madrid] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in D:\Xaamp\htdocs\corecraft\app\controllers\PerfilController.php on line 217
+[13-May-2025 13:17:47 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[13-May-2025 13:17:48 Europe/Madrid] Usuario encontrado: Sí
+[13-May-2025 13:17:48 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[13-May-2025 13:17:48 Europe/Madrid] Contraseña válida: Sí
+[13-May-2025 13:17:48 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[13-May-2025 13:17:48 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 55.00
+    [user_altura] => 214.00
+    [user_objetivo] => mejorar_resistencia
+    [authenticated] => 1
+)
+
+[15-May-2025 13:06:56 Europe/Madrid] Error al obtener logros del usuario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ul.fecha_logro' in 'field list'
+[15-May-2025 13:10:20 Europe/Madrid] Error al obtener logros del usuario: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ul.fecha_logro' in 'field list'
+[15-May-2025 18:35:00 Europe/Madrid] Intento de login - Email: victorprueba@gmail.com
+[15-May-2025 18:35:00 Europe/Madrid] Usuario encontrado: Sí
+[15-May-2025 18:35:00 Europe/Madrid] Verificando contraseña para usuario: victorprueba@gmail.com
+[15-May-2025 18:35:00 Europe/Madrid] Contraseña válida: Sí
+[15-May-2025 18:35:00 Europe/Madrid] Sesión iniciada para usuario: victorprueba@gmail.com
+[15-May-2025 18:35:00 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 7
+    [user_name] => victorprueba
+    [user_email] => victorprueba@gmail.com
+    [user_edad] => 23
+    [user_peso] => 34.00
+    [user_altura] => 172.00
+    [user_objetivo] => ganar_masa_muscular
+    [authenticated] => 1
+)
+
+[16-May-2025 11:36:26 Europe/Madrid] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pregunta_seguridad' in 'field list'
+[16-May-2025 11:38:33 Europe/Madrid] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pregunta_seguridad' in 'field list'
+[16-May-2025 11:39:46 Europe/Madrid] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pregunta_seguridad' in 'field list'
+[16-May-2025 11:41:42 Europe/Madrid] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in D:\Xaamp\htdocs\corecraft\app\controllers\PerfilController.php on line 226
+[16-May-2025 11:43:02 Europe/Madrid] Intento de login - Email: victorprueba@gmail.com
+[16-May-2025 11:43:02 Europe/Madrid] Usuario encontrado: Sí
+[16-May-2025 11:43:02 Europe/Madrid] Verificando contraseña para usuario: victorprueba@gmail.com
+[16-May-2025 11:43:02 Europe/Madrid] Contraseña válida: Sí
+[16-May-2025 11:43:02 Europe/Madrid] Sesión iniciada para usuario: victorprueba@gmail.com
+[16-May-2025 11:43:02 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 7
+    [user_name] => victorprueba
+    [user_email] => victorprueba@gmail.com
+    [user_edad] => 23
+    [user_peso] => 34.00
+    [user_altura] => 172.00
+    [user_objetivo] => ganar_masa_muscular
+    [user_peso_objetivo] => 80.00
+    [authenticated] => 1
+)
+
+[17-May-2025 15:32:26 Europe/Madrid] Intento de login - Email: victorprueba@gmail.com
+[17-May-2025 15:32:26 Europe/Madrid] Usuario encontrado: Sí
+[17-May-2025 15:32:26 Europe/Madrid] Verificando contraseña para usuario: victorprueba@gmail.com
+[17-May-2025 15:32:27 Europe/Madrid] Contraseña válida: Sí
+[17-May-2025 15:32:27 Europe/Madrid] Sesión iniciada para usuario: victorprueba@gmail.com
+[17-May-2025 15:32:27 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 7
+    [user_name] => victorprueba
+    [user_email] => victorprueba@gmail.com
+    [user_edad] => 23
+    [user_peso] => 34.00
+    [user_altura] => 172.00
+    [user_objetivo] => ganar_masa_muscular
+    [user_peso_objetivo] => 80.00
+    [authenticated] => 1
+)
+
+[18-May-2025 11:53:37 Europe/Madrid] Intento de login - Email: victorprueba@gmail.com
+[18-May-2025 11:53:37 Europe/Madrid] Usuario encontrado: Sí
+[18-May-2025 11:53:37 Europe/Madrid] Verificando contraseña para usuario: victorprueba@gmail.com
+[18-May-2025 11:53:37 Europe/Madrid] Contraseña válida: Sí
+[18-May-2025 11:53:37 Europe/Madrid] Sesión iniciada para usuario: victorprueba@gmail.com
+[18-May-2025 11:53:37 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 7
+    [user_name] => victorprueba
+    [user_email] => victorprueba@gmail.com
+    [user_edad] => 23
+    [user_peso] => 80.00
+    [user_altura] => 172.00
+    [user_objetivo] => ganar_masa_muscular
+    [user_peso_objetivo] => 80.00
+    [authenticated] => 1
+)
+
+[19-May-2025 12:34:54 Europe/Madrid] Intento de login - Email: victorprueba@gmail.com
+[19-May-2025 12:34:54 Europe/Madrid] Usuario encontrado: Sí
+[19-May-2025 12:34:54 Europe/Madrid] Verificando contraseña para usuario: victorprueba@gmail.com
+[19-May-2025 12:34:55 Europe/Madrid] Contraseña válida: Sí
+[19-May-2025 12:34:55 Europe/Madrid] Sesión iniciada para usuario: victorprueba@gmail.com
+[19-May-2025 12:34:55 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 7
+    [user_name] => victorprueba
+    [user_email] => victorprueba@gmail.com
+    [user_edad] => 23
+    [user_peso] => 80.00
+    [user_altura] => 172.00
+    [user_objetivo] => ganar_masa_muscular
+    [user_peso_objetivo] => 80.00
+    [authenticated] => 1
+)
+
+[19-May-2025 12:44:49 Europe/Madrid] Verificando logro para usuario 7 con requisito alcanzar_peso_objetivo
+[19-May-2025 12:44:49 Europe/Madrid] El usuario 7 ya tiene el logro con requisito alcanzar_peso_objetivo
+[19-May-2025 12:45:06 Europe/Madrid] PHP Deprecated:  Constant FILTER_SANITIZE_STRING is deprecated in D:\Xaamp\htdocs\corecraft\app\controllers\PerfilController.php on line 226
+[19-May-2025 12:46:26 Europe/Madrid] Verificando logro para usuario 10 con requisito alcanzar_peso_objetivo
+[19-May-2025 12:46:26 Europe/Madrid] Encontrado logro con ID: 2
+[19-May-2025 12:46:26 Europe/Madrid] Logro asignado exitosamente al usuario 10
+[19-May-2025 12:46:40 Europe/Madrid] Verificando logro para usuario 10 con requisito crear_rutina_personalizada
+[19-May-2025 12:46:40 Europe/Madrid] Encontrado logro con ID: 5
+[19-May-2025 12:46:40 Europe/Madrid] Logro asignado exitosamente al usuario 10
+[19-May-2025 12:46:44 Europe/Madrid] Verificando logro para usuario 10 con requisito alcanzar_peso_objetivo
+[19-May-2025 12:46:44 Europe/Madrid] El usuario 10 ya tiene el logro con requisito alcanzar_peso_objetivo
+[19-May-2025 12:47:55 Europe/Madrid] Verificando logro para usuario 10 con requisito alcanzar_peso_objetivo
+[19-May-2025 12:47:55 Europe/Madrid] Encontrado logro con ID: 2
+[19-May-2025 12:47:55 Europe/Madrid] El usuario 10 ya tiene el logro con ID 2
+[19-May-2025 12:48:05 Europe/Madrid] Verificando logro para usuario 10 con requisito alcanzar_peso_objetivo
+[19-May-2025 12:48:05 Europe/Madrid] Encontrado logro con ID: 2
+[19-May-2025 12:48:05 Europe/Madrid] El usuario 10 ya tiene el logro con ID 2
+[19-May-2025 12:49:03 Europe/Madrid] Verificando logro para usuario 10 con requisito alcanzar_peso_objetivo
+[19-May-2025 12:49:03 Europe/Madrid] Encontrado logro con ID: 2
+[19-May-2025 12:49:03 Europe/Madrid] El usuario 10 ya tiene el logro con ID 2
+[19-May-2025 12:49:14 Europe/Madrid] Verificando logro para usuario 10 con requisito alcanzar_peso_objetivo
+[19-May-2025 12:49:14 Europe/Madrid] Encontrado logro con ID: 2
+[19-May-2025 12:49:14 Europe/Madrid] El usuario 10 ya tiene el logro con ID 2
+[19-May-2025 12:49:46 Europe/Madrid] Verificando logro para usuario 10 con requisito alcanzar_peso_objetivo
+[19-May-2025 12:49:46 Europe/Madrid] Encontrado logro con ID: 2
+[19-May-2025 12:49:46 Europe/Madrid] El usuario 10 ya tiene el logro con ID 2
+[20-May-2025 15:51:16 Europe/Madrid] Intento de login - Email: victor_ardite3@ceroca.cat
+[20-May-2025 15:51:16 Europe/Madrid] Usuario encontrado: Sí
+[20-May-2025 15:51:16 Europe/Madrid] Verificando contraseña para usuario: victor_ardite3@ceroca.cat
+[20-May-2025 15:51:16 Europe/Madrid] Contraseña válida: Sí
+[20-May-2025 15:51:16 Europe/Madrid] Sesión iniciada para usuario: victor_ardite3@ceroca.cat
+[20-May-2025 15:51:16 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 3
+    [user_name] => victor3
+    [user_email] => victor_ardite3@ceroca.cat
+    [user_edad] => 23
+    [user_peso] => 55.00
+    [user_altura] => 214.00
+    [user_objetivo] => mejorar_resistencia
+    [user_peso_objetivo] => 70.00
+    [authenticated] => 1
+)
+
+[22-May-2025 00:14:10 Europe/Madrid] Intento de login - Email: victorprueba433@gmail.com
+[22-May-2025 00:14:10 Europe/Madrid] Usuario encontrado: No
+[22-May-2025 00:14:10 Europe/Madrid] Credenciales inválidas
+[22-May-2025 00:14:12 Europe/Madrid] Intento de login - Email: victorprueba43@gmail.com
+[22-May-2025 00:14:12 Europe/Madrid] Usuario encontrado: No
+[22-May-2025 00:14:12 Europe/Madrid] Credenciales inválidas
+[22-May-2025 00:14:18 Europe/Madrid] Intento de login - Email: ar@gmail.com
+[22-May-2025 00:14:18 Europe/Madrid] Usuario encontrado: No
+[22-May-2025 00:14:18 Europe/Madrid] Credenciales inválidas
+[22-May-2025 00:14:26 Europe/Madrid] Intento de login - Email: victorprueba@gmail.com
+[22-May-2025 00:14:26 Europe/Madrid] Usuario encontrado: Sí
+[22-May-2025 00:14:26 Europe/Madrid] Verificando contraseña para usuario: victorprueba@gmail.com
+[22-May-2025 00:14:26 Europe/Madrid] Contraseña válida: No
+[22-May-2025 00:14:26 Europe/Madrid] Credenciales inválidas
+[22-May-2025 00:14:29 Europe/Madrid] Intento de login - Email: victorprueba11@gmail.com
+[22-May-2025 00:14:29 Europe/Madrid] Usuario encontrado: No
+[22-May-2025 00:14:29 Europe/Madrid] Credenciales inválidas
+[22-May-2025 00:15:56 Europe/Madrid] Intento de login - Email: victor1@gmail.com
+[22-May-2025 00:15:56 Europe/Madrid] Usuario encontrado: Sí
+[22-May-2025 00:15:56 Europe/Madrid] Verificando contraseña para usuario: victor1@gmail.com
+[22-May-2025 00:15:56 Europe/Madrid] Contraseña válida: Sí
+[22-May-2025 00:15:56 Europe/Madrid] Sesión iniciada para usuario: victor1@gmail.com
+[22-May-2025 00:15:56 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 11
+    [user_name] => victor1
+    [user_email] => victor1@gmail.com
+    [user_edad] => 23
+    [user_peso] => 80.00
+    [user_altura] => 172.00
+    [user_objetivo] => perder_peso
+    [user_peso_objetivo] => 75.00
+    [authenticated] => 1
+)
+
+[22-May-2025 00:21:36 Europe/Madrid] Verificando logro para usuario 12 con requisito alcanzar_peso_objetivo
+[22-May-2025 00:21:36 Europe/Madrid] Encontrado logro con ID: 2
+[22-May-2025 00:21:36 Europe/Madrid] Logro asignado exitosamente al usuario 12
+[22-May-2025 00:22:31 Europe/Madrid] Verificando logro para usuario 12 con requisito alcanzar_peso_objetivo
+[22-May-2025 00:22:31 Europe/Madrid] Encontrado logro con ID: 2
+[22-May-2025 00:22:31 Europe/Madrid] El usuario 12 ya tiene el logro con ID 2
+[22-May-2025 00:35:51 Europe/Madrid] Intento de login - Email: victor1@gmail.com
+[22-May-2025 00:35:51 Europe/Madrid] Usuario encontrado: Sí
+[22-May-2025 00:35:51 Europe/Madrid] Verificando contraseña para usuario: victor1@gmail.com
+[22-May-2025 00:35:51 Europe/Madrid] Contraseña válida: Sí
+[22-May-2025 00:35:51 Europe/Madrid] Sesión iniciada para usuario: victor1@gmail.com
+[22-May-2025 00:35:51 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 11
+    [user_name] => victor1
+    [user_email] => victor1@gmail.com
+    [user_edad] => 23
+    [user_peso] => 80.00
+    [user_altura] => 172.00
+    [user_objetivo] => perder_peso
+    [user_peso_objetivo] => 75.00
+    [authenticated] => 1
+)
+
+[22-May-2025 00:36:03 Europe/Madrid] Verificando logro para usuario 11 con requisito alcanzar_peso_objetivo
+[22-May-2025 00:36:03 Europe/Madrid] Encontrado logro con ID: 2
+[22-May-2025 00:36:03 Europe/Madrid] Logro asignado exitosamente al usuario 11
+[22-May-2025 00:38:10 Europe/Madrid] Verificando logro para usuario 11 con requisito alcanzar_peso_objetivo
+[22-May-2025 00:38:10 Europe/Madrid] Encontrado logro con ID: 2
+[22-May-2025 00:38:10 Europe/Madrid] El usuario 11 ya tiene el logro con ID 2
+[22-May-2025 00:38:27 Europe/Madrid] Verificando logro para usuario 11 con requisito crear_rutina_personalizada
+[22-May-2025 00:38:27 Europe/Madrid] Encontrado logro con ID: 5
+[22-May-2025 00:38:27 Europe/Madrid] Logro asignado exitosamente al usuario 11
+[22-May-2025 00:38:44 Europe/Madrid] Verificando logro para usuario 11 con requisito alcanzar_peso_objetivo
+[22-May-2025 00:38:44 Europe/Madrid] Encontrado logro con ID: 2
+[22-May-2025 00:38:44 Europe/Madrid] El usuario 11 ya tiene el logro con ID 2
+[22-May-2025 15:33:30 Europe/Madrid] Verificando logro para usuario 13 con requisito alcanzar_peso_objetivo
+[22-May-2025 15:33:30 Europe/Madrid] Encontrado logro con ID: 2
+[22-May-2025 15:33:30 Europe/Madrid] Logro asignado exitosamente al usuario 13
+[22-May-2025 15:36:41 Europe/Madrid] Verificando logro para usuario 14 con requisito alcanzar_peso_objetivo
+[22-May-2025 15:36:41 Europe/Madrid] Encontrado logro con ID: 2
+[22-May-2025 15:36:41 Europe/Madrid] Logro asignado exitosamente al usuario 14
+[22-May-2025 15:37:21 Europe/Madrid] Verificando logro para usuario 14 con requisito crear_rutina_personalizada
+[22-May-2025 15:37:21 Europe/Madrid] Encontrado logro con ID: 5
+[22-May-2025 15:37:21 Europe/Madrid] Logro asignado exitosamente al usuario 14
+[22-May-2025 15:38:58 Europe/Madrid] Verificando logro para usuario 14 con requisito alcanzar_peso_objetivo
+[22-May-2025 15:38:58 Europe/Madrid] Encontrado logro con ID: 2
+[22-May-2025 15:38:58 Europe/Madrid] El usuario 14 ya tiene el logro con ID 2
+[22-May-2025 15:40:21 Europe/Madrid] Verificando logro para usuario 14 con requisito alcanzar_peso_objetivo
+[22-May-2025 15:40:21 Europe/Madrid] Encontrado logro con ID: 2
+[22-May-2025 15:40:21 Europe/Madrid] El usuario 14 ya tiene el logro con ID 2
+[22-May-2025 16:29:07 Europe/Madrid] Intento de login - Email: prueba1@gmail.com
+[22-May-2025 16:29:07 Europe/Madrid] Usuario encontrado: Sí
+[22-May-2025 16:29:07 Europe/Madrid] Verificando contraseña para usuario: prueba1@gmail.com
+[22-May-2025 16:29:07 Europe/Madrid] Contraseña válida: Sí
+[22-May-2025 16:29:07 Europe/Madrid] Sesión iniciada para usuario: prueba1@gmail.com
+[22-May-2025 16:29:07 Europe/Madrid] SESSION data: Array
+(
+    [user_id] => 12
+    [user_name] => prueba1
+    [user_email] => prueba1@gmail.com
+    [user_edad] => 23
+    [user_peso] => 75.00
+    [user_altura] => 174.00
+    [user_objetivo] => perder_peso
+    [user_peso_objetivo] => 75.00
+    [authenticated] => 1
+)
+
+[22-May-2025 16:33:14 Europe/Madrid] Verificando logro para usuario 12 con requisito crear_rutina_personalizada
+[22-May-2025 16:33:14 Europe/Madrid] Encontrado logro con ID: 5
+[22-May-2025 16:33:14 Europe/Madrid] El usuario 12 ya tiene el logro con ID 5
+[22-May-2025 16:33:36 Europe/Madrid] Verificando logro para usuario 12 con requisito crear_rutina_personalizada
+[22-May-2025 16:33:36 Europe/Madrid] Encontrado logro con ID: 5
+[22-May-2025 16:33:36 Europe/Madrid] El usuario 12 ya tiene el logro con ID 5

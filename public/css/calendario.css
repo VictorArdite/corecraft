@@ -1,0 +1,342 @@
+.calendar-container {
+    background: var(--background-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    margin-bottom: 20px;
+}
+
+.calendar-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+}
+
+.calendar-navigation h2 {
+    font-size: 1.8em;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.calendar-grid {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    background: var(--primary-color);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 10px;
+    background: white;
+}
+
+.day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 1px solid var(--border-color);
+    position: relative;
+    font-weight: bold;
+    background: var(--background-color);
+    color: var(--text-color);
+    min-height: 40px;
+}
+
+.day:hover {
+    background: var(--hover-color);
+    transform: scale(1.05);
+}
+
+.day.empty {
+    background: var(--light-color);
+    cursor: default;
+    border: none;
+}
+
+.day.training {
+    color: white;
+}
+
+.day.fuerza {
+    background: var(--danger-color);
+}
+
+.day.cardio {
+    background: var(--success-color);
+}
+
+.day.flexibilidad {
+    background: var(--info-color);
+}
+
+.day.descanso {
+    background: var(--secondary-color);
+}
+
+.day::after {
+    content: attr(data-tipo);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0.7em;
+    padding: 2px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--background-color);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    padding: 15px;
+    border-top: 1px solid var(--border-color);
+    text-align: right;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background: white;
+    color: var(--text-color);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.close-modal {
+    cursor: pointer;
+    font-size: 1.5em;
+    color: white;
+}
+
+.button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.button.primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.button.primary:hover {
+    background: var(--primary-dark-color);
+}
+
+.button.secondary {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.button.secondary:hover {
+    background: var(--secondary-dark-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .calendar-container {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .calendar-navigation h2 {
+        font-size: 1.4em;
+    }
+
+    .day {
+        font-size: 0.9em;
+        min-height: 30px;
+    }
+
+    .day::after {
+        font-size: 0.6em;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 20px auto;
+    }
+}
+
+/* HEADER igual que home y rutinas */
+header {
+    background-color: #111;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacio entre el logo y los botones */
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header .logo img {
+    height: 50px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+nav {
+    flex-grow: 1; /* Permite que el contenedor de navegación ocupe el espacio disponible */
+    display: flex;
+    justify-content: center; /* Centramos todo el contenido dentro de la barra de navegación */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Asegura que los elementos se centren */
+    width: 100%;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #ffd600;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-button {
+    padding: 12px 25px;
+    background-color: #ffd600;
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    display: inline-block;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(255,214,0,0.10);
+}
+
+.auth-button:hover {
+    background-color: #fff;
+    color: #ffd600;
+} 

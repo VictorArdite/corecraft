@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoreCraft - Registro</title>
     <link rel="stylesheet" href="/corecraft/public/css/global.css">
-    <link rel="stylesheet" href="/corecraft/public/css/login.css">
+    <link rel="stylesheet" href="/corecraft/public/css/registro.css">
 </head>
 <body>
     <main>
@@ -82,7 +82,17 @@
 
                 <div class="form-group">
                     <label for="goal">Objetivo:</label>
-                    <input type="text" id="goal" name="goal">
+                    <select id="goal" name="goal" required>
+                        <option value="">Selecciona tu objetivo</option>
+                        <option value="perder_peso">Perder peso</option>
+                        <option value="ganar_masa_muscular">Ganar masa muscular</option>
+                        <option value="mejorar_resistencia">Mejorar resistencia</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="peso_objetivo">Peso Objetivo (kg):</label>
+                    <input type="number" step="0.1" id="peso_objetivo" name="peso_objetivo">
                 </div>
 
                 <button type="submit" class="btn-primary">Registrarse</button>

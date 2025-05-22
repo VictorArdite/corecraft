@@ -1,25 +1,103 @@
 body {
-    background-color: #49494b;
+    background-color: #23272b;
     color: #fff;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+header {
+    background-color: #111;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo img {
+    height: 50px;
+    margin-left: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover, header nav ul li a.active {
+    color: #ffd600;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+}
+
+.auth-button {
+    background-color: #ffd600;
+    color: #23272b;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    border: none;
+    font-size: 1em;
+    box-shadow: 0 2px 8px rgba(255,214,0,0.10);
+    white-space: nowrap;
+    width: auto;
+    min-width: 120px;
+    text-align: center;
+}
+
+.auth-button:hover {
+    background-color: #fff;
+    color: #ffd600;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 214, 0, 0.2);
+}
+
 .container {
     max-width: 800px;
     margin: 2rem auto;
     padding: 2rem;
-    background-color: #2c2c2c;
+    background-color: #23272b;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ffd600;
 }
 
 h1 {
-    color: #fff;
+    color: #ffd600;
     text-align: center;
     margin-bottom: 2rem;
     font-size: 2.5rem;
+}
+
+.subtitle {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .form-group {
@@ -37,9 +115,9 @@ input[type="number"],
 select {
     width: 100%;
     padding: 0.8rem;
-    border: 2px solid #00bcd4;
+    border: 2px solid #ffd600;
     border-radius: 5px;
-    background-color: #3c3c3c;
+    background-color: #23272b;
     color: #fff;
     font-size: 1rem;
     transition: border-color 0.3s ease;
@@ -48,70 +126,76 @@ select {
 input[type="number"]:focus,
 select:focus {
     outline: none;
-    border-color: #00bcd4;
-    box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+    border-color: #ffd600;
+    box-shadow: 0 0 5px rgba(255, 214, 0, 0.5);
 }
 
-button {
-    background-color: #00bcd4;
-    color: #fff;
+.btn-calcular {
+    background-color: #ffd600;
+    color: #23272b;
     padding: 1rem 2rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.1rem;
     width: 100%;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
 }
 
-button:hover {
-    background-color: #0097a7;
+.btn-calcular:hover {
+    background-color: #23272b;
+    color: #ffd600;
+    border: 2px solid #ffd600;
 }
 
 #resultado {
     margin-top: 2rem;
     padding: 1.5rem;
-    background-color: #3c3c3c;
+    background-color: #23272b;
     border-radius: 5px;
-    border-left: 4px solid #00bcd4;
+    border: 2px solid #ffd600;
 }
 
 #resultado h2 {
-    color: #00bcd4;
+    color: #ffd600;
     margin-top: 0;
 }
 
 #resultado p {
     margin: 1rem 0;
     line-height: 1.6;
+    color: #fff;
 }
 
-.recomendaciones {
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color: #2c2c2c;
+.info-adicional {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #23272b;
     border-radius: 5px;
+    border: 2px solid #ffd600;
 }
 
-.recomendaciones h3 {
-    color: #00bcd4;
+.info-adicional h3 {
+    color: #ffd600;
     margin-bottom: 1rem;
 }
 
-.recomendaciones ul {
+.info-adicional ul {
     list-style-type: none;
     padding: 0;
 }
 
-.recomendaciones li {
+.info-adicional li {
     margin-bottom: 0.5rem;
     padding-left: 1.5rem;
     position: relative;
+    color: #fff;
 }
 
-.recomendaciones li:before {
+.info-adicional li:before {
     content: "•";
-    color: #00bcd4;
+    color: #ffd600;
     position: absolute;
     left: 0;
 }
@@ -131,7 +215,7 @@ button:hover {
         padding: 0.6rem;
     }
 
-    button {
+    .btn-calcular {
         padding: 0.8rem 1.5rem;
     }
 } 

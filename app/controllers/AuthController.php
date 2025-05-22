@@ -44,7 +44,7 @@ class AuthController {
                 exit;
             }
 
-            $stmt = $this->db->prepare("SELECT id, nombre, email, password, edad, peso, altura, objetivo FROM usuarios WHERE email = ?");
+            $stmt = $this->db->prepare("SELECT id, nombre, email, password, edad, peso, altura, objetivo, peso_objetivo FROM usuarios WHERE email = ?");
             $stmt->execute([$email]);
             $user = $stmt->fetch();
 
@@ -63,6 +63,7 @@ class AuthController {
                     $_SESSION['user_peso'] = $user['peso'];
                     $_SESSION['user_altura'] = $user['altura'];
                     $_SESSION['user_objetivo'] = $user['objetivo'];
+                    $_SESSION['user_peso_objetivo'] = $user['peso_objetivo'];
                     $_SESSION['authenticated'] = true;
                     
                     error_log("Sesión iniciada para usuario: " . $user['email']);
@@ -94,11 +95,9 @@ class AuthController {
             $weight = $_POST['weight'] ?? null;
             $height = $_POST['height'] ?? null;
             $goal = $_POST['goal'] ?? '';
-            $pregunta_seguridad = $_POST['pregunta_seguridad'] ?? '';
-            $respuesta_seguridad = $_POST['respuesta_seguridad'] ?? '';
+            $peso_objetivo = $_POST['peso_objetivo'] ?? null;
 
-            if (empty($username) || empty($email) || empty($password) || 
-                empty($pregunta_seguridad) || empty($respuesta_seguridad)) {
+            if (empty($username) || empty($email) || empty($password) || empty($goal)) {
                 header('Location: index.php?action=register&error=2');
                 exit();
             }
@@ -115,8 +114,8 @@ class AuthController {
                 // Hash de la contraseña
                 $password = password_hash($password, PASSWORD_DEFAULT);
 
-                $stmt = $this->db->prepare("INSERT INTO usuarios (nombre, email, password, edad, peso, altura, objetivo, pregunta_seguridad, respuesta_seguridad) 
-                                          VALUES (:username, :email, :password, :age, :weight, :height, :goal, :pregunta_seguridad, :respuesta_seguridad)");
+                $stmt = $this->db->prepare("INSERT INTO usuarios (nombre, email, password, edad, peso, altura, objetivo, peso_objetivo) 
+                                          VALUES (:username, :email, :password, :age, :weight, :height, :goal, :peso_objetivo)");
                 
                 $stmt->execute([
                     'username' => $username,
@@ -126,8 +125,7 @@ class AuthController {
                     'weight' => $weight,
                     'height' => $height,
                     'goal' => $goal,
-                    'pregunta_seguridad' => $pregunta_seguridad,
-                    'respuesta_seguridad' => $respuesta_seguridad
+                    'peso_objetivo' => $peso_objetivo
                 ]);
 
                 $_SESSION['user_id'] = $this->db->lastInsertId();
@@ -137,6 +135,7 @@ class AuthController {
                 $_SESSION['user_peso'] = $weight;
                 $_SESSION['user_altura'] = $height;
                 $_SESSION['user_objetivo'] = $goal;
+                $_SESSION['user_peso_objetivo'] = $peso_objetivo;
                 $_SESSION['authenticated'] = true;
 
                 header('Location: index.php?action=home');
